@@ -1,0 +1,10 @@
+node_modules/
+.test-work/
+data/history/
+*.tmp
+*.log
+.server.pid
+evidence/failure.png
+evidence/browser-failure.json
+first-view.png
+.server-windows.pid

@@ -1,0 +1,242 @@
+[
+  {
+    "file": "original_basis_closure_gaps_and_pro_brief_zh.md",
+    "bytes": 64197,
+    "sha256": "1b71ebe72b796e5f724ff34643c3fc746a97fc52f83360027cfddafae394ac8d"
+  },
+  {
+    "file": "page_state_functions.md",
+    "bytes": 27095,
+    "sha256": "b64f2bf690b84693c6e512b26cdafeca0f39e562b3954f72c59a9106355544f9"
+  },
+  {
+    "file": "review-v2.md",
+    "bytes": 981,
+    "sha256": "bbc23a32f59b76206a1f80c0776fb1c2056bba9cf62e130bb4c7e688a2debdd6"
+  },
+  {
+    "file": "latest-user-decisions.md",
+    "bytes": 15921,
+    "sha256": "ac9440fde3737645b9c1b54a98bff355193e3bde50606ee67da86f1b9ae8a579"
+  },
+  {
+    "file": "state_concept_calibration_astra_max_v2_zh.md",
+    "bytes": 55743,
+    "sha256": "e6a4bfc55116ea7d2b774deb8181d758f3adb2a694fa238c0aafdd08241edf3f"
+  },
+  {
+    "file": "original_basis_theoretical_solution_C1_zh.md",
+    "bytes": 223510,
+    "sha256": "e3f921f308c6dfe5d50172a746a831470a7777842ec8071f670dda115490cf1f"
+  },
+  {
+    "file": "../prompts/pm-workbench-integrate-reports-v1.md",
+    "bytes": 4806,
+    "sha256": "5d0bba154ff9566a8f1fc5bab0ef60a2ada4a07d91bcf22c8f0c681f5af350b2"
+  },
+  {
+    "file": "pm-status-2026-11-02.md",
+    "bytes": 13866,
+    "sha256": "28e3bb63386b890683908f16916c962356002f1a92420e53fcb53222b7bf0376"
+  },
+  {
+    "file": "../modules/concept-network/README.md",
+    "bytes": 3117,
+    "sha256": "5d792159f1a30f667a9538a6ec73f6b4a48069849bd88f236fd718e6c2e2ffa4"
+  },
+  {
+    "file": "../modules/concept-network/design-memo-video-first-v0.md",
+    "bytes": 25670,
+    "sha256": "7bee627d132d8a849c4902e0b28a419c6564e20603f4719cf7a774b76bac938f"
+  },
+  {
+    "file": "../modules/concept-network/CODEX-BRIEF.md",
+    "bytes": 3307,
+    "sha256": "39437dd5810c61d7d2812b858dc3517b72095f71759131bb0ca233065d773542"
+  },
+  {
+    "file": "../modules/action-goal/v1-interface-contract.md",
+    "bytes": 21256,
+    "sha256": "eb2b606f9126379d5a94358957e37af3d66d896a54b4d28a4f591853639afb02"
+  },
+  {
+    "file": "../modules/action-goal/v1-open-dynamics-candidates.md",
+    "bytes": 25798,
+    "sha256": "0c64e2f504890dc5163ab255dbfde7b65b875bf1552e11b26189e668a059f2c3"
+  },
+  {
+    "file": "../modules/action-goal/CODEX-BRIEF.md",
+    "bytes": 3113,
+    "sha256": "4770a805c153ed36ffc337b453bf61af02edc57062a8dd23ca7706bd05397492"
+  },
+  {
+    "file": "../modules/state-network/README.md",
+    "bytes": 4133,
+    "sha256": "f401c12305d54107c6ef47d24ce683ac978d52a045e3149b20efd4f1a7d88446"
+  },
+  {
+    "file": "../modules/state-network/S-SPACE-01-sparse-feature-to-spatial-peak.md",
+    "bytes": 17707,
+    "sha256": "0ad6bf3b941053d814c8764a2fcc398f7891a80cfc07b53b1b3f9a47ee574f1b"
+  },
+  {
+    "file": "../modules/state-network/interface-notes.md",
+    "bytes": 10247,
+    "sha256": "92149c060c2e3a4cbc88bc7e719d691371afcef23d871f074fc7777e3012ca9e"
+  },
+  {
+    "file": "../modules/input/README.md",
+    "bytes": 1722,
+    "sha256": "0c3b455d85421b2f170bda71131529e014a39105626800540263acf542e7d5fd"
+  },
+  {
+    "file": "../modules/input/scheme-plain-zh.md",
+    "bytes": 3776,
+    "sha256": "a42e7cc66a8f29ff1812174b6236f509066df50f680a60aed433b555985ec1b8"
+  },
+  {
+    "file": "../modules/input/design-draft-v1.md",
+    "bytes": 11476,
+    "sha256": "0da534939f372193a144cbbe787c434af017e3f64d4179a0f0bba352834d2d71"
+  },
+  {
+    "file": "../modules/input/interface-contract.md",
+    "bytes": 18797,
+    "sha256": "2d938104909bbd13363f2f4492dc0269320a23a307c7d7e6bb07c0a554e9ca7f"
+  },
+  {
+    "file": "../modules/input/feasibility-minecraft-dual-ray-3d.md",
+    "bytes": 28069,
+    "sha256": "808957a483578fd0065c819eacb738c03fc12818a5541ec25f9a4f9f57176f2b"
+  },
+  {
+    "file": "../modules/state-network/S-SPACE-02-multi-view-ray-3d-filter.md",
+    "bytes": 22296,
+    "sha256": "118a1382df10275456e45cd53e3b87bc483f31888c1ea87c450bddbcfecb0834"
+  },
+  {
+    "file": "../prompts/pm-workbench-integrate-state-sspace-03-07.md",
+    "bytes": 4844,
+    "sha256": "69db54095df74a0b7af723734acbf961a5d33f04ca1bbee27d1796ab6821b4b5"
+  },
+  {
+    "file": "pm-status-2026-11-03.md",
+    "bytes": 15918,
+    "sha256": "4863bc3333b2a3d2ca3d2c4beca327cc5f0d90f9f796b1497ffc2ab81f538211"
+  },
+  {
+    "file": "../modules/state-network/S-SPACE-03-carrier-structure.md",
+    "bytes": 35747,
+    "sha256": "ac6e7f5268b84443c4a6a5de12f4b54493e85f38d49639b0d3d8dbde723706ad"
+  },
+  {
+    "file": "../modules/state-network/S-SPACE-04-false-intersection-filter.md",
+    "bytes": 16379,
+    "sha256": "53a92a0c3808b95610e8bb98d1db5eca469a9c4cc13d65870e0e288f8bb2f42e"
+  },
+  {
+    "file": "../modules/state-network/S-SPACE-05-specificity-at-intersection.md",
+    "bytes": 6757,
+    "sha256": "ce45a9326760818b7497127d72521aa5b4b6545424dd997ef5011ceed7967175"
+  },
+  {
+    "file": "../modules/state-network/experiments/specificity-at-intersection/RESULT.md",
+    "bytes": 31503,
+    "sha256": "74fd713b38c89ec6a89ca778cd03014ab52d30db813040efd865f05f60629bcc"
+  },
+  {
+    "file": "../modules/state-network/S-SPACE-06-mc-monocular-state.md",
+    "bytes": 22366,
+    "sha256": "b8667bab99ff225ffe08f7f08cee3d0e9f4f1440776c58b0420166950bfd6910"
+  },
+  {
+    "file": "../modules/state-network/experiments/mc-monocular-state/RESULT.md",
+    "bytes": 12299,
+    "sha256": "bc0caeb85dfad1b12b62b7c615a5dba829b10ef8a9e78e4cacc08f456fd86067"
+  },
+  {
+    "file": "../modules/state-network/S-SPACE-06b-block-scale-prior.md",
+    "bytes": 4766,
+    "sha256": "b0df37999824e82be4f0ec86b84af21bf356ad8eff798ecf38e915dd8988377d"
+  },
+  {
+    "file": "../modules/state-network/S-SPACE-06c-image-to-pattern.md",
+    "bytes": 17936,
+    "sha256": "0e87b8ecc5de01fccf9e187548dbb7c08b4cb185183258d1fcb18eb401884046"
+  },
+  {
+    "file": "../modules/state-network/experiments/mc-image-to-pattern/RESULT.md",
+    "bytes": 8713,
+    "sha256": "520731410493957bc019e6d886112dac0de7027c3746249b09b3c73963d5bec7"
+  },
+  {
+    "file": "../modules/state-network/experiments/mc-perspective-multi/RESULT.md",
+    "bytes": 11009,
+    "sha256": "1454518ef32295a2154da02b9c2f3d48c87a77e1713b1f22ac55ef6596e338b4"
+  },
+  {
+    "file": "../modules/state-network/S-SPACE-07-relative-layout.md",
+    "bytes": 10141,
+    "sha256": "8f485c5a3800227fb6ec4297f5a367243a2ae2627e902419fbe348a97f8d906e"
+  },
+  {
+    "file": "../modules/state-network/experiments/mc-relative-layout/RESULT.md",
+    "bytes": 6707,
+    "sha256": "955cebcba9b85139361efde28e96de7fa02784192b4e6c3854053cf7723eddc9"
+  },
+  {
+    "file": "../modules/state-network/experiments/mc-relative-layout/validation.json",
+    "bytes": 45465,
+    "sha256": "1631e3722b9720b23e262af975f074c724c3d6545bb706f6829590cf9ed53e1f"
+  },
+  {
+    "file": "pm-status-2026-11-04-2d-reset.md",
+    "bytes": 3708,
+    "sha256": "e85deb188c2a193a99ae11f4dd47a8cf7c6f9bb33395d5111e61237c6974bc9d"
+  },
+  {
+    "file": "../prompts/pm-workbench-reset-2d-toy-v1.md",
+    "bytes": 4221,
+    "sha256": "ddda6a626bbd66c1d3e611fa949896ff9ae0761252371f29577d2e28076376c6"
+  },
+  {
+    "file": "../modules/input/design-draft-v3-2d-toy.md",
+    "bytes": 2685,
+    "sha256": "5b89f1340005e8d679ef5ef56b0ae4f7486799208aa196dc84e5e59b0a2831b1"
+  },
+  {
+    "file": "../prompts/pm-workbench-register-input-2d-v3.md",
+    "bytes": 1862,
+    "sha256": "dad3d8165a819fd23460937d036532e1c37ed876efafbd174c66a75c7567474e"
+  },
+  {
+    "file": "pm-status-2026-11-04-input-2d-v3.md",
+    "bytes": 4267,
+    "sha256": "c52b409ee2d561ce6d4d44a6b5a81b2d7a14daa33b26b53991a650cf28aecf9f"
+  },
+  {
+    "file": "../modules/state-network/S-SPACE-08-2d-toy-model.md",
+    "bytes": 17893,
+    "sha256": "dd1774c36aba7ce47394025c5774a4a644f42f1e68836ae8b4c2be61f2c1f005"
+  },
+  {
+    "file": "../modules/state-network/experiments/2d-toy-model/README.md",
+    "bytes": 1141,
+    "sha256": "334aa34e18dda30f2125c5ab3fc3672a969c552d30477b01a787416bb86a17f3"
+  },
+  {
+    "file": "../prompts/pm-workbench-register-state-sspace-08.md",
+    "bytes": 5276,
+    "sha256": "7a0a3c8644a2baadaf92aa827f535c378c51321092f85555d402864711349a1d"
+  },
+  {
+    "file": "pm-status-2026-11-04-state-sspace-08.md",
+    "bytes": 10889,
+    "sha256": "1ea8865db18ad890b685bf3ffc5df68dbd81cfc7dd1899cce1cc7050e18835a1"
+  },
+  {
+    "file": "../README.md",
+    "bytes": 8847,
+    "sha256": "a8897f0d55c600f9bed4543a5b5c21433be83e040442ee05209c3a283431dc8b"
+  }
+]

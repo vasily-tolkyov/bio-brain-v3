@@ -1,0 +1,73 @@
+{
+  "time": "2026-11-02T10:01:37.309Z",
+  "browser": "156.0.4314.58",
+  "viewport": {
+    "width": 1600,
+    "height": 1000
+  },
+  "url": "http://127.0.0.1:4318",
+  "scope": "UI + schema contracts; not neural simulation",
+  "checks": [
+    {
+      "name": "WebGL scene loads with canonical data",
+      "passed": true
+    },
+    {
+      "name": "mouse rotates, wheel zooms, right-drag pans",
+      "passed": true
+    },
+    {
+      "name": "real canvas click selects directed edge",
+      "passed": true
+    },
+    {
+      "name": "search calibration edge highlights real internal endpoints and copies reference",
+      "passed": true
+    },
+    {
+      "name": "drill into C0 and attractor then return; repeated three times",
+      "passed": true
+    },
+    {
+      "name": "functional routes share same concept nodes",
+      "passed": true
+    },
+    {
+      "name": "case steps distinguish unresolved credit assignment and disable animation",
+      "passed": true
+    },
+    {
+      "name": "local edit changes label and status while keeping ID",
+      "passed": true
+    },
+    {
+      "name": "export JSON roundtrip validates and imports a changed wire without ID loss",
+      "passed": true
+    },
+    {
+      "name": "invalid import is rejected without mutating active data",
+      "passed": true
+    },
+    {
+      "name": "external file change refreshes scene with the same module ID",
+      "passed": true
+    },
+    {
+      "name": "malformed external file preserves last valid scene and recovers",
+      "passed": true
+    },
+    {
+      "name": "write token, Origin and concurrent revision protections",
+      "passed": true
+    },
+    {
+      "name": "deprecated modules hide descendants and wires until explicitly enabled",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript runtime errors during repeated interactions",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

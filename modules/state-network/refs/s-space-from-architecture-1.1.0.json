@@ -1,0 +1,591 @@
+{
+  "version": "1.1.0",
+  "updatedAt": "2026-11-02T09:42:12.232114+00:00",
+  "nodes": {
+    "M-STATE": {
+      "id": "M-STATE",
+      "label": "状态网络",
+      "kind": "module",
+      "parentId": null,
+      "status": "confirmed",
+      "description": "当前空间、具体实例、出处、经历与目标的活动承载。内部小框表示职责边界，不规定独立硬件分区。",
+      "position": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        5.3,
+        7,
+        4
+      ],
+      "color": "#66cabd",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-STATE",
+        "D-GOAL"
+      ],
+      "tags": []
+    },
+    "S-SPACE": {
+      "id": "S-SPACE",
+      "label": "空间多峰",
+      "kind": "structure",
+      "parentId": "M-STATE",
+      "status": "confirmed",
+      "description": "一物可多峰；先有局部活动，再求归组。深度/参照/自运动歧义保留。",
+      "position": [
+        0,
+        2.05,
+        0
+      ],
+      "size": [
+        4.4,
+        1.5,
+        2.8
+      ],
+      "color": "#73b9ff",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-STATE"
+      ],
+      "tags": []
+    },
+    "S-INSTANCE": {
+      "id": "S-INSTANCE",
+      "label": "实例 / 对应",
+      "kind": "structure",
+      "parentId": "M-STATE",
+      "status": "unresolved",
+      "description": "同类不同实例保留独立位置、属性、参与角色与调用对应；不预置对象真ID。",
+      "position": [
+        -1.15,
+        0.2,
+        0
+      ],
+      "size": [
+        2,
+        1.6,
+        2.8
+      ],
+      "color": "#73b9ff",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-STATE",
+        "D-OPEN"
+      ],
+      "tags": []
+    },
+    "S-SOURCE": {
+      "id": "S-SOURCE",
+      "label": "出处 / 经历",
+      "kind": "structure",
+      "parentId": "M-STATE",
+      "status": "confirmed",
+      "description": "观察、补全、预测、回忆、预演分别保留身份；实际经历不会被解释改写。",
+      "position": [
+        1.15,
+        0.2,
+        0
+      ],
+      "size": [
+        2,
+        1.6,
+        2.8
+      ],
+      "color": "#73b9ff",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-STATE",
+        "D-LEARN"
+      ],
+      "tags": []
+    },
+    "S-HAVE": {
+      "id": "S-HAVE",
+      "label": "已有状态",
+      "kind": "structure",
+      "parentId": "M-STATE",
+      "status": "confirmed",
+      "description": "当前有现实见证的状态。过去有过或预演出现，不等于当前已经拥有。",
+      "position": [
+        -1.15,
+        -1.8,
+        0
+      ],
+      "size": [
+        2,
+        1.4,
+        2.8
+      ],
+      "color": "#73b9ff",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-GOAL"
+      ],
+      "tags": []
+    },
+    "S-WANT": {
+      "id": "S-WANT",
+      "label": "目标 / 需要",
+      "kind": "structure",
+      "parentId": "M-STATE",
+      "status": "confirmed",
+      "description": "身体需要、好奇与已学偏好形成“要”。优先、耐心、子目标的动态机制仍待定。",
+      "position": [
+        1.15,
+        -1.8,
+        0
+      ],
+      "size": [
+        2,
+        1.4,
+        2.8
+      ],
+      "color": "#73b9ff",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-GOAL"
+      ],
+      "tags": []
+    },
+    "S-CONTEXT": {
+      "id": "S-CONTEXT",
+      "label": "调用 / 分支区分",
+      "kind": "structure",
+      "parentId": "S-SOURCE",
+      "status": "candidate",
+      "description": "同一概念权重的不同上下文可分。C1的分时/代际方案仅为候选，不视为固定对象表。",
+      "position": [
+        0,
+        0,
+        0.2
+      ],
+      "size": [
+        1.6,
+        1.1,
+        1.5
+      ],
+      "color": "#73b9ff",
+      "sourceIds": [
+        "SRC-C1"
+      ],
+      "decisionIds": [
+        "D-OPEN"
+      ],
+      "tags": []
+    },
+    "U-BIND": {
+      "id": "U-BIND",
+      "label": "绑定与身份续接 ?",
+      "kind": "placeholder",
+      "parentId": "S-INSTANCE",
+      "status": "unresolved",
+      "description": "多峰归组、同色实例交叉、分裂/合并和旧返回失效的统一动态承载仍未选定。",
+      "position": [
+        0,
+        0,
+        0.1
+      ],
+      "size": [
+        1.6,
+        1.1,
+        1.5
+      ],
+      "color": "#73b9ff",
+      "sourceIds": [
+        "SRC-B",
+        "SRC-C1"
+      ],
+      "decisionIds": [
+        "D-OPEN"
+      ],
+      "tags": []
+    }
+  },
+  "ports": [
+    {
+      "id": "P-SPACE-IN",
+      "nodeId": "S-SPACE",
+      "label": "空间证据",
+      "direction": "in",
+      "position": [
+        -2.2,
+        0,
+        0
+      ],
+      "signal": "observation",
+      "status": "confirmed",
+      "description": "空间证据",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-SPACE-OUT",
+      "nodeId": "S-SPACE",
+      "label": "多峰/关系",
+      "direction": "out",
+      "position": [
+        0,
+        -0.75,
+        0
+      ],
+      "signal": "spatial",
+      "status": "confirmed",
+      "description": "多峰/关系",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-INSTANCE-IN",
+      "nodeId": "S-INSTANCE",
+      "label": "归组线索",
+      "direction": "in",
+      "position": [
+        0,
+        0.8,
+        0
+      ],
+      "signal": "spatial",
+      "status": "unresolved",
+      "description": "归组线索",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-INSTANCE-CALL",
+      "nodeId": "S-INSTANCE",
+      "label": "实例调用",
+      "direction": "out",
+      "position": [
+        1,
+        0,
+        1.4
+      ],
+      "signal": "activity",
+      "status": "candidate",
+      "description": "实例调用",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-STATE"
+      ]
+    },
+    {
+      "id": "P-INSTANCE-RETURN",
+      "nodeId": "S-INSTANCE",
+      "label": "原处回映",
+      "direction": "in",
+      "position": [
+        1,
+        0,
+        -1.4
+      ],
+      "signal": "completion",
+      "status": "candidate",
+      "description": "原处回映",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-RETURN"
+      ]
+    },
+    {
+      "id": "P-SOURCE-IN",
+      "nodeId": "S-SOURCE",
+      "label": "实际经历",
+      "direction": "in",
+      "position": [
+        -1,
+        0,
+        1.4
+      ],
+      "signal": "experience",
+      "status": "confirmed",
+      "description": "实际经历",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-SOURCE-OUT",
+      "nodeId": "S-SOURCE",
+      "label": "时序/来源",
+      "direction": "out",
+      "position": [
+        1,
+        0,
+        0
+      ],
+      "signal": "temporal",
+      "status": "confirmed",
+      "description": "时序/来源",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-STATE-CAL",
+      "nodeId": "S-SOURCE",
+      "label": "状态反馈 · 三因子",
+      "direction": "out",
+      "position": [
+        1,
+        -0.5,
+        1.4
+      ],
+      "signal": "calibration",
+      "status": "confirmed",
+      "description": "状态反馈 · 三因子",
+      "sourceIds": [
+        "SRC-U"
+      ],
+      "decisionIds": [
+        "D-CAL0",
+        "D-MISSING"
+      ]
+    },
+    {
+      "id": "P-HAVE-IN",
+      "nodeId": "S-HAVE",
+      "label": "现实核对",
+      "direction": "in",
+      "position": [
+        -1,
+        0,
+        0
+      ],
+      "signal": "observation",
+      "status": "confirmed",
+      "description": "现实核对",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-GOAL"
+      ]
+    },
+    {
+      "id": "P-HAVE-OUT",
+      "nodeId": "S-HAVE",
+      "label": "当前已有",
+      "direction": "out",
+      "position": [
+        1,
+        -0.3,
+        1.4
+      ],
+      "signal": "goal",
+      "status": "confirmed",
+      "description": "当前已有",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-GOAL"
+      ]
+    },
+    {
+      "id": "P-WANT-IN",
+      "nodeId": "S-WANT",
+      "label": "需要/偏好",
+      "direction": "in",
+      "position": [
+        -1,
+        0,
+        0
+      ],
+      "signal": "body",
+      "status": "confirmed",
+      "description": "需要/偏好",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-GOAL"
+      ]
+    },
+    {
+      "id": "P-WANT-OUT",
+      "nodeId": "S-WANT",
+      "label": "目标条件",
+      "direction": "out",
+      "position": [
+        1,
+        0,
+        1.4
+      ],
+      "signal": "goal",
+      "status": "confirmed",
+      "description": "目标条件",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-GOAL"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "L-SPACE",
+      "label": "保位置稀疏活动",
+      "to": "P-SPACE-IN",
+      "signal": "observation",
+      "status": "candidate",
+      "description": "局部特征及位置映入空间候选。跨视角深度及参照的具体算法为候选。",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-STATE"
+      ],
+      "legacyRefs": [
+        "W01",
+        "W02"
+      ],
+      "tags": [],
+      "from": "P-IN-FEAT"
+    },
+    {
+      "id": "L-GROUP",
+      "label": "多峰 → 实例候选",
+      "to": "P-INSTANCE-IN",
+      "signal": "spatial",
+      "status": "unresolved",
+      "description": "一物多峰、多物相似峰与整体/部分的动态归组尚未确定。",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-OPEN"
+      ],
+      "legacyRefs": [
+        "W03"
+      ],
+      "tags": [],
+      "from": "P-SPACE-OUT"
+    },
+    {
+      "id": "L-CALL",
+      "label": "局部线索调用",
+      "to": "P-C0-IN",
+      "signal": "activity",
+      "status": "candidate",
+      "description": "保留实例、位置、关系与来源，把可复用局部内容送入同一概念网。具体编码未定。",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-STATE",
+        "D-CORE"
+      ],
+      "legacyRefs": [
+        "W04",
+        "W05"
+      ],
+      "tags": [],
+      "from": "P-INSTANCE-CALL"
+    },
+    {
+      "id": "L-RETURN",
+      "label": "补全沿对应返回",
+      "to": "P-INSTANCE-RETURN",
+      "signal": "completion",
+      "status": "candidate",
+      "description": "返回是信号通路；回到原实例/出处，不写成新观察。对应维护未定，没有返回强度。",
+      "sourceIds": [
+        "SRC-U",
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-RETURN"
+      ],
+      "legacyRefs": [
+        "W06"
+      ],
+      "tags": [],
+      "from": "P-C0-RETURN"
+    },
+    {
+      "id": "L-HAVE",
+      "label": "现实 → 已有",
+      "to": "P-HAVE-IN",
+      "signal": "observation",
+      "status": "candidate",
+      "description": "已有须由现实活动支持；判定的具体绑定机制待补。",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-GOAL"
+      ],
+      "legacyRefs": [
+        "W15"
+      ],
+      "tags": [],
+      "from": "P-SPACE-OUT"
+    },
+    {
+      "id": "L-HAVE-QUERY",
+      "label": "已有 → 缺失比较",
+      "to": "P-C2-GOAL",
+      "signal": "goal",
+      "status": "candidate",
+      "description": "与目标在同实例、参照、相对时间比较。具体联合编码未定。",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-GOAL"
+      ],
+      "legacyRefs": [
+        "W15"
+      ],
+      "tags": [],
+      "from": "P-HAVE-OUT",
+      "path": [
+        [
+          0,
+          -4,
+          5
+        ],
+        [
+          3,
+          5.8,
+          5
+        ]
+      ]
+    }
+  ],
+  "confirmed_space_notes": [
+    "S-SPACE status=confirmed: 一物可多峰；先有局部活动，再求归组。深度/参照/自运动歧义保留。",
+    "P-SPACE-IN confirmed observation; P-SPACE-OUT confirmed spatial",
+    "L-SPACE candidate: from P-IN-FEAT → P-SPACE-IN, 保位置稀疏活动",
+    "L-GROUP unresolved: P-SPACE-OUT → P-INSTANCE-IN",
+    "L-HAVE candidate also from P-SPACE-OUT → P-HAVE-IN"
+  ],
+  "status_policy": "mechanismValidated false; 候选不得写成确定结构; 小框是职责不等于五套独立物理网络"
+}

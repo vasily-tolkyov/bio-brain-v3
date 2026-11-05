@@ -1,0 +1,8 @@
+#!/bin/sh
+set -eu
+if ! git diff --quiet; then
+  printf '%s\n' '请先暂存或独立保存所有当前改动，再对完整提交快照执行检查。' >&2
+  exit 1
+fi
+node scripts/check.mjs >/dev/null
+npm test

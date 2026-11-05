@@ -1,0 +1,290 @@
+[
+  {
+    "id": "W01",
+    "source": "original_basis_closure_gaps_and_pro_brief_zh.md",
+    "line": 157,
+    "text": "| W01 | RGB及采样时刻→S1稀疏特征入口 | 读真实像素；本次采样写观察活动与可用范围 | 位置、通道、未观测/弱特征；不得输入对象真值；G02 |"
+  },
+  {
+    "id": "W02",
+    "source": "original_basis_closure_gaps_and_pro_brief_zh.md",
+    "line": 158,
+    "text": "| W02 | 稀疏特征与不同视角线索→S2/S3空间活动 | 每次新证据约束位置候选；继续保持未解决方向/深度歧义 | 原点参照、自运动、对应、深度来源；G03/G05 |"
+  },
+  {
+    "id": "W03",
+    "source": "original_basis_closure_gaps_and_pro_brief_zh.md",
+    "line": 159,
+    "text": "| W03 | 空间活动与局部共同结构→候选归组 | 读峰与轮廓/共同变化；迭代写归属候选，允许未归属 | 一物多峰、多物相似峰、整体/部分；G06/G10 |"
+  },
+  {
+    "id": "W04",
+    "source": "original_basis_closure_gaps_and_pro_brief_zh.md",
+    "line": 160,
+    "text": "| W04 | 实例局部特征与相对关系→L2原数值输入端口 | 发起调用时生成输入活动，保留对应关系；不预先写概念标签 | 跨位置内容如何对齐、实例/角色如何可分；G07/G08/G11 |"
+  },
+  {
+    "id": "W05",
+    "source": "original_basis_closure_gaps_and_pro_brief_zh.md",
+    "line": 161,
+    "text": "| W05 | 原端口活动→L1/L4学习和传播 | 事实呈现时按已核实的原规则更新；查询时只读还是会诱发学习，需G01/G13明确 | 直接输入与传播补全、共闪与单端、每份经历更新次数 |"
+  },
+  {
+    "id": "W06",
+    "source": "original_basis_closure_gaps_and_pro_brief_zh.md",
+    "line": 162,
+    "text": "| W06 | L3补全→L6逆映→S5原空间出处 | 本次调用完成后写“候选解释/补全”，经对应回到实例；返回前核验对应有效性 | 不写为新观察；不把已失效返回写到另一实例；G09 |"
+  },
+  {
+    "id": "W07",
+    "source": "original_basis_closure_gaps_and_pro_brief_zh.md",
+    "line": 163,
+    "text": "| W07 | H回与当前真实O/S→核对与归组修正 | 只在同参照、同相对时间及可观察部分比较；即时修正当前解释 | 未观测/不可见不能当反例；可观察区域的明确缺失可作候选反例，范围由G16判定；补全不是观察；G09/G13/G15 |"
+  },
+  {
+    "id": "W08",
+    "source": "original_basis_closure_gaps_and_pro_brief_zh.md",
+    "line": 164,
+    "text": "| W08 | 身体数值、实际改善/恶化→状态与经历 | 身体采样更新；作为可原生具备的感觉送原网络形成关联 | 饥饿强弱不直接包含“食物”或满足方法；G04/G19 |"
+  },
+  {
+    "id": "W09",
+    "source": "original_basis_closure_gaps_and_pro_brief_zh.md",
+    "line": 165,
+    "text": "| W09 | 教师或自主发出的原动作→动作经历入口 | 发出时登记尝试；若有回执再登记接口接受/执行状态；结果在后续观察中写 | 命令、执行、成功三者不合并；持续按住与新按边沿不同；G04/G27 |"
+  },
+  {
+    "id": "W10",
+    "source": "original_basis_closure_gaps_and_pro_brief_zh.md",
+    "line": 166,
+    "text": "| W10 | 前状态＋动作经历＋后观察→L5时间展开 | 以真实采样/动作时刻构造有序经历，再送原组合学习；时长/未确认保留 | 时间片、实例、关系角色、变化与持续状态；G11/G12/G14 |"
+  },
+  {
+    "id": "W11",
+    "source": "original_basis_closure_gaps_and_pro_brief_zh.md",
+    "line": 167,
+    "text": "| W11 | 当前条件＋未执行候选动作→L5/L3/L6条件预测 | 读同一知识，查询后续相对时间片；写预测活动及可核对期限 | 对象、候选分支、预测时间、未知/无变化；候选动作不进入现实past；G15 |"
+  },
+  {
+    "id": "W12",
+    "source": "original_basis_closure_gaps_and_pro_brief_zh.md",
+    "line": 168,
+    "text": "| W12 | 到期的预测与实际反馈→L7事实校准入口 | 新事实到来或核对期限到达后，形成正确条件下的原规则学习材料 | 不另设误差学习器；反例作用范围、无观察不作失败、旧经历不重复加证；G14/G16 |"
+  },
+  {
+    "id": "W13",
+    "source": "original_basis_closure_gaps_and_pro_brief_zh.md",
+    "line": 169,
+    "text": "| W13 | 具体经历→长期痕迹；当前状态/目标→按需回忆 | 重要经历形成可保留痕迹；被线索唤起时读旧经历，写回忆活动 | 事实、原解释、后解释、记忆缺失和猜测区分；G17/G18/G30 |"
+  },
+  {
+    "id": "W14",
+    "source": "original_basis_closure_gaps_and_pro_brief_zh.md",
+    "line": 170,
+    "text": "| W14 | 身体需要、未知、学习所得偏好→“要”通道 | 当前需要变化或探索机会形成时更新目标候选与优先活动 | “想要”、迫切程度、兴趣、外界规律可信度分别可读；G19/G20/G21 |"
+  },
+  {
+    "id": "W15",
+    "source": "original_basis_closure_gaps_and_pro_brief_zh.md",
+    "line": 171,
+    "text": "| W15 | 目标＋当前已有状态→L8上行补全与差集 | 对该目标实例反查；写缺失条件，不写“已拥有” | 同类目标与特定对象目标、当前已有与过去曾有；G22 |"
+  },
+  {
+    "id": "W16",
+    "source": "original_basis_closure_gaps_and_pro_brief_zh.md",
+    "line": 172,
+    "text": "| W16 | 非动作缺失→原“要”入口再次反查 | 递归产生子目标活动并保留父目标依赖；实际条件变化后重核 | 不能把缺件集合当已排序可执行计划；环路、冲突、不可达；G23 |"
+  },
+  {
+    "id": "W17",
+    "source": "original_basis_closure_gaps_and_pro_brief_zh.md",
+    "line": 173,
+    "text": "| W17 | 多种候选动作/子目标→同网预演 | 使用隔离的假设状态读原知识；只写该分支预测，定期接收现实更新 | 多分支不混合；现实变化可撤销过时分支；G24 |"
+  },
+  {
+    "id": "W18",
+    "source": "original_basis_closure_gaps_and_pro_brief_zh.md",
+    "line": 174,
+    "text": "| W18 | 候选后果差异及信息缺口→信息目标/行动偏好 | 提出能区分当前解释的观察或尝试，再经原目标反查接动作 | 不能预置正确鉴别动作；观测不可达与确有信息区分；G25 |"
+  },
+  {
+    "id": "W19",
+    "source": "original_basis_closure_gaps_and_pro_brief_zh.md",
+    "line": 175,
+    "text": "| W19 | 已着地的动作候选＋迫切性/目标进度→原动作竞争 | 保留当前实例、方向、持续时间候选；胜出后才送接口 | 候选叶如何对应原始玩家操作、互斥和同时按键、释放与中止；G26 |"
+  },
+  {
+    "id": "W20",
+    "source": "original_basis_closure_gaps_and_pro_brief_zh.md",
+    "line": 176,
+    "text": "| W20 | 接口执行→真实结果→W01/W08/W09 | 执行后继续采样；只在收到真实信息后更新状态、目标满足和原学习 | 延迟、阻挡、命令失败、只执行半段、无变化；G27 |"
+  },
+  {
+    "id": "W21",
+    "source": "original_basis_closure_gaps_and_pro_brief_zh.md",
+    "line": 177,
+    "text": "| W21 | 目标投入与真实有用进展→耐心/暂停/恢复 | 持续投入消耗；新有用信息可递减地补充；阈值触发重选 | 目标进展不是任意新奇，重选仍服从迫切性；G28/G29 |"
+  },
+  {
+    "id": "W22",
+    "source": "original_basis_closure_gaps_and_pro_brief_zh.md",
+    "line": 178,
+    "text": "| W22 | 已记疑问、暂停目标、新条件→再次唤起 | 不冲突疑问暂存；合适空闲或相关变化后恢复 | 空闲调查具体疑问属于V1；不等于二阶段系统巩固；G28 |"
+  },
+  {
+    "id": "W23",
+    "source": "original_basis_closure_gaps_and_pro_brief_zh.md",
+    "line": 179,
+    "text": "| W23 | 记住的地点与沿途线索→当前空间状态及子目标 | 饥饿唤起经历，按已学动作与地标逐步返回；到达后重新观察 | 记忆地点不是全知导航；食物已不在时必须修正；G31 |"
+  },
+  {
+    "id": "W24",
+    "source": "original_basis_closure_gaps_and_pro_brief_zh.md",
+    "line": 180,
+    "text": "| W24 | 背包/工作台画面、动作与结果→同一状态/经历/概念链 | 界面切换时更新参照与可见状态；尝试后形成真实经历 | UI位置、手上/世界物品对应与配方均不能免费给定；G32 |"
+  },
+  {
+    "id": "W01",
+    "source": "original_basis_theoretical_solution_C1_zh.md",
+    "line": 1187,
+    "text": "| W01 | 实际RGB及可用位→O_e/A_e再生保持；内容无关局部窗口→数值局部特征 | 像素/规范通道值/真实秒；只有新采样造e；弱项被原topK删除时仍可在O中保留，过期回收后标缺失 | S；多个重看窗口为Q。事实窗口的训练次数不能自行增加，G02/G14 |"
+  },
+  {
+    "id": "W02",
+    "source": "original_basis_theoretical_solution_C1_zh.md",
+    "line": 1188,
+    "text": "| W02 | 带出处局部特征＋真实不同视角→Γ、匹配h及Z_e空间候选 | 单目射线、未知尺度；动作命令只作候选条件，不能直接平移相机状态；无视差保持深度未知 | S；推断深度不伪装真值训练，G03/G05 |"
+  },
+  {
+    "id": "W03",
+    "source": "original_basis_theoretical_solution_C1_zh.md",
+    "line": 1189,
+    "text": "| W03 | Z、局部邻接/共同变化、真实残差及原补全→B_h及整体/部分关系活动 | 对同一证据的互斥叶归属竞争；层级包含另存，未知归属持续可用；真证据更新时重算 | S＋Q；不同分割假设不各训练一份事实，G06/G10 |"
+  },
+  {
+    "id": "W04",
+    "source": "original_basis_theoretical_solution_C1_zh.md",
+    "line": 1190,
+    "text": "| W04 | B_h、g及局部相对特征/关系→Φ_g→L2原端口；同步保持r_j | 坐标/角色/真实τ/原来源联合；绝对出处留在状态；原局部对比/topK后须可区分相关输入 | Q或L意向；Φ改变输入统计公开登记；多g查询不重复训练，G07/G08/G11 |"
+  },
+  {
+    "id": "W05",
+    "source": "original_basis_theoretical_solution_C1_zh.md",
+    "line": 1191,
+    "text": "| W05 | 原端口及实际有效呈现→原L1/L4训练/传播 | 只按原σ、域、载色、频次和顺序更新Θ/ξ；缺测如何影响单端必须G01回答 | 唯一L入口之一；任何新增门控都列影响，不因“公式未改”免审 |"
+  },
+  {
+    "id": "W06",
+    "source": "original_basis_theoretical_solution_C1_zh.md",
+    "line": 1192,
+    "text": "| W06 | 原补全c→D_orig局部图样→R_g、r_j→候选H回_j | 核验证据/解释/原核版本与代际；失效结果拒绝或有证据地重新变换；缺角始终Pred | Q→S；不写O、不产生新真实支持，G09 |"
+  },
+  {
+    "id": "W07",
+    "source": "original_basis_theoretical_solution_C1_zh.md",
+    "line": 1193,
+    "text": "| W07 | H回/到期预测＋同参照真实O→V域核对→解释、归属、疑问修订 | 传感器有效不等于结果可观察；时窗、可见性和检测机会合格才判反例；缺测另立群 | S；核对本身不直接改ρ；合格真实材料经W12按原L，G09/G15/G16 |"
+  },
+  {
+    "id": "W08",
+    "source": "original_basis_theoretical_solution_C1_zh.md",
+    "line": 1194,
+    "text": "| W08 | 实际身体数值及相邻真实变化→身体/改善活动＋E | 保留原单位、标定方向及时间；d/r不得由预演替写；需要信号没有食物意义 | 实际新样本经原L；动机不调η或重复呈现，G04/G19 |"
+  },
+  {
+    "id": "W09",
+    "source": "original_basis_theoretical_solution_C1_zh.md",
+    "line": 1195,
+    "text": "| W09 | 教师/自主已提交原始u、真实释放、可选回执→Cmd/Ack/E | 发令时只记issued；接口接受只记accepted；长按保持续，只有真实转换造新边沿 | L的实际动作材料；待试u仅在Q分支，G04/G26/G27 |"
+  },
+  {
+    "id": "W10",
+    "source": "original_basis_theoretical_solution_C1_zh.md",
+    "line": 1196,
+    "text": "| W10 | 前后真实状态、动作/回执、持续/边沿与Λ→U→L5原展开 | 真实Δt、参与者角色、覆盖/原来源必须联合可读；统一色不能消除索引；本次用途另保留 | 原L5→原L；切片/聚合次数依A_evt，G11/G12/G14 |"
+  },
+  {
+    "id": "W11",
+    "source": "original_basis_theoretical_solution_C1_zh.md",
+    "line": 1197,
+    "text": "| W11 | 当前条件＋待试动作＋显式未知假设→干净正向ξ→原未来片H_j | 不从目标钳制ξ复制；保存假设分支、到期窗、实例与Θ版；“未返回”不等于无变化 | Q；m=条件预测，不写现实past，G15/G24 |"
+  },
+  {
+    "id": "W12",
+    "source": "original_basis_theoretical_solution_C1_zh.md",
+    "line": 1198,
+    "text": "| W12 | 合格实际核对＋实际条件差异→原事实呈现意向 | 反例材料与当时条件绑定；未检验不计失败；新假设不消除已经成立的反例 | 仅原F±/U_orig；绝不按误差另写W/η，G14/G16 |"
+  },
+  {
+    "id": "W13",
+    "source": "original_basis_theoretical_solution_C1_zh.md",
+    "line": 1199,
+    "text": "| W13 | 真实E及匿名p_e→原内容—经历地址组合；当前线索→原补全p_e→通用代际匹配→读有效E | 保存当时身体/地点/动作来源；原样本、旧解释、新解释分开；缺细节读为缺失；已写Θ的完整经历码在有限域内不重用 | 首次原L按A_evt，地址端口/配对影响公开；按需回忆Q。永久知识更正另见G39 |"
+  },
+  {
+    "id": "W14",
+    "source": "original_basis_theoretical_solution_C1_zh.md",
+    "line": 1200,
+    "text": "| W14 | 当前需要、未决证据、原网读出的兴趣→目标群q/a | 需要/兴趣/未知与事实可靠性不同量；只生成要，不制造当前结果 | S＋Q；偏好内容只由真实经历的原L形成，G19–G22 |"
+  },
+  {
+    "id": "W15",
+    "source": "original_basis_theoretical_solution_C1_zh.md",
+    "line": 1201,
+    "text": "| W15 | 实例化目标＋当前已有见证→L8→候选完整组合与缺件 | 按同实例/参照/目标τ比较；过去拥有不满足现在，未知have不冒充已证缺失 | Q→S；不写事实，G22/G23 |"
+  },
+  {
+    "id": "W16",
+    "source": "original_basis_theoretical_solution_C1_zh.md",
+    "line": 1202,
+    "text": "| W16 | 原返回的非动作缺件＋父目标→暂态D→子目标再钳L8 | 保父子/替代路线及版本；相同目标＋绑定＋相关状态未变的祖先回路抑制；真实新进展可解除 | Q；没有原返回的成功边不由D自造，G23 |"
+  },
+  {
+    "id": "W17",
+    "source": "original_basis_theoretical_solution_C1_zh.md",
+    "line": 1203,
+    "text": "| W17 | 候选动作/路线＋现实基态→隔离Z^(b)/ξ_b→原预演 | 分支实际时间和假想τ分开；现实采样按最低配额运行；相关新证据立即取消旧执行资格 | Q；分支不训练独立Θ，G24/G33 |"
+  },
+  {
+    "id": "W18",
+    "source": "original_basis_theoretical_solution_C1_zh.md",
+    "line": 1204,
+    "text": "| W18 | 各分支可观察后果差异＋当前缺口→信息目标→原反查 | 差异须大于噪声/可用性容差；Obs(a)未知不计确定收益；无已学动作可无保证探索 | Q比较＋S；真正新观察之后才L，G25 |"
+  },
+  {
+    "id": "W19",
+    "source": "original_basis_theoretical_solution_C1_zh.md",
+    "line": 1205,
+    "text": "| W19 | 已着地的原始动作候选、当前现实前件、目标优先→竞争→接口数值 | 动作组保持方向/幅度/持续与释放；互斥路线不相加；抽象动作名无逆映就未着地 | 胜出不等于执行；接口提交后走W09，G26 |"
+  },
+  {
+    "id": "W20",
+    "source": "original_basis_theoretical_solution_C1_zh.md",
+    "line": 1206,
+    "text": "| W20 | 实际发令/接受/释放→持续RGB/身体采样→W01/W08/W09 | 分开延迟、被挡、半段、提前达成；未发令后续步骤不得入E；停止按接口真实回执处理 | 新真实反馈原L；计划不补历史，G27 |"
+  },
+  {
+    "id": "W21",
+    "source": "original_basis_theoretical_solution_C1_zh.md",
+    "line": 1207,
+    "text": "| W21 | 真投入时间＋新有用见证→P_g/N_g/全局投入状态→暂停/重选 | 刷新Aλ^N递减，N到界后额度0；已知重复I=0；暂停保历史，切换无瞬间充满；需要目标继续存在 | S；不改变原η/H写入/事实权重，G29 |"
+  },
+  {
+    "id": "W22",
+    "source": "original_basis_theoretical_solution_C1_zh.md",
+    "line": 1208,
+    "text": "| W22 | 暂存疑问/暂停目标＋相关新证据或任务空闲→恢复脉冲 | 慢q与快注意分开；恢复前重核当前条件；超载可延期，不能声称有限时必查所有疑问 | S＋Q；V1具体疑问调查，不后移为二阶段巩固，G28 |"
+  },
+  {
+    "id": "W23",
+    "source": "original_basis_theoretical_solution_C1_zh.md",
+    "line": 1209,
+    "text": "| W23 | 原召回地点/沿途实际线索＋当前Z→L8中间地标→原动作叶 | 内部局部参照，不传真值导航；每段重新观察；只学单向去程不自动可逆；到达核实现存 | Q组织，真正行走/核对才L，G31 |"
+  },
+  {
+    "id": "W24",
+    "source": "original_basis_theoretical_solution_C1_zh.md",
+    "line": 1210,
+    "text": "| W24 | 界面/手上/世界RGB变化＋真实操作→同一B/E/U/Θ链 | 屏幕/局部参照可变化；物品同一性由经历候选形成；文字、配方、数量不可免费给定 | 原L；自由尝试不要求成熟配方全覆盖，G32/G40 |"
+  }
+]
