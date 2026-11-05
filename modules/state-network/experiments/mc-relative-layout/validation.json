@@ -1,0 +1,1903 @@
+{
+  "mechanismValidated": false,
+  "check_count": 247,
+  "passed": 247,
+  "failed": 0,
+  "depth_pair_count": 28,
+  "checks": [
+    {
+      "description": "输入 001：夹具可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 001：输出可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 001：符合实际相机及像素几何",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 001：输出只含测量、方程数值、关系及依据",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 001：A 未改写射线或产生测深",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 001：用叉积独立核对沉积",
+      "passed": true,
+      "detail": "max_error=7.11e-15"
+    },
+    {
+      "description": "输入 001：独立核对 ray_left_right",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 001：独立核对 coordinate_presence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 001：独立核对 pair_coverage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 001：独立核对 no_extra_depth",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 001：独立核对 coordinates",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 001：独立核对 near_far",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 001：独立核对 cartesian_x",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 001：独立核对 range_near_far",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 002：夹具可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 002：输出可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 002：符合实际相机及像素几何",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 002：输出只含测量、方程数值、关系及依据",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 002：A 未改写射线或产生测深",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 002：用叉积独立核对沉积",
+      "passed": true,
+      "detail": "max_error=7.11e-15"
+    },
+    {
+      "description": "输入 002：独立核对 ray_left_right",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 002：独立核对 coordinate_presence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 002：独立核对 pair_coverage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 002：独立核对 no_extra_depth",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 002：独立核对 coordinates",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 002：独立核对 near_far",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 002：独立核对 cartesian_x",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 002：独立核对 range_near_far",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 003：夹具可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 003：输出可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 003：符合实际相机及像素几何",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 003：输出只含测量、方程数值、关系及依据",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 003：A 未改写射线或产生测深",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 003：用叉积独立核对沉积",
+      "passed": true,
+      "detail": "max_error=7.11e-15"
+    },
+    {
+      "description": "输入 003：独立核对 ray_left_right",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 003：独立核对 coordinate_presence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 003：独立核对 pair_coverage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 003：独立核对 no_extra_depth",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 003：独立核对 coordinates",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 003：独立核对 near_far",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 003：独立核对 cartesian_x",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 003：独立核对 range_near_far",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 004：夹具可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 004：输出可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 004：符合实际相机及像素几何",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 004：输出只含测量、方程数值、关系及依据",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 004：A 未改写射线或产生测深",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 004：用叉积独立核对沉积",
+      "passed": true,
+      "detail": "max_error=7.11e-15"
+    },
+    {
+      "description": "输入 004：独立核对 ray_left_right",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 004：独立核对 coordinate_presence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 004：独立核对 pair_coverage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 004：独立核对 no_extra_depth",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 005：夹具可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 005：输出可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 005：符合实际相机及像素几何",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 005：输出只含测量、方程数值、关系及依据",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 005：A 未改写射线或产生测深",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 005：用叉积独立核对沉积",
+      "passed": true,
+      "detail": "max_error=1.55e-15"
+    },
+    {
+      "description": "输入 005：独立核对 ray_left_right",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 005：独立核对 coordinate_presence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 005：独立核对 pair_coverage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 005：独立核对 no_extra_depth",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 005：独立核对 coordinates",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 005：独立核对 near_far",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 005：独立核对 cartesian_x",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 005：独立核对 range_near_far",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 006：夹具可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 006：输出可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 006：符合实际相机及像素几何",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 006：输出只含测量、方程数值、关系及依据",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 006：A 未改写射线或产生测深",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 006：用叉积独立核对沉积",
+      "passed": true,
+      "detail": "max_error=1.55e-15"
+    },
+    {
+      "description": "输入 006：独立核对 ray_left_right",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 006：独立核对 coordinate_presence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 006：独立核对 pair_coverage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 006：独立核对 no_extra_depth",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 007：夹具可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 007：输出可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 007：符合实际相机及像素几何",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 007：输出只含测量、方程数值、关系及依据",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 007：A 未改写射线或产生测深",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 007：用叉积独立核对沉积",
+      "passed": true,
+      "detail": "max_error=7.11e-15"
+    },
+    {
+      "description": "输入 007：独立核对 ray_left_right",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 007：独立核对 coordinate_presence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 007：独立核对 pair_coverage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 007：独立核对 no_extra_depth",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 008：夹具可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 008：输出可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 008：符合实际相机及像素几何",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 008：输出只含测量、方程数值、关系及依据",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 008：A 未改写射线或产生测深",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 008：用叉积独立核对沉积",
+      "passed": true,
+      "detail": "max_error=2.22e-15"
+    },
+    {
+      "description": "输入 008：独立核对 ray_left_right",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 008：独立核对 coordinate_presence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 008：独立核对 pair_coverage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 008：独立核对 no_extra_depth",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 008：独立核对 coordinates",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 008：独立核对 near_far",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 008：独立核对 cartesian_x",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 008：独立核对 range_near_far",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 009：夹具可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 009：输出可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 009：符合实际相机及像素几何",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 009：输出只含测量、方程数值、关系及依据",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 009：A 未改写射线或产生测深",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 009：用叉积独立核对沉积",
+      "passed": true,
+      "detail": "max_error=3.55e-15"
+    },
+    {
+      "description": "输入 009：独立核对 ray_left_right",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 009：独立核对 coordinate_presence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 009：独立核对 pair_coverage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 009：独立核对 no_extra_depth",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 009：独立核对 coordinates",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 009：独立核对 near_far",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 009：独立核对 cartesian_x",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 009：独立核对 range_near_far",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 010：夹具可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 010：输出可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 010：符合实际相机及像素几何",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 010：输出只含测量、方程数值、关系及依据",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 010：A 未改写射线或产生测深",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 010：用叉积独立核对沉积",
+      "passed": true,
+      "detail": "max_error=7.11e-15"
+    },
+    {
+      "description": "输入 010：独立核对 ray_left_right",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 010：独立核对 coordinate_presence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 010：独立核对 pair_coverage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 010：独立核对 no_extra_depth",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 011：夹具可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 011：输出可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 011：符合实际相机及像素几何",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 011：输出只含测量、方程数值、关系及依据",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 011：A 未改写射线或产生测深",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 011：用叉积独立核对沉积",
+      "passed": true,
+      "detail": "max_error=7.11e-15"
+    },
+    {
+      "description": "输入 011：独立核对 ray_left_right",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 011：独立核对 coordinate_presence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 011：独立核对 pair_coverage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 011：独立核对 no_extra_depth",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 011：独立核对 coordinates",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 012：夹具可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 012：输出可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 012：符合实际相机及像素几何",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 012：输出只含测量、方程数值、关系及依据",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 012：A 未改写射线或产生测深",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 012：用叉积独立核对沉积",
+      "passed": true,
+      "detail": "max_error=7.11e-15"
+    },
+    {
+      "description": "输入 012：独立核对 ray_left_right",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 012：独立核对 coordinate_presence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 012：独立核对 pair_coverage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 012：独立核对 no_extra_depth",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 013：夹具可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 013：输出可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 013：符合实际相机及像素几何",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 013：输出只含测量、方程数值、关系及依据",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 013：A 未改写射线或产生测深",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 013：用叉积独立核对沉积",
+      "passed": true,
+      "detail": "max_error=0"
+    },
+    {
+      "description": "输入 013：独立核对 ray_left_right",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 013：独立核对 coordinate_presence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 013：独立核对 pair_coverage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 013：独立核对 no_extra_depth",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "运行时只导入已列明的标准库",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "运行时无文件读取或动态代码入口",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 001：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=0"
+    },
+    {
+      "description": "输入 002：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=0"
+    },
+    {
+      "description": "输入 003：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=0"
+    },
+    {
+      "description": "输入 004：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=0"
+    },
+    {
+      "description": "输入 005：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=0"
+    },
+    {
+      "description": "输入 006：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=0"
+    },
+    {
+      "description": "输入 007：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=0"
+    },
+    {
+      "description": "输入 008：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=0"
+    },
+    {
+      "description": "输入 009：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=0"
+    },
+    {
+      "description": "输入 010：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=0"
+    },
+    {
+      "description": "输入 011：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=0"
+    },
+    {
+      "description": "输入 012：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=0"
+    },
+    {
+      "description": "输入 013：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=0"
+    },
+    {
+      "description": "输入 014：修改后的输入可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 014：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=2"
+    },
+    {
+      "description": "输入 015：修改后的输入可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 015：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=2"
+    },
+    {
+      "description": "输入 016：修改后的输入可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 016：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=2"
+    },
+    {
+      "description": "输入 017：修改后的输入可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 017：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=2"
+    },
+    {
+      "description": "输入 018：修改后的输入可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 018：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=2"
+    },
+    {
+      "description": "输入 019：修改后的输入可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 019：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=2"
+    },
+    {
+      "description": "输入 020：修改后的输入可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 020：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=2"
+    },
+    {
+      "description": "输入 021：修改后的输入可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 021：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=2"
+    },
+    {
+      "description": "输入 022：修改后的输入可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 022：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=2"
+    },
+    {
+      "description": "输入 023：修改后的输入可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 023：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=2"
+    },
+    {
+      "description": "输入 024：修改后的输入可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 024：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=2"
+    },
+    {
+      "description": "输入 025：修改后的输入可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 025：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=2"
+    },
+    {
+      "description": "输入 026：修改后的输入可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 026：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=2"
+    },
+    {
+      "description": "输入 027：修改后的输入可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 027：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=2"
+    },
+    {
+      "description": "输入 028：修改后的输入可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 028：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=2"
+    },
+    {
+      "description": "输入 029：修改后的输入可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 029：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=2"
+    },
+    {
+      "description": "输入 030：修改后的输入可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 030：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=2"
+    },
+    {
+      "description": "输入 031：修改后的输入可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 031：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=2"
+    },
+    {
+      "description": "输入 032：修改后的输入可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 032：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=2"
+    },
+    {
+      "description": "输入 033：修改后的输入可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 033：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=2"
+    },
+    {
+      "description": "输入 034：修改后的输入可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 034：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=2"
+    },
+    {
+      "description": "输入 035：修改后的输入可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "输入 035：隔离 CLI 实际行为及访问范围",
+      "passed": true,
+      "detail": "exit=2"
+    },
+    {
+      "description": "直接向 A 的 ray.depth 塞值时解释函数抛出异常",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "数值间隔不足时不产生该关系字段",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "数值相等时产生相等关系",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "报告中的检查数量可重算",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "深度比较数量只计算有数值依据的物体对",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "报告数值核对：001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "报告数值核对：002",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "报告数值核对：003",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "报告数值核对：004",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "报告数值核对：005",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "报告数值核对：006",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "报告数值核对：007",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "报告数值核对：008",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "报告数值核对：009",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "报告数值核对：010",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "报告数值核对：011",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "报告数值核对：012",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "报告数值核对：013",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "保护文件核对：architecture-sha256",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "保护文件核对：all-existing-files-unchanged",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "保护文件核对：input-content-and-inventory",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "保护文件核对：06-series-unchanged",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "保护文件核对：new-files-within-requested-paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "Python 语法核对：fixtures.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "Python 语法核对：pipeline.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "Python 语法核对：run.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "Python 语法核对：runtime.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "Python 语法核对：scope.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "Python 语法核对：scoring.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "Python 语法核对：verify.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "全部机制标记保持 false",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "两份文档最后一行符合要求",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "description": "原目录产物全部重算且未留下旧标签文件",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "equation_checks": {
+    "001": {
+      "ray_left_right": true,
+      "coordinate_presence": true,
+      "pair_coverage": true,
+      "no_extra_depth": true,
+      "coordinates": true,
+      "near_far": true,
+      "cartesian_x": true,
+      "range_near_far": true,
+      "coordinate_count": 4,
+      "depth_pair_count": 6,
+      "max_coordinate_error": 0.0
+    },
+    "002": {
+      "ray_left_right": true,
+      "coordinate_presence": true,
+      "pair_coverage": true,
+      "no_extra_depth": true,
+      "coordinates": true,
+      "near_far": true,
+      "cartesian_x": true,
+      "range_near_far": true,
+      "coordinate_count": 4,
+      "depth_pair_count": 6,
+      "max_coordinate_error": 0.0
+    },
+    "003": {
+      "ray_left_right": true,
+      "coordinate_presence": true,
+      "pair_coverage": true,
+      "no_extra_depth": true,
+      "coordinates": true,
+      "near_far": true,
+      "cartesian_x": true,
+      "range_near_far": true,
+      "coordinate_count": 4,
+      "depth_pair_count": 6,
+      "max_coordinate_error": 0.0
+    },
+    "004": {
+      "ray_left_right": true,
+      "coordinate_presence": true,
+      "pair_coverage": true,
+      "no_extra_depth": true,
+      "coordinate_count": 0,
+      "depth_pair_count": 0
+    },
+    "005": {
+      "ray_left_right": true,
+      "coordinate_presence": true,
+      "pair_coverage": true,
+      "no_extra_depth": true,
+      "coordinates": true,
+      "near_far": true,
+      "cartesian_x": true,
+      "range_near_far": true,
+      "coordinate_count": 4,
+      "depth_pair_count": 6,
+      "max_coordinate_error": 0.0
+    },
+    "006": {
+      "ray_left_right": true,
+      "coordinate_presence": true,
+      "pair_coverage": true,
+      "no_extra_depth": true,
+      "coordinate_count": 0,
+      "depth_pair_count": 0
+    },
+    "007": {
+      "ray_left_right": true,
+      "coordinate_presence": true,
+      "pair_coverage": true,
+      "no_extra_depth": true,
+      "coordinate_count": 0,
+      "depth_pair_count": 0
+    },
+    "008": {
+      "ray_left_right": true,
+      "coordinate_presence": true,
+      "pair_coverage": true,
+      "no_extra_depth": true,
+      "coordinates": true,
+      "near_far": true,
+      "cartesian_x": true,
+      "range_near_far": true,
+      "coordinate_count": 3,
+      "depth_pair_count": 3,
+      "max_coordinate_error": 0.0
+    },
+    "009": {
+      "ray_left_right": true,
+      "coordinate_presence": true,
+      "pair_coverage": true,
+      "no_extra_depth": true,
+      "coordinates": true,
+      "near_far": true,
+      "cartesian_x": true,
+      "range_near_far": true,
+      "coordinate_count": 2,
+      "depth_pair_count": 1,
+      "max_coordinate_error": 0.0
+    },
+    "010": {
+      "ray_left_right": true,
+      "coordinate_presence": true,
+      "pair_coverage": true,
+      "no_extra_depth": true,
+      "coordinate_count": 0,
+      "depth_pair_count": 0
+    },
+    "011": {
+      "ray_left_right": true,
+      "coordinate_presence": true,
+      "pair_coverage": true,
+      "no_extra_depth": true,
+      "coordinates": true,
+      "coordinate_count": 1,
+      "depth_pair_count": 0,
+      "max_coordinate_error": 0.0
+    },
+    "012": {
+      "ray_left_right": true,
+      "coordinate_presence": true,
+      "pair_coverage": true,
+      "no_extra_depth": true,
+      "coordinate_count": 0,
+      "depth_pair_count": 0
+    },
+    "013": {
+      "ray_left_right": true,
+      "coordinate_presence": true,
+      "pair_coverage": true,
+      "no_extra_depth": true,
+      "coordinate_count": 0,
+      "depth_pair_count": 0
+    }
+  },
+  "cli_runs": [
+    {
+      "input_number": "001",
+      "exit_code": 0,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "001/input.json",
+        "001/output.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "002",
+      "exit_code": 0,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "002/input.json",
+        "002/output.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "003",
+      "exit_code": 0,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "003/input.json",
+        "003/output.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "004",
+      "exit_code": 0,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "004/input.json",
+        "004/output.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "005",
+      "exit_code": 0,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "005/input.json",
+        "005/output.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "006",
+      "exit_code": 0,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "006/input.json",
+        "006/output.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "007",
+      "exit_code": 0,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "007/input.json",
+        "007/output.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "008",
+      "exit_code": 0,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "008/input.json",
+        "008/output.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "009",
+      "exit_code": 0,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "009/input.json",
+        "009/output.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "010",
+      "exit_code": 0,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "010/input.json",
+        "010/output.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "011",
+      "exit_code": 0,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "011/input.json",
+        "011/output.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "012",
+      "exit_code": 0,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "012/input.json",
+        "012/output.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "013",
+      "exit_code": 0,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "013/input.json",
+        "013/output.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "014",
+      "exit_code": 2,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "014/input.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "015",
+      "exit_code": 2,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "015/input.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "016",
+      "exit_code": 2,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "016/input.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "017",
+      "exit_code": 2,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "017/input.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "018",
+      "exit_code": 2,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "018/input.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "019",
+      "exit_code": 2,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "019/input.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "020",
+      "exit_code": 2,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "020/input.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "021",
+      "exit_code": 2,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "021/input.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "022",
+      "exit_code": 2,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "022/input.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "023",
+      "exit_code": 2,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "023/input.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "024",
+      "exit_code": 2,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "024/input.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "025",
+      "exit_code": 2,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "025/input.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "026",
+      "exit_code": 2,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "026/input.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "027",
+      "exit_code": 2,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "027/input.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "028",
+      "exit_code": 2,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "028/input.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "029",
+      "exit_code": 2,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "029/input.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "030",
+      "exit_code": 2,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "030/input.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "031",
+      "exit_code": 2,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "031/input.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "032",
+      "exit_code": 2,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "032/input.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "033",
+      "exit_code": 2,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "033/input.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "034",
+      "exit_code": 2,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "034/input.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    },
+    {
+      "input_number": "035",
+      "exit_code": 2,
+      "accesses": [
+        "pipeline.py",
+        "pipeline.py",
+        "pipeline.py",
+        "__pycache__/runtime.cpython-313.pyc",
+        "runtime.py",
+        "035/input.json"
+      ],
+      "checks_passed": 1,
+      "checks_failed": 0
+    }
+  ],
+  "scope": {
+    "mechanismValidated": false,
+    "architecture_sha256": "1daf69c998bfded08a077fc8844d0354d45c606e959fde75b2ec644624adc5bb",
+    "protected_file_count": 598,
+    "input_file_count": 6,
+    "series_06_file_count": 3,
+    "mismatches": [],
+    "unauthorized_state_network_additions": [],
+    "checks": {
+      "architecture-sha256": true,
+      "all-existing-files-unchanged": true,
+      "input-content-and-inventory": true,
+      "06-series-unchanged": true,
+      "new-files-within-requested-paths": true
+    }
+  }
+}

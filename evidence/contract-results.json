@@ -1,0 +1,123 @@
+{
+  "version": "1.1.0",
+  "validation": {
+    "valid": true,
+    "errors": []
+  },
+  "rules": {
+    "scope": "architecture-contracts-only",
+    "passed": true,
+    "checked": 7,
+    "failed": [],
+    "rules": [
+      {
+        "id": "R-CAL0",
+        "checks": [
+          {
+            "type": "edge-target",
+            "edgeId": "L-CAL0",
+            "nodeId": "S-C0-SYN",
+            "passed": true
+          },
+          {
+            "type": "edge-decision",
+            "edgeId": "L-CAL0",
+            "decisionId": "D-CAL0",
+            "passed": true
+          }
+        ],
+        "formalized": true
+      },
+      {
+        "id": "R-CALN",
+        "checks": [
+          {
+            "type": "edge-target",
+            "edgeId": "L-CAL1",
+            "nodeId": "S-C1-SYN",
+            "passed": true
+          },
+          {
+            "type": "edge-target",
+            "edgeId": "L-CAL2",
+            "nodeId": "S-C2-SYN",
+            "passed": true
+          },
+          {
+            "type": "edge-decision",
+            "edgeId": "L-CAL1",
+            "decisionId": "D-CALN",
+            "passed": true
+          },
+          {
+            "type": "edge-decision",
+            "edgeId": "L-CAL2",
+            "decisionId": "D-CALN",
+            "passed": true
+          }
+        ],
+        "formalized": true
+      },
+      {
+        "id": "R-RETURN",
+        "checks": [
+          {
+            "type": "edge-decision",
+            "edgeId": "L-RETURN",
+            "decisionId": "D-RETURN",
+            "passed": true
+          }
+        ],
+        "formalized": true
+      },
+      {
+        "id": "R-LEARN",
+        "checks": [],
+        "formalized": false
+      },
+      {
+        "id": "R-MISSING",
+        "checks": [],
+        "formalized": false
+      },
+      {
+        "id": "R-CREDIT",
+        "checks": [],
+        "formalized": false
+      }
+    ],
+    "unresolved": [
+      {
+        "caseId": "CASE-OBS",
+        "stepId": "STEP-OBS-3",
+        "note": "责任份额、三因子完整式与H规格未全定；不得伪造数值轨迹。"
+      },
+      {
+        "caseId": "CASE-OCCLUDE",
+        "stepId": "STEP-OCC-2",
+        "note": "仍须合计ρ普通学习、三因子、预算与新H生长，不把一次负项等同净下降。"
+      },
+      {
+        "caseId": "CASE-LAMP-CREDIT",
+        "stepId": "STEP-LAMP-3",
+        "note": "仅按参与追责是否伤及正确C0视觉内容？责任归属尚未验收。"
+      },
+      {
+        "caseId": "CASE-LAMP-CREDIT",
+        "stepId": "STEP-LAMP-4",
+        "note": "下层仍以原非三因子校准上层；尚未证明错误高层关系会被恰当修改。§10闭环不标通过。"
+      },
+      {
+        "caseId": "CASE-GOAL",
+        "stepId": "STEP-GOAL-2",
+        "note": "内部预演不学习；完整分支保持、顺序与停止条件未定。"
+      },
+      {
+        "caseId": "CASE-GOAL",
+        "stepId": "STEP-GOAL-3",
+        "note": "不能把候选动作画成已执行成功；动作选择与竞争机制尚待设计。"
+      }
+    ],
+    "mechanismValidated": false
+  }
+}

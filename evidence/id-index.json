@@ -1,0 +1,1400 @@
+{
+  "architectureId": "concept-state-network",
+  "version": "1.1.0",
+  "index": [
+    {
+      "id": "M-ENV",
+      "kind": "nodes",
+      "label": "环境",
+      "status": "confirmed",
+      "sources": [
+        "SRC-P"
+      ]
+    },
+    {
+      "id": "M-IN",
+      "kind": "nodes",
+      "label": "感觉入口",
+      "status": "confirmed",
+      "sources": [
+        "SRC-P",
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "M-STATE",
+      "kind": "nodes",
+      "label": "状态网络",
+      "status": "confirmed",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "M-CONCEPT",
+      "kind": "nodes",
+      "label": "概念网络 · 同一基座",
+      "status": "confirmed",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "M-ACTION",
+      "kind": "nodes",
+      "label": "动作接口",
+      "status": "confirmed",
+      "sources": [
+        "SRC-P",
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "S-IN-SPARSE",
+      "kind": "nodes",
+      "label": "稀疏 / 位置保留",
+      "status": "candidate",
+      "sources": [
+        "SRC-B",
+        "SRC-C1"
+      ]
+    },
+    {
+      "id": "S-IN-BODY",
+      "kind": "nodes",
+      "label": "身体 / 时钟",
+      "status": "confirmed",
+      "sources": [
+        "SRC-P"
+      ]
+    },
+    {
+      "id": "S-SPACE",
+      "kind": "nodes",
+      "label": "空间多峰",
+      "status": "confirmed",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "S-INSTANCE",
+      "kind": "nodes",
+      "label": "实例 / 对应",
+      "status": "unresolved",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "S-SOURCE",
+      "kind": "nodes",
+      "label": "出处 / 经历",
+      "status": "confirmed",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "S-HAVE",
+      "kind": "nodes",
+      "label": "已有状态",
+      "status": "confirmed",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "S-WANT",
+      "kind": "nodes",
+      "label": "目标 / 需要",
+      "status": "confirmed",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "S-CONTEXT",
+      "kind": "nodes",
+      "label": "调用 / 分支区分",
+      "status": "candidate",
+      "sources": [
+        "SRC-C1"
+      ]
+    },
+    {
+      "id": "U-BIND",
+      "kind": "nodes",
+      "label": "绑定与身份续接 ?",
+      "status": "unresolved",
+      "sources": [
+        "SRC-B",
+        "SRC-C1"
+      ]
+    },
+    {
+      "id": "U-MEM",
+      "kind": "nodes",
+      "label": "长期痕迹 / 重解释 ?",
+      "status": "unresolved",
+      "sources": [
+        "SRC-P",
+        "SRC-C1"
+      ]
+    },
+    {
+      "id": "U-REG",
+      "kind": "nodes",
+      "label": "耐心 / 优先 / 探索 ?",
+      "status": "unresolved",
+      "sources": [
+        "SRC-P",
+        "SRC-C1"
+      ]
+    },
+    {
+      "id": "S-COMPETE",
+      "kind": "nodes",
+      "label": "动作竞争",
+      "status": "unresolved",
+      "sources": [
+        "SRC-B",
+        "SRC-C1"
+      ]
+    },
+    {
+      "id": "S-EXEC",
+      "kind": "nodes",
+      "label": "发令 / 回执",
+      "status": "confirmed",
+      "sources": [
+        "SRC-P",
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "C0",
+      "kind": "nodes",
+      "label": "最底层 · 局部概念",
+      "status": "confirmed",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "S-C0-ATTR",
+      "kind": "nodes",
+      "label": "局部吸引子",
+      "status": "confirmed",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "S-C0-N1",
+      "kind": "nodes",
+      "label": "神经元 α（示意）",
+      "status": "confirmed",
+      "sources": [
+        "SRC-B",
+        "SRC-V"
+      ]
+    },
+    {
+      "id": "S-C0-SYN",
+      "kind": "nodes",
+      "label": "内部连接 ρ / H",
+      "status": "confirmed",
+      "sources": [
+        "SRC-U",
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "S-C0-N2",
+      "kind": "nodes",
+      "label": "神经元 β（示意）",
+      "status": "confirmed",
+      "sources": [
+        "SRC-B",
+        "SRC-V"
+      ]
+    },
+    {
+      "id": "C1",
+      "kind": "nodes",
+      "label": "上层 · 时序组合",
+      "status": "confirmed",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "S-C1-ATTR",
+      "kind": "nodes",
+      "label": "局部吸引子",
+      "status": "confirmed",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "S-C1-N1",
+      "kind": "nodes",
+      "label": "神经元 α（示意）",
+      "status": "confirmed",
+      "sources": [
+        "SRC-B",
+        "SRC-V"
+      ]
+    },
+    {
+      "id": "S-C1-SYN",
+      "kind": "nodes",
+      "label": "内部连接 ρ / H",
+      "status": "confirmed",
+      "sources": [
+        "SRC-U",
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "S-C1-N2",
+      "kind": "nodes",
+      "label": "神经元 β（示意）",
+      "status": "confirmed",
+      "sources": [
+        "SRC-B",
+        "SRC-V"
+      ]
+    },
+    {
+      "id": "C2",
+      "kind": "nodes",
+      "label": "更高层 · 关系组合",
+      "status": "confirmed",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "S-C2-ATTR",
+      "kind": "nodes",
+      "label": "局部吸引子",
+      "status": "confirmed",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "S-C2-N1",
+      "kind": "nodes",
+      "label": "神经元 α（示意）",
+      "status": "confirmed",
+      "sources": [
+        "SRC-B",
+        "SRC-V"
+      ]
+    },
+    {
+      "id": "S-C2-SYN",
+      "kind": "nodes",
+      "label": "内部连接 ρ / H",
+      "status": "confirmed",
+      "sources": [
+        "SRC-U",
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "S-C2-N2",
+      "kind": "nodes",
+      "label": "神经元 β（示意）",
+      "status": "confirmed",
+      "sources": [
+        "SRC-B",
+        "SRC-V"
+      ]
+    },
+    {
+      "id": "S-T01",
+      "kind": "nodes",
+      "label": "时间展开 0→1",
+      "status": "confirmed",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "S-T12",
+      "kind": "nodes",
+      "label": "时间展开 1→2",
+      "status": "confirmed",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "U-CAL0",
+      "kind": "nodes",
+      "label": "三因子完整式 ?",
+      "status": "unresolved",
+      "sources": [
+        "SRC-U"
+      ]
+    },
+    {
+      "id": "U-H",
+      "kind": "nodes",
+      "label": "H / 传播完整式 ?",
+      "status": "unresolved",
+      "sources": [
+        "SRC-B",
+        "SRC-U"
+      ]
+    },
+    {
+      "id": "U-CAPACITY",
+      "kind": "nodes",
+      "label": "容量 / 稳定性 ?",
+      "status": "unresolved",
+      "sources": [
+        "SRC-C1"
+      ]
+    },
+    {
+      "id": "U-CREDIT",
+      "kind": "nodes",
+      "label": "跨层责任归属 ?",
+      "status": "unresolved",
+      "sources": [
+        "SRC-REVIEW",
+        "SRC-V2"
+      ]
+    },
+    {
+      "id": "U-DECODE",
+      "kind": "nodes",
+      "label": "原解码贡献记录 ?",
+      "status": "unresolved",
+      "sources": [
+        "SRC-REVIEW",
+        "SRC-V2"
+      ]
+    },
+    {
+      "id": "U-ETA-K",
+      "kind": "nodes",
+      "label": "η / K 共同可行域 ?",
+      "status": "unresolved",
+      "sources": [
+        "SRC-REVIEW",
+        "SRC-V2"
+      ]
+    },
+    {
+      "id": "U-H-GROW",
+      "kind": "nodes",
+      "label": "新边 H / 多边稳定 ?",
+      "status": "unresolved",
+      "sources": [
+        "SRC-REVIEW",
+        "SRC-V2"
+      ]
+    },
+    {
+      "id": "C-T0",
+      "kind": "nodes",
+      "label": "T0 / 责任追踪候选",
+      "status": "candidate",
+      "sources": [
+        "SRC-V2"
+      ]
+    },
+    {
+      "id": "P-C0-IN",
+      "kind": "ports",
+      "label": "活动输入",
+      "status": "confirmed",
+      "owner": "C0",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-C0-RETURN",
+      "kind": "ports",
+      "label": "补全返回",
+      "status": "confirmed",
+      "owner": "C0",
+      "sources": [
+        "SRC-U",
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-C0-UP",
+      "kind": "ports",
+      "label": "低层活动",
+      "status": "confirmed",
+      "owner": "C0",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-C0-DOWN",
+      "kind": "ports",
+      "label": "下层校准信号",
+      "status": "confirmed",
+      "owner": "C0",
+      "sources": [
+        "SRC-U"
+      ]
+    },
+    {
+      "id": "P-C0-CAL",
+      "kind": "ports",
+      "label": "内部连接校准",
+      "status": "confirmed",
+      "owner": "S-C0-SYN",
+      "sources": [
+        "SRC-U"
+      ]
+    },
+    {
+      "id": "P-C0-N1",
+      "kind": "ports",
+      "label": "活动",
+      "status": "confirmed",
+      "owner": "S-C0-N1",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-C0-SYN-A",
+      "kind": "ports",
+      "label": "连接端α",
+      "status": "confirmed",
+      "owner": "S-C0-SYN",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-C0-SYN-B",
+      "kind": "ports",
+      "label": "连接端β",
+      "status": "confirmed",
+      "owner": "S-C0-SYN",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-C0-N2",
+      "kind": "ports",
+      "label": "活动",
+      "status": "confirmed",
+      "owner": "S-C0-N2",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-C1-IN",
+      "kind": "ports",
+      "label": "活动输入",
+      "status": "confirmed",
+      "owner": "C1",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-C1-RETURN",
+      "kind": "ports",
+      "label": "补全返回",
+      "status": "confirmed",
+      "owner": "C1",
+      "sources": [
+        "SRC-U",
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-C1-UP",
+      "kind": "ports",
+      "label": "低层活动",
+      "status": "confirmed",
+      "owner": "C1",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-C1-DOWN",
+      "kind": "ports",
+      "label": "下层校准信号",
+      "status": "confirmed",
+      "owner": "C1",
+      "sources": [
+        "SRC-U"
+      ]
+    },
+    {
+      "id": "P-C1-CAL",
+      "kind": "ports",
+      "label": "内部连接校准",
+      "status": "confirmed",
+      "owner": "S-C1-SYN",
+      "sources": [
+        "SRC-U"
+      ]
+    },
+    {
+      "id": "P-C1-N1",
+      "kind": "ports",
+      "label": "活动",
+      "status": "confirmed",
+      "owner": "S-C1-N1",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-C1-SYN-A",
+      "kind": "ports",
+      "label": "连接端α",
+      "status": "confirmed",
+      "owner": "S-C1-SYN",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-C1-SYN-B",
+      "kind": "ports",
+      "label": "连接端β",
+      "status": "confirmed",
+      "owner": "S-C1-SYN",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-C1-N2",
+      "kind": "ports",
+      "label": "活动",
+      "status": "confirmed",
+      "owner": "S-C1-N2",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-C2-IN",
+      "kind": "ports",
+      "label": "活动输入",
+      "status": "confirmed",
+      "owner": "C2",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-C2-RETURN",
+      "kind": "ports",
+      "label": "补全返回",
+      "status": "confirmed",
+      "owner": "C2",
+      "sources": [
+        "SRC-U",
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-C2-UP",
+      "kind": "ports",
+      "label": "低层活动",
+      "status": "confirmed",
+      "owner": "C2",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-C2-DOWN",
+      "kind": "ports",
+      "label": "下层校准信号",
+      "status": "confirmed",
+      "owner": "C2",
+      "sources": [
+        "SRC-U"
+      ]
+    },
+    {
+      "id": "P-C2-CAL",
+      "kind": "ports",
+      "label": "内部连接校准",
+      "status": "confirmed",
+      "owner": "S-C2-SYN",
+      "sources": [
+        "SRC-U"
+      ]
+    },
+    {
+      "id": "P-C2-N1",
+      "kind": "ports",
+      "label": "活动",
+      "status": "confirmed",
+      "owner": "S-C2-N1",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-C2-SYN-A",
+      "kind": "ports",
+      "label": "连接端α",
+      "status": "confirmed",
+      "owner": "S-C2-SYN",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-C2-SYN-B",
+      "kind": "ports",
+      "label": "连接端β",
+      "status": "confirmed",
+      "owner": "S-C2-SYN",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-C2-N2",
+      "kind": "ports",
+      "label": "活动",
+      "status": "confirmed",
+      "owner": "S-C2-N2",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-T01-IN",
+      "kind": "ports",
+      "label": "片段入口",
+      "status": "confirmed",
+      "owner": "S-T01",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-T01-OUT",
+      "kind": "ports",
+      "label": "展开活动",
+      "status": "confirmed",
+      "owner": "S-T01",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-T12-IN",
+      "kind": "ports",
+      "label": "片段入口",
+      "status": "confirmed",
+      "owner": "S-T12",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-T12-OUT",
+      "kind": "ports",
+      "label": "展开活动",
+      "status": "confirmed",
+      "owner": "S-T12",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-ENV-OBS",
+      "kind": "ports",
+      "label": "真实反馈",
+      "status": "confirmed",
+      "owner": "M-ENV",
+      "sources": [
+        "SRC-P"
+      ]
+    },
+    {
+      "id": "P-ENV-ACT",
+      "kind": "ports",
+      "label": "动作作用",
+      "status": "confirmed",
+      "owner": "M-ENV",
+      "sources": [
+        "SRC-P"
+      ]
+    },
+    {
+      "id": "P-IN-RAW",
+      "kind": "ports",
+      "label": "采样",
+      "status": "confirmed",
+      "owner": "M-IN",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-IN-FEAT",
+      "kind": "ports",
+      "label": "具位置特征",
+      "status": "confirmed",
+      "owner": "S-IN-SPARSE",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-IN-BODY",
+      "kind": "ports",
+      "label": "身体采样",
+      "status": "confirmed",
+      "owner": "S-IN-BODY",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-SPACE-IN",
+      "kind": "ports",
+      "label": "空间证据",
+      "status": "confirmed",
+      "owner": "S-SPACE",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-SPACE-OUT",
+      "kind": "ports",
+      "label": "多峰/关系",
+      "status": "confirmed",
+      "owner": "S-SPACE",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-INSTANCE-IN",
+      "kind": "ports",
+      "label": "归组线索",
+      "status": "unresolved",
+      "owner": "S-INSTANCE",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-INSTANCE-CALL",
+      "kind": "ports",
+      "label": "实例调用",
+      "status": "candidate",
+      "owner": "S-INSTANCE",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-INSTANCE-RETURN",
+      "kind": "ports",
+      "label": "原处回映",
+      "status": "candidate",
+      "owner": "S-INSTANCE",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-SOURCE-IN",
+      "kind": "ports",
+      "label": "实际经历",
+      "status": "confirmed",
+      "owner": "S-SOURCE",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-SOURCE-OUT",
+      "kind": "ports",
+      "label": "时序/来源",
+      "status": "confirmed",
+      "owner": "S-SOURCE",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-STATE-CAL",
+      "kind": "ports",
+      "label": "状态反馈 · 三因子",
+      "status": "confirmed",
+      "owner": "S-SOURCE",
+      "sources": [
+        "SRC-U"
+      ]
+    },
+    {
+      "id": "P-HAVE-IN",
+      "kind": "ports",
+      "label": "现实核对",
+      "status": "confirmed",
+      "owner": "S-HAVE",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-HAVE-OUT",
+      "kind": "ports",
+      "label": "当前已有",
+      "status": "confirmed",
+      "owner": "S-HAVE",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-WANT-IN",
+      "kind": "ports",
+      "label": "需要/偏好",
+      "status": "confirmed",
+      "owner": "S-WANT",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-WANT-OUT",
+      "kind": "ports",
+      "label": "目标条件",
+      "status": "confirmed",
+      "owner": "S-WANT",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-C2-GOAL",
+      "kind": "ports",
+      "label": "要 / 已有入口",
+      "status": "confirmed",
+      "owner": "C2",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-C0-ACTION",
+      "kind": "ports",
+      "label": "动作/缺条件候选",
+      "status": "confirmed",
+      "owner": "C0",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-ACTION-CAND",
+      "kind": "ports",
+      "label": "候选竞争",
+      "status": "unresolved",
+      "owner": "S-COMPETE",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-ACTION-WIN",
+      "kind": "ports",
+      "label": "胜出候选",
+      "status": "unresolved",
+      "owner": "S-COMPETE",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-EXEC-IN",
+      "kind": "ports",
+      "label": "原始动作",
+      "status": "confirmed",
+      "owner": "S-EXEC",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-EXEC-OUT",
+      "kind": "ports",
+      "label": "实际提交",
+      "status": "confirmed",
+      "owner": "S-EXEC",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "P-EXEC-TRACE",
+      "kind": "ports",
+      "label": "动作经历",
+      "status": "confirmed",
+      "owner": "S-EXEC",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "L-C0-A",
+      "kind": "edges",
+      "label": "神经元 ↔ 内部连接",
+      "status": "confirmed",
+      "from": "P-C0-N1",
+      "to": "P-C0-SYN-A",
+      "sources": [
+        "SRC-B",
+        "SRC-V"
+      ]
+    },
+    {
+      "id": "L-C0-B",
+      "kind": "edges",
+      "label": "内部连接 ↔ 神经元",
+      "status": "confirmed",
+      "from": "P-C0-SYN-B",
+      "to": "P-C0-N2",
+      "sources": [
+        "SRC-B",
+        "SRC-V"
+      ]
+    },
+    {
+      "id": "L-C1-A",
+      "kind": "edges",
+      "label": "神经元 ↔ 内部连接",
+      "status": "confirmed",
+      "from": "P-C1-N1",
+      "to": "P-C1-SYN-A",
+      "sources": [
+        "SRC-B",
+        "SRC-V"
+      ]
+    },
+    {
+      "id": "L-C1-B",
+      "kind": "edges",
+      "label": "内部连接 ↔ 神经元",
+      "status": "confirmed",
+      "from": "P-C1-SYN-B",
+      "to": "P-C1-N2",
+      "sources": [
+        "SRC-B",
+        "SRC-V"
+      ]
+    },
+    {
+      "id": "L-C2-A",
+      "kind": "edges",
+      "label": "神经元 ↔ 内部连接",
+      "status": "confirmed",
+      "from": "P-C2-N1",
+      "to": "P-C2-SYN-A",
+      "sources": [
+        "SRC-B",
+        "SRC-V"
+      ]
+    },
+    {
+      "id": "L-C2-B",
+      "kind": "edges",
+      "label": "内部连接 ↔ 神经元",
+      "status": "confirmed",
+      "from": "P-C2-SYN-B",
+      "to": "P-C2-N2",
+      "sources": [
+        "SRC-B",
+        "SRC-V"
+      ]
+    },
+    {
+      "id": "L-SENSE",
+      "kind": "edges",
+      "label": "真实采样",
+      "status": "confirmed",
+      "from": "P-ENV-OBS",
+      "to": "P-IN-RAW",
+      "sources": [
+        "SRC-P",
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "L-SPACE",
+      "kind": "edges",
+      "label": "保位置稀疏活动",
+      "status": "candidate",
+      "from": "P-IN-FEAT",
+      "to": "P-SPACE-IN",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "L-GROUP",
+      "kind": "edges",
+      "label": "多峰 → 实例候选",
+      "status": "unresolved",
+      "from": "P-SPACE-OUT",
+      "to": "P-INSTANCE-IN",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "L-CALL",
+      "kind": "edges",
+      "label": "局部线索调用",
+      "status": "candidate",
+      "from": "P-INSTANCE-CALL",
+      "to": "P-C0-IN",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "L-RETURN",
+      "kind": "edges",
+      "label": "补全沿对应返回",
+      "status": "candidate",
+      "from": "P-C0-RETURN",
+      "to": "P-INSTANCE-RETURN",
+      "sources": [
+        "SRC-U",
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "L-CAL0",
+      "kind": "edges",
+      "label": "三因子 · 内部连接",
+      "status": "confirmed",
+      "from": "P-STATE-CAL",
+      "to": "P-C0-CAL",
+      "sources": [
+        "SRC-U"
+      ]
+    },
+    {
+      "id": "L-CAL1",
+      "kind": "edges",
+      "label": "非三因子 · 0→1",
+      "status": "confirmed",
+      "from": "P-C0-DOWN",
+      "to": "P-C1-CAL",
+      "sources": [
+        "SRC-U"
+      ]
+    },
+    {
+      "id": "L-CAL2",
+      "kind": "edges",
+      "label": "非三因子 · 1→2",
+      "status": "confirmed",
+      "from": "P-C1-DOWN",
+      "to": "P-C2-CAL",
+      "sources": [
+        "SRC-U"
+      ]
+    },
+    {
+      "id": "L-T01-IN",
+      "kind": "edges",
+      "label": "低层时间片",
+      "status": "confirmed",
+      "from": "P-C0-UP",
+      "to": "P-T01-IN",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "L-T01-OUT",
+      "kind": "edges",
+      "label": "展开 → 上层",
+      "status": "candidate",
+      "from": "P-T01-OUT",
+      "to": "P-C1-IN",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "L-T12-IN",
+      "kind": "edges",
+      "label": "上层时间片",
+      "status": "confirmed",
+      "from": "P-C1-UP",
+      "to": "P-T12-IN",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "L-T12-OUT",
+      "kind": "edges",
+      "label": "展开 → 更高层",
+      "status": "candidate",
+      "from": "P-T12-OUT",
+      "to": "P-C2-IN",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "L-FB10",
+      "kind": "edges",
+      "label": "上层补全反馈",
+      "status": "confirmed",
+      "from": "P-C1-RETURN",
+      "to": "P-C0-IN",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "L-FB21",
+      "kind": "edges",
+      "label": "更高层补全反馈",
+      "status": "confirmed",
+      "from": "P-C2-RETURN",
+      "to": "P-C1-IN",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "L-EXPERIENCE",
+      "kind": "edges",
+      "label": "经历 → 时间展开",
+      "status": "candidate",
+      "from": "P-SOURCE-OUT",
+      "to": "P-T01-IN",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "L-BODY",
+      "kind": "edges",
+      "label": "身体 → 需要",
+      "status": "confirmed",
+      "from": "P-IN-BODY",
+      "to": "P-WANT-IN",
+      "sources": [
+        "SRC-P",
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "L-HAVE",
+      "kind": "edges",
+      "label": "现实 → 已有",
+      "status": "candidate",
+      "from": "P-SPACE-OUT",
+      "to": "P-HAVE-IN",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "L-GOAL",
+      "kind": "edges",
+      "label": "要 → 同网反查",
+      "status": "confirmed",
+      "from": "P-WANT-OUT",
+      "to": "P-C2-GOAL",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "L-HAVE-QUERY",
+      "kind": "edges",
+      "label": "已有 → 缺失比较",
+      "status": "candidate",
+      "from": "P-HAVE-OUT",
+      "to": "P-C2-GOAL",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "L-ACTION",
+      "kind": "edges",
+      "label": "候选 → 动作竞争",
+      "status": "unresolved",
+      "from": "P-C0-ACTION",
+      "to": "P-ACTION-CAND",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "L-COMPETE",
+      "kind": "edges",
+      "label": "胜出 → 发令",
+      "status": "unresolved",
+      "from": "P-ACTION-WIN",
+      "to": "P-EXEC-IN",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "L-EXECUTE",
+      "kind": "edges",
+      "label": "动作 → 环境",
+      "status": "confirmed",
+      "from": "P-EXEC-OUT",
+      "to": "P-ENV-ACT",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "L-ACTION-TRACE",
+      "kind": "edges",
+      "label": "真实动作 → 经历",
+      "status": "confirmed",
+      "from": "P-EXEC-TRACE",
+      "to": "P-SOURCE-IN",
+      "sources": [
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "R-CAL0",
+      "kind": "rules",
+      "label": "底层校准目标",
+      "status": "confirmed",
+      "sources": [
+        "SRC-U"
+      ]
+    },
+    {
+      "id": "R-CALN",
+      "kind": "rules",
+      "label": "逐层非三因子",
+      "status": "confirmed",
+      "sources": [
+        "SRC-U"
+      ]
+    },
+    {
+      "id": "R-RETURN",
+      "kind": "rules",
+      "label": "返回仅传信号",
+      "status": "confirmed",
+      "sources": [
+        "SRC-U"
+      ]
+    },
+    {
+      "id": "R-LEARN",
+      "kind": "rules",
+      "label": "现实与预演学习边界",
+      "status": "confirmed",
+      "sources": [
+        "SRC-U"
+      ]
+    },
+    {
+      "id": "R-MISSING",
+      "kind": "rules",
+      "label": "遮挡缺测无豁免",
+      "status": "confirmed",
+      "sources": [
+        "SRC-U"
+      ]
+    },
+    {
+      "id": "R-CREDIT",
+      "kind": "rules",
+      "label": "跨层责任反例",
+      "status": "unresolved",
+      "sources": [
+        "SRC-REVIEW",
+        "SRC-V2"
+      ]
+    },
+    {
+      "id": "CASE-OBS",
+      "kind": "cases",
+      "label": "现实观察与补全",
+      "status": "unresolved",
+      "sources": [
+        "SRC-U",
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "CASE-OCCLUDE",
+      "kind": "cases",
+      "label": "遮挡 / 缺测",
+      "status": "unresolved",
+      "sources": [
+        "SRC-U",
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "CASE-LAMP-CREDIT",
+      "kind": "cases",
+      "label": "高层误判灯亮 → 责任归属",
+      "status": "unresolved",
+      "sources": [
+        "SRC-REVIEW",
+        "SRC-V2"
+      ]
+    },
+    {
+      "id": "CASE-GOAL",
+      "kind": "cases",
+      "label": "目标反查 / 内部预演",
+      "status": "unresolved",
+      "sources": [
+        "SRC-U",
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "DEPRECATED-B1",
+      "kind": "tombstones",
+      "label": "旧桥接B1校准靶点/返回强度被用户纠正；该编号只是展示废弃记录，不伪装旧W编号。",
+      "status": "deprecated",
+      "sources": [
+        "SRC-U"
+      ]
+    }
+  ]
+}

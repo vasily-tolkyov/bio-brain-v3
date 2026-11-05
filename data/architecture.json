@@ -1,0 +1,4599 @@
+{
+  "schemaVersion": 1,
+  "architectureId": "concept-state-network",
+  "version": "1.2.2",
+  "updatedAt": "2026-11-04T16:03:53.769Z",
+  "title": "概念 × 状态",
+  "notice": "架构示意 · 非网络运行 · 当前阶段：2D toy model（3D 为后续升级）",
+  "sources": [
+    {
+      "id": "SRC-U",
+      "title": "用户最新架构纠正 · 2026-11-02",
+      "kind": "user",
+      "locator": "sources/latest-user-decisions.md",
+      "summary": "最高优先级：三因子校准底层吸引子内部连接；上层沿用非三因子逐层校准；返回仅为通路。"
+    },
+    {
+      "id": "SRC-B",
+      "title": "原基座闭环题包",
+      "kind": "library",
+      "locator": "https://chatgpt.com/api/library/files/libfile_7a13952348d081919b458620e4acdc4a/download",
+      "summary": "已实际下载并核对第2–5节、W01–W24。旧缺测与校准表述已由最新用户定义覆盖。"
+    },
+    {
+      "id": "SRC-C1",
+      "title": "C1 理论答卷 · 条件候选",
+      "kind": "library",
+      "locator": "https://chatgpt.com/api/library/files/libfile_6d0803069df08191a2f0d21a7274d811/download",
+      "summary": "已下载；核对受保护构件、实例调用、时间展开与接线。候选方案不自动升级为已确认。"
+    },
+    {
+      "id": "SRC-P",
+      "title": "状态模块功能图景 · 序列9",
+      "kind": "page",
+      "locator": "https://chatgpt.com/space/page_bcf9ea1a418c8191b6095ca613b2911f",
+      "summary": "已读取114余块的现行功能需求；功能要求不等于独立物理模块。"
+    },
+    {
+      "id": "SRC-V",
+      "title": "本工作台展示约定",
+      "kind": "design",
+      "locator": "README.md",
+      "summary": "坐标、三个示意概念层、神经元抽样及全部M-/S-/P-/L-编号只用于展示，不是运行时神经元表、固定层数或已批准实现。未重新观看原视频；无机制实验。"
+    },
+    {
+      "id": "SRC-V2",
+      "title": "V2 三因子内部连接方案 · 候选",
+      "kind": "library",
+      "locator": "https://chatgpt.com/api/library/files/libfile_7b9de4a272f88191a7126a4c0863c4dd/download",
+      "summary": "已下载并核对拓扑及候选边界。T0责任追踪、生长、预算与H初始化未获批准；§10并未通过跨层因果闭环验收。"
+    },
+    {
+      "id": "SRC-REVIEW",
+      "title": "父线程 V2 初审 · 2026-11-02",
+      "kind": "design",
+      "locator": "sources/review-v2.md",
+      "summary": "提出高层错误关系可能导致正确底层内容受损的待验证项；不增添任何补救机制。"
+    },
+    {
+      "id": "SRC-PM-20261102",
+      "title": "用户项目管理授权与跨模块边界 · 2026-11-02",
+      "kind": "user",
+      "locator": "prompts/pm-workbench-integrate-reports-v1.md",
+      "summary": "【已确认】授权汇总四模块上报并更新工作台；输入候选须等用户确认，观测／补全／返回边界按本简报登记，不代表机制验证。"
+    },
+    {
+      "id": "SRC-PM-STATUS",
+      "title": "项目管理纪要 · 2026-11-02",
+      "kind": "design",
+      "locator": "sources/pm-status-2026-11-02.md",
+      "summary": "【已确认】整合记录与文档索引；逐项区分已确认、候选、未验证/开放及设计已锁·现码未对齐，保留输入契约和 U-CREDIT 等阻塞。"
+    },
+    {
+      "id": "SRC-CONCEPT-V0-INDEX",
+      "title": "概念网络 v0 · 阅读入口",
+      "kind": "design",
+      "locator": "modules/concept-network/README.md",
+      "summary": "【已确认】视频①–⑯优先及最新校准边界；【候选】接口编码与时序；【未验证/开放】mechanismValidated: false。"
+    },
+    {
+      "id": "SRC-CONCEPT-V0",
+      "title": "概念网络 v0 · 视频优先设计备忘",
+      "kind": "design",
+      "locator": "modules/concept-network/design-memo-video-first-v0.md",
+      "summary": "【已确认】登记视频主线与 C0 内部校准边界；【设计已锁·现码未对齐】报告三因子仍改下行 W、动作门仍挂 W；【未验证/开放】O1–O10。本次仅核对文档，未重看视频或重审源码。"
+    },
+    {
+      "id": "SRC-CONCEPT-BRIEF",
+      "title": "概念网络 v0 · 后续简报",
+      "kind": "design",
+      "locator": "modules/concept-network/CODEX-BRIEF.md",
+      "summary": "【已确认】模块后续阅读入口；【候选】取证与接口方案；【未验证/开放】优先推进 O1–O4，不把后续简报中的范围说明当成机制验收。"
+    },
+    {
+      "id": "SRC-ACTION-V1",
+      "title": "动作与目标 v1 · 候选接口契约",
+      "kind": "design",
+      "locator": "modules/action-goal/v1-interface-contract.md",
+      "summary": "【候选】L-GOAL / L-BODY / L-ACTION-TRACE 交接与第一版闭环草稿，只约定职责边界，不改跨模块接线；§6 九项动力学未验收。"
+    },
+    {
+      "id": "SRC-ACTION-DYNAMICS-V1",
+      "title": "动作与目标 v1 · 九项候选动力学",
+      "kind": "design",
+      "locator": "modules/action-goal/v1-open-dynamics-candidates.md",
+      "summary": "【候选】耐心、竞争、归属取消、中断终止、探索、目标满足、预演预算、差集情景计量、执行事实；方程、参数与行为证据均未验收。"
+    },
+    {
+      "id": "SRC-ACTION-BRIEF",
+      "title": "动作与目标 v1 · 原任务简报",
+      "kind": "design",
+      "locator": "modules/action-goal/CODEX-BRIEF.md",
+      "summary": "【已确认】原任务职责与交付范围的追溯入口；本次按候选文档整合，不用旧简报的锁定措辞覆盖最新视频或用户边界。"
+    },
+    {
+      "id": "SRC-STATE-INDEX",
+      "title": "状态网络 S-SPACE-08 · 2D toy 当前主线阅读入口",
+      "kind": "design",
+      "locator": "modules/state-network/README.md",
+      "summary": "【用户已确认】README 已指向 S-SPACE-08-2d-toy-model.md，第一版只留 S-SPACE 活动图：同尺寸密强度网格、按原位置点亮、整帧覆盖，无相机→世界映射，无状态侧峰／归组／局部极大。【候选方案】字段、伪代码与核验大纲。【开放/未决】四盒退场后的交接与拓扑待群对齐，原结构 ID 保留。【3D 归档／历史参考·非本版默认】旧 01～07 与实验；mechanismValidated: false。"
+    },
+    {
+      "id": "SRC-S-SPACE-01",
+      "title": "【3D 归档·非当前默认】状态网络 S-SPACE-01 · 稀疏特征到空间峰",
+      "kind": "design",
+      "locator": "modules/state-network/S-SPACE-01-sparse-feature-to-spatial-peak.md",
+      "summary": "【3D 归档·非当前默认】已不作当前主线默认。【候选】局部投影与投影后有限邻接交换均未选定；【未验证/开放】三维、归组、回映与续接，旧 depth_evidence 载荷待与输入 v1 对齐。"
+    },
+    {
+      "id": "SRC-STATE-INTERFACE",
+      "title": "【3D 归档·非当前默认】状态网络 · 候选接口备注",
+      "kind": "design",
+      "locator": "modules/state-network/interface-notes.md",
+      "summary": "【3D 归档·非当前默认】已不作当前主线默认。【候选】核对期间状态侧另行补充输入 v1 多路射线、逐路接纳与撤销讨论；【未验证/开放】只是接收侧补丁草稿，尚未用户确认或联合签认，不改规范端口载荷。"
+    },
+    {
+      "id": "SRC-INPUT-INDEX",
+      "title": "输入模块 · 2D toy v3 方向与候选交接索引",
+      "kind": "design",
+      "locator": "modules/input/README.md",
+      "summary": "【用户已确认】README STATUS 指向 2D 画面→分块局部对比 topK 稀疏→S-SPACE，点保留原位置、可带光强与颜色，topK 可色加权；参数等状态设计完再调。【候选／开放/未决】交接 schema 等状态最小承载后再对。【3D 归档】旧 MC／双路／三维稿非现行默认；mechanismValidated: false。"
+    },
+    {
+      "id": "SRC-INPUT-PLAIN",
+      "title": "【3D 归档·非当前默认】输入 v1 · 双路矩阵与射线通俗方案",
+      "kind": "design",
+      "locator": "modules/input/scheme-plain-zh.md",
+      "summary": "【3D 归档·非当前默认】已不作当前主线默认。【候选】供用户理解并评审分工；不把讲解中的射线、时间与撤销例子写成已批准字段或运行 API。"
+    },
+    {
+      "id": "SRC-INPUT-V1",
+      "title": "【3D 归档·非当前默认】输入 v1 · 设计草案与 P1–P5",
+      "kind": "design",
+      "locator": "modules/input/design-draft-v1.md",
+      "summary": "【3D 归档·非当前默认】已不作当前主线默认。【候选】参数、射线几何、深度不确定、多路时序和接纳验收；【已确认】方向不授权 Q2/Q3 定稿；旧 Q4/Q5 仍开放。"
+    },
+    {
+      "id": "SRC-INPUT-INTERFACE",
+      "title": "【3D 归档·非当前默认】输入 v1 · 候选接口契约",
+      "kind": "design",
+      "locator": "modules/input/interface-contract.md",
+      "summary": "【3D 归档·非当前默认】已不作当前主线默认。【候选】VisionSparseEvent、view_id、geometry_ref、逐样本 ray 及逐路接纳／撤销／有效期，均待用户及接收方确认；不写入 ports / edges。"
+    },
+    {
+      "id": "SRC-INPUT-3D-FEASIBILITY",
+      "title": "【3D 归档·非当前默认】输入 · Minecraft 双路射线三维可行性报告",
+      "kind": "design",
+      "locator": "modules/input/feasibility-minecraft-dual-ray-3d.md",
+      "summary": "【3D 归档·非当前默认】已不作当前主线默认。【候选】登记条件性几何论证；【未验证/开放】正确对应、标定、时序、消歧及 S-SPACE 机制仍有条件与缺口，不证明网络已具备三维能力，不批准输入侧三角测量。"
+    },
+    {
+      "id": "SRC-S-SPACE-02",
+      "title": "【3D 归档·非当前默认】状态网络 S-SPACE-02 · 核对期间新到候选稿",
+      "kind": "design",
+      "locator": "modules/state-network/S-SPACE-02-multi-view-ray-3d-filter.md",
+      "summary": "【3D 归档·非当前默认】已不作当前主线默认。【候选】逐路寄存、共享三维承载与模式筛选的讨论稿；两个机制均未选定，接收侧字段仅候选对齐。本次原样归档，不视为用户决定或群内签认；mechanismValidated: false。"
+    },
+    {
+      "id": "SRC-PM-STATE-20261103",
+      "title": "【3D 归档·非当前默认】状态 03～07 · 本轮项目管理简报",
+      "kind": "user",
+      "locator": "prompts/pm-workbench-integrate-state-sspace-03-07.md",
+      "summary": "【3D 归档·非当前默认】已不作当前主线默认。【已确认】授权只登记状态侧候选上报和源稿已确认边界；不扩展输入／概念／动作拓扑，不批准机制，不 push。"
+    },
+    {
+      "id": "SRC-PM-STATE-STATUS-20261103",
+      "title": "【3D 归档·非当前默认】状态 03～07 · 项目管理纪要",
+      "kind": "design",
+      "locator": "sources/pm-status-2026-11-03.md",
+      "summary": "【3D 归档·非当前默认】已不作当前主线默认。【候选】登记各稿进度、合成证据及限制；沿用 1.1.1 阻塞，记录工作台验证和可写克隆 bundle；mechanismValidated: false。"
+    },
+    {
+      "id": "SRC-STATE-DECISIONS-20261103",
+      "title": "【3D 归档·非当前默认】状态侧用户确认与登记边界 · 2026-11-03 追加",
+      "kind": "user",
+      "locator": "sources/latest-user-decisions.md",
+      "summary": "【3D 归档·非当前默认】已不作当前主线默认。【已确认】仅引用 2026-11-03 追加段：固定 RF、MC 单路入口、方块尺度与锁定 K、自然成像和 A 外条件计量；不批准候选实现或输入载荷。"
+    },
+    {
+      "id": "SRC-S-SPACE-03",
+      "title": "【3D 归档·非当前默认】【候选】S-SPACE-03 · 三维承载结构",
+      "kind": "design",
+      "locator": "modules/state-network/S-SPACE-03-carrier-structure.md",
+      "summary": "【3D 归档·非当前默认】已不作当前主线默认。固定重叠 RF 的方向已确认；核、读出、容量、预算映射与接纳实现仍候选。近远窗和宽度为条件起点，不是正式默认；旧模型检查不替代修订后规则验收。"
+    },
+    {
+      "id": "SRC-S-SPACE-04",
+      "title": "【3D 归档·非当前默认】【候选】S-SPACE-04 · 自然成像与另立筛选模块",
+      "kind": "design",
+      "locator": "modules/state-network/S-SPACE-04-false-intersection-filter.md",
+      "summary": "【3D 归档·非当前默认】已不作当前主线默认。自然成像与筛选职责边界已确认；场与亮度不贴真假、交汇或形态标签。筛选算法、稳定性定义及接口尚未设计，不作为沉积前的资格门。"
+    },
+    {
+      "id": "SRC-S-SPACE-05",
+      "title": "【3D 归档·非当前默认】【候选】S-SPACE-05 · 交汇特异性研究",
+      "kind": "design",
+      "locator": "modules/state-network/S-SPACE-05-specificity-at-intersection.md",
+      "summary": "【3D 归档·非当前默认】已不作当前主线默认。05B 扩至 93 个合成场景：有条件的变化可进入场，同输入异世界仍可同场；局部响应不等于普遍唯一定位，不提供筛选机制。"
+    },
+    {
+      "id": "SRC-S-SPACE-05-RESULT",
+      "title": "【3D 归档·非当前默认】【候选】交汇特异性 · 05B 实验结果",
+      "kind": "design",
+      "locator": "modules/state-network/experiments/specificity-at-intersection/RESULT.md",
+      "summary": "【3D 归档·非当前默认】已不作当前主线默认。上报 15 个结果文件、187 个夹具文件复算一致；24 套不同世界共享未配对输入等反例保留。真值仅用于生成／评分，未接真实 MC。"
+    },
+    {
+      "id": "SRC-S-SPACE-06",
+      "title": "【3D 归档·非当前默认】【候选】S-SPACE-06 · MC 单目状态",
+      "kind": "design",
+      "locator": "modules/state-network/S-SPACE-06-mc-monocular-state.md",
+      "summary": "【3D 归档·非当前默认】已不作当前主线默认。MC 首版单路 2D＋相机参数方向已确认；承载活动与实际度量深度分开。单帧缩放反例和候选路径不等于真实 MC 接入或完整协议实现。"
+    },
+    {
+      "id": "SRC-S-SPACE-06-RESULT",
+      "title": "【3D 归档·非当前默认】【候选】MC 单目状态 · 合成结果",
+      "kind": "design",
+      "locator": "modules/state-network/experiments/mc-monocular-state/RESULT.md",
+      "summary": "【3D 归档·非当前默认】已不作当前主线默认。上报 32 项合成检查、11 份产物复算一致；不同深度世界可生成相同图像和未知深度 ray，不能据活动承载声称唯一测距。"
+    },
+    {
+      "id": "SRC-S-SPACE-06B",
+      "title": "【3D 归档·非当前默认】【候选】S-SPACE-06b · 方块尺度先验与锁定 K",
+      "kind": "design",
+      "locator": "modules/state-network/S-SPACE-06b-block-scale-prior.md",
+      "summary": "【3D 归档·非当前默认】已不作当前主线默认。1 块单位先验与锁定后已知的 K 已确认；N 的识别、单位参照与真实配置仍开放。用户倾向／待写入的辅助选型不升为确认，不默认 N=1。"
+    },
+    {
+      "id": "SRC-S-SPACE-06C",
+      "title": "【3D 归档·非当前默认】【候选】S-SPACE-06c · 图像到空间图案",
+      "kind": "design",
+      "locator": "modules/state-network/S-SPACE-06c-image-to-pattern.md",
+      "summary": "【3D 归档·非当前默认】已不作当前主线默认。已收可运行的 P2 图像→稀疏 ray→活动图案候选；B 在 A 外作受限条件计量，成熟辅助未连接。实验默认不成为正式接口配置。"
+    },
+    {
+      "id": "SRC-S-SPACE-06C-RESULT",
+      "title": "【3D 归档·非当前默认】【候选】图像到空间图案 · 合成闭环结果",
+      "kind": "design",
+      "locator": "modules/state-network/experiments/mc-image-to-pattern/RESULT.md",
+      "summary": "【3D 归档·非当前默认】已不作当前主线默认。上报 7 个场景、43 项检查、72 份产物复算一致；观测与 A 不受 B 改写，ray.depth 始终 unknown；真实 MC 和一般块缝识别未验证。"
+    },
+    {
+      "id": "SRC-S-SPACE-MULTI-RESULT",
+      "title": "【3D 归档·非当前默认】【候选】多物体透视 · 结果与未通过项",
+      "kind": "design",
+      "locator": "modules/state-network/experiments/mc-perspective-multi/RESULT.md",
+      "summary": "【3D 归档·非当前默认】已不作当前主线默认。上报 12 个场景、40 项运行检查、9 项独立复核；能力评分 2 项通过、2 项未通过，唯一真实近远及所有截面特征可分未通过。离线评分称谓不进入场或相对布局分类。"
+    },
+    {
+      "id": "SRC-S-SPACE-07",
+      "title": "【3D 归档·非当前默认】【候选】S-SPACE-07 · 无分类标签的相对布局",
+      "kind": "design",
+      "locator": "modules/state-network/S-SPACE-07-relative-layout.md",
+      "summary": "【3D 归档·非当前默认】已不作当前主线默认。范围及几何依据适用时，在 A 外计算左右、近远与条件坐标；不另起布局状态分类。ray.depth 仅表示相机未测深，条件结果不回写。末行 DONE-MC-RELATIVE-LAYOUT-NOLABEL。"
+    },
+    {
+      "id": "SRC-S-SPACE-07-RESULT",
+      "title": "【3D 归档·非当前默认】【候选】MC 相对布局 · 数值复核结果",
+      "kind": "design",
+      "locator": "modules/state-network/experiments/mc-relative-layout/RESULT.md",
+      "summary": "【3D 归档·非当前默认】已不作当前主线默认。上报 165 项运行检查及 28 对物体的条件关系核对；缺依据时相应数值不产生，硬错配显式失败。精确合成端点不替代真实 MC 几何识别与误差验证。"
+    },
+    {
+      "id": "SRC-S-SPACE-07-VALIDATION",
+      "title": "【3D 归档·非当前默认】【候选】MC 相对布局 · 独立验证记录",
+      "kind": "design",
+      "locator": "modules/state-network/experiments/mc-relative-layout/validation.json",
+      "summary": "【3D 归档·非当前默认】已不作当前主线默认。只读核对上报 check_count=247、passed=247、failed=0、mechanismValidated=false；记录所保护的 architecture 为 1.1.1 快照，本次不重写历史验证或冒称已对 1.1.2 重跑实验。"
+    },
+    {
+      "id": "SRC-U-2D-RESET-20261104",
+      "title": "用户决定 · 输入／状态重置为 2D toy · 2026-11-04",
+      "kind": "user",
+      "locator": "sources/latest-user-decisions.md",
+      "summary": "【已确认】先 2D toy model 再升 3D；旧 3D／MC／S-SPACE-01～07 归档非主线；概念／动作不重建；工作台同步。"
+    },
+    {
+      "id": "SRC-PM-2D-BRIEF-20261104",
+      "title": "项目管理简报 · 工作台 2D 重置",
+      "kind": "design",
+      "locator": "prompts/pm-workbench-reset-2d-toy-v1.md",
+      "summary": "授权 Codex／执行侧将工作台同步到 2D toy 阶段；不改运行源码；不假造 2D 拓扑定稿；mechanismValidated: false。"
+    },
+    {
+      "id": "SRC-PM-STATUS-2D-20261104",
+      "title": "项目管理纪要 · 2026-11-04 · 2D 重置",
+      "kind": "design",
+      "locator": "sources/pm-status-2026-11-04-2d-reset.md",
+      "summary": "阶段切换、模块状态表、旧 3D 归档、阻塞（等 2D 上报）与验证入口；mechanismValidated: false。"
+    },
+    {
+      "id": "SRC-INPUT-2D-V3",
+      "title": "输入短稿 v3 · 2D toy 画面稀疏进 S-SPACE",
+      "kind": "design",
+      "locator": "modules/input/design-draft-v3-2d-toy.md",
+      "summary": "【用户已确认】分块局部对比 topK、原位置、光强与可选颜色（非对象标签）、可色加权及参数后调方向。【候选】整帧稀疏集合交接形状。【开放/未决】schema、编码、尺度与接收口联合签认等状态最小承载后再对。【3D 归档】旧 MC／三维稿不作现行；mechanismValidated: false。"
+    },
+    {
+      "id": "SRC-U-INPUT-2D-V3-20261104",
+      "title": "用户决定 · 输入 2D toy v3 · 2026-11-04 追加",
+      "kind": "user",
+      "locator": "sources/latest-user-decisions.md",
+      "summary": "【用户已确认】仅引用 2026-11-04 输入 2D toy v3 追加段，确认方向与调参时序；【候选／开放/未决】交接字段未签认；【3D 归档】旧线非当前默认。概念／动作边界保留；mechanismValidated: false。"
+    },
+    {
+      "id": "SRC-PM-INPUT-2D-V3-20261104",
+      "title": "项目管理简报 · 登记输入 2D toy v3（不定拓扑）",
+      "kind": "user",
+      "locator": "prompts/pm-workbench-register-input-2d-v3.md",
+      "summary": "【用户已确认】授权登记短稿及 README STATUS 到来源、决定和纪要，工作台由 1.2.0 升至 1.2.1，运行 check／test 后本地提交，不 push；不新增或改定稿输入 ports／wires／topology，不改 bio-brain／newnet，不回退概念／动作边界；mechanismValidated: false。"
+    },
+    {
+      "id": "SRC-PM-STATUS-INPUT-2D-V3-20261104",
+      "title": "项目管理纪要 · 2026-11-04 · 输入 2D toy v3 登记",
+      "kind": "design",
+      "locator": "sources/pm-status-2026-11-04-input-2d-v3.md",
+      "summary": "登记输入 v3 已确认方向、候选交接与开放字段，交叉引用 2D 重置纪要；记录 1.2.1 的来源校验、拓扑保留和工作台验证。旧 3D／MC 仍归档；mechanismValidated: false。"
+    },
+    {
+      "id": "SRC-S-SPACE-08",
+      "title": "状态网络 S-SPACE-08 · 2D toy 图像平面活动图最小设计稿",
+      "kind": "design",
+      "locator": "modules/state-network/S-SPACE-08-2d-toy-model.md",
+      "summary": "【用户已确认】第 2 节八条方向及观测隔离边界，当前状态主线只留 S-SPACE 活动图；四盒退场方向不等于结构已物理删除。【候选方案】字段表、伪代码、读出交接与核验场景。【开放/未决】输入字段、C0／L-CALL／L-CAL0 承接、回传峰落点、旧 L-* 与拓扑、颜色及调参均待群对齐；mechanismValidated: false。"
+    },
+    {
+      "id": "SRC-STATE-2D-TOY-OUTLINE",
+      "title": "【候选方案】S-SPACE-08 · 2D 活动图核验场景大纲",
+      "kind": "design",
+      "locator": "modules/state-network/experiments/2d-toy-model/README.md",
+      "summary": "【候选方案】单点点亮、双点分离、完整空帧全 0、次帧覆盖四项逐格数组核验大纲；示例数值不是参数默认。【开放/未决】无执行代码或已跑结果，本轮未实现、未执行；不引用旧 3D 实验充作本版验证，mechanismValidated: false。"
+    },
+    {
+      "id": "SRC-U-STATE-SSPACE-08-20261104",
+      "title": "用户决定 · 状态 S-SPACE-08 · 2026-11-04 追加",
+      "kind": "user",
+      "locator": "sources/latest-user-decisions.md",
+      "summary": "【用户已确认】仅引用 2026-11-04 状态 S-SPACE-08 追加段；按 brief 原文登记八条方向、观测隔离与登记边界。【开放/未决】四盒非本版职责，保留结构身份待群对齐后处理；不锁输入 schema，不回退概念／动作边界，mechanismValidated: false。"
+    },
+    {
+      "id": "SRC-PM-STATE-SSPACE-08-20261104",
+      "title": "项目管理简报 · 登记状态 S-SPACE-08 2D toy（不定拓扑）",
+      "kind": "user",
+      "locator": "prompts/pm-workbench-register-state-sspace-08.md",
+      "summary": "【用户已确认】授权 Codex 唯一执行，将状态 08 收进工作台来源、决定与纪要，版本 1.2.1→1.2.2；原样纳入主稿、README、大纲及 brief，check／test 后本地提交，不 push。四盒退场只登记方向与待群对齐事项，不删除、重接或重编号，不改运行仓库与输入正文；mechanismValidated: false。"
+    },
+    {
+      "id": "SRC-PM-STATUS-STATE-SSPACE-08-20261104",
+      "title": "项目管理纪要 · 2026-11-04 · 状态 S-SPACE-08 登记",
+      "kind": "design",
+      "locator": "sources/pm-status-2026-11-04-state-sspace-08.md",
+      "summary": "区分八条【用户已确认】方向、【候选方案】字段／伪代码／场景、五项【开放/未决】与【3D 归档／历史参考·非本版默认】；对照输入 v3，记录四盒及旧 L-* 影响、群对齐下一步、1.2.2 身份保留和来源校验、check／test；mechanismValidated: false。"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "D-CAL0",
+      "title": "三因子 → 底层内部连接",
+      "description": "状态网络提供三因子校准；增强、削弱或新建组成概念最底层吸引子的神经元之间连接。不是桥接边或返回通路的强度。",
+      "status": "confirmed",
+      "sourceIds": [
+        "SRC-U"
+      ]
+    },
+    {
+      "id": "D-CALN",
+      "title": "下层 → 上层内部校准",
+      "description": "每个更高概念层由紧邻的更低概念层以原非三因子机制校准。三个层仅示意可递归关系。",
+      "status": "confirmed",
+      "sourceIds": [
+        "SRC-U"
+      ]
+    },
+    {
+      "id": "D-RETURN",
+      "title": "返回是信号通路",
+      "description": "补全沿对应返回状态位置；没有另设的“返回强度”变量。具体对应和失效处理仍待设计。",
+      "status": "confirmed",
+      "sourceIds": [
+        "SRC-U"
+      ]
+    },
+    {
+      "id": "D-LEARN",
+      "title": "现实活动可学习",
+      "description": "真实外界输入产生的直接活动和补全活动均参与学习；内部预演不学习。回忆等其他用途的完整写入边界未补定。",
+      "status": "confirmed",
+      "sourceIds": [
+        "SRC-U"
+      ]
+    },
+    {
+      "id": "D-MISSING",
+      "title": "缺测照常小幅削弱",
+      "description": "遮挡或缺测仍按相应规则小幅削弱，不设豁免；不能据此声称采样偏差必然自行消失。",
+      "status": "confirmed",
+      "sourceIds": [
+        "SRC-U"
+      ]
+    },
+    {
+      "id": "D-CORE",
+      "title": "一套概念基座，多种用途",
+      "description": "学习、补全、预测和目标反查由同一概念网络承担；不另接独立预测器、规划器或固定语义对象表。",
+      "status": "confirmed",
+      "sourceIds": [
+        "SRC-P",
+        "SRC-B",
+        "SRC-U"
+      ]
+    },
+    {
+      "id": "D-RHO",
+      "title": "原 ρ / H 分轨",
+      "description": "ρ 共闪加强、单端与时间衰减；H色选择传播。H完整写入式、传播步进、作用集合与边界仍待定。",
+      "status": "confirmed",
+      "sourceIds": [
+        "SRC-U",
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "D-STATE",
+      "title": "【历史参考·非本版默认】旧状态实例与出处职责",
+      "description": "【历史参考·非本版默认】旧职责叙述保留追溯：空间多峰、独立实例、位置与来源不能被共享概念抹掉；具体绑定、保持和资源机制未定。【用户已确认】本版以 D-STATE-2D-SSPACE-08 的八条为准，第一版只留 S-SPACE 活动图；S-INSTANCE／S-SOURCE／S-HAVE／S-WANT 非本版职责，不用别名或附表恢复。【开放/未决】这些 ID、所属端口和旧 L-* 保留，待群对齐后处理；这不撤销概念／动作既有职责与学习边界。",
+      "status": "deprecated",
+      "sourceIds": [
+        "SRC-P",
+        "SRC-B",
+        "SRC-S-SPACE-08",
+        "SRC-U-STATE-SSPACE-08-20261104",
+        "SRC-PM-STATE-SSPACE-08-20261104",
+        "SRC-PM-STATUS-STATE-SSPACE-08-20261104"
+      ]
+    },
+    {
+      "id": "D-GOAL",
+      "title": "要 ≠ 已有",
+      "description": "目标、当前已有、缺失条件和假想结果区分；真实反馈才核实达成。",
+      "status": "confirmed",
+      "sourceIds": [
+        "SRC-P",
+        "SRC-B"
+      ]
+    },
+    {
+      "id": "D-OPEN",
+      "title": "候选结构仍待审",
+      "description": "局部参照、调用绑定、分支隔离、动作竞争与长期痕迹是待定/候选承载；图不替用户批准。",
+      "status": "unresolved",
+      "sourceIds": [
+        "SRC-C1",
+        "SRC-P"
+      ]
+    },
+    {
+      "id": "D-VIS",
+      "title": "架构展示，不运行脑网络",
+      "description": "JSON是架构编辑数据；图形尺寸、神经元示例与信号动画不对应仿真结果，未接入Minecraft。",
+      "status": "confirmed",
+      "sourceIds": [
+        "SRC-V"
+      ]
+    },
+    {
+      "id": "D-OLD",
+      "title": "桥接B1校准靶点已废弃",
+      "description": "旧报告把三因子落在桥接可靠性/返回强度的路线已被用户明确纠正，默认不显示。",
+      "status": "deprecated",
+      "sourceIds": [
+        "SRC-U"
+      ]
+    },
+    {
+      "id": "D-V2",
+      "title": "T0 / 责任 / 生长是候选",
+      "description": "V2的具体归因、预算、更新公式及新边H初始化仍待审核，不能等同于用户已定拓扑。",
+      "status": "candidate",
+      "sourceIds": [
+        "SRC-V2",
+        "SRC-REVIEW"
+      ]
+    },
+    {
+      "id": "D-CREDIT",
+      "title": "跨层责任归属未通过",
+      "description": "高层错误预测灯亮时，C0可能正确表达灯亮视觉内容；现实未亮的负信号若只按参与追责，可能伤正确C0而留下错误高层关系。须分别验证每层责任与更新目标。",
+      "status": "unresolved",
+      "sourceIds": [
+        "SRC-REVIEW"
+      ]
+    },
+    {
+      "id": "D-PM-PROCESS",
+      "title": "【已确认】项目管理授权与候选落台流程",
+      "description": "Grok Bot 负责整理，Codex 为工作台唯一落地执行者；跨模块接口先对齐并记录确认范围。输入未获用户确认前只登记候选来源，不写规范拓扑；按稳定 ID 递增版本、追加日志、检查后提交，不 push。",
+      "status": "confirmed",
+      "sourceIds": [
+        "SRC-PM-20261102",
+        "SRC-PM-STATUS",
+        "SRC-U"
+      ]
+    },
+    {
+      "id": "D-OBSERVATION-BOUNDARY",
+      "title": "【已确认】真实观测仅来自适配器",
+      "description": "S-SPACE 的真实观测入口只接收适配器交付的真实稀疏活动＋射线及标定依据。此决定只锁来源和职责，不批准 L-SPACE / P-SPACE-IN 的字段、版本或 API；身体、动作与环境结果按各自事实来源区分。",
+      "status": "confirmed",
+      "sourceIds": [
+        "SRC-PM-20261102",
+        "SRC-U"
+      ]
+    },
+    {
+      "id": "D-COMPLETION-BOUNDARY",
+      "title": "【已确认】补全回映不生成新观测",
+      "description": "补全／回映只沿原实例与出处返回推测信号，必须对照真实输入，不能当新观测灌回状态；返回无可学习强度。沿用 D-LEARN：真实输入触发的直接及补全活动仍可学习，内部预演不学习，缺测照常小幅削弱，不恢复补全禁学或缺测豁免。",
+      "status": "confirmed",
+      "sourceIds": [
+        "SRC-PM-20261102",
+        "SRC-U",
+        "SRC-CONCEPT-V0"
+      ]
+    },
+    {
+      "id": "D-CONCEPT-VIDEO-FIRST",
+      "title": "【已确认】概念 v0 以视频①–⑯为主线",
+      "description": "最新用户校准边界约束全部说明，视频新设计优先、未覆盖处才用注明出处的仓库材料。状态三因子只校 C0 吸引子内部连接；更高层由下一层非三因子校准；返回仅传信号。登记主线不批准具体公式、阈值、编码或全部演示参数，本轮未重看视频。",
+      "status": "confirmed",
+      "sourceIds": [
+        "SRC-PM-20261102",
+        "SRC-CONCEPT-V0-INDEX",
+        "SRC-CONCEPT-V0",
+        "SRC-CONCEPT-BRIEF",
+        "SRC-U"
+      ]
+    },
+    {
+      "id": "D-CONCEPT-CODE-GAP",
+      "title": "【设计已锁·现码未对齐】下行 W 与动作门差距",
+      "description": "概念备忘 §5 的只读源码报告记录：现码三因子仍写下行 W，动作门仍以 W 入池和驱动；不符合 C0 内部连接校准与新版差集动作门方向。这里只登记差距，未重新审计或修改运行源码，也未验收新门的计量和参数。",
+      "status": "unresolved",
+      "sourceIds": [
+        "SRC-CONCEPT-V0",
+        "SRC-CONCEPT-BRIEF",
+        "SRC-ACTION-V1",
+        "SRC-PM-20261102"
+      ]
+    },
+    {
+      "id": "D-CONCEPT-OPEN",
+      "title": "【未验证/开放】概念 O1–O10 与责任阻塞",
+      "description": "O1 内部校准状态、O2 更新顺序、O3 三因子责任、O4 新边资格、O5 多实例对应、O6 逆映损失、O7 目标入口、O8 子目标与情景、O9 差集计量、O10 来源隔离均未定。U-CREDIT / CASE-LAMP-CREDIT、U-DECODE、U-ETA-K、U-H-GROW 继续开放；V2 / C-T0 仍为候选。",
+      "status": "unresolved",
+      "sourceIds": [
+        "SRC-CONCEPT-V0",
+        "SRC-CONCEPT-BRIEF",
+        "SRC-REVIEW",
+        "SRC-PM-STATUS"
+      ]
+    },
+    {
+      "id": "D-ACTION-V1",
+      "title": "【候选】动作 v1 契约只登记边界",
+      "description": "登记 L-GOAL / L-BODY / L-ACTION-TRACE 契约草稿及 L-EXPERIENCE 交接。目标、预演、实际动作副本和真实结果分开；请求／回执不能代替目标达成。字段、接收存储责任与动力学未签认，既有接线及状态原样保留，不据职责名新建物理网络。",
+      "status": "candidate",
+      "sourceIds": [
+        "SRC-ACTION-V1",
+        "SRC-ACTION-BRIEF",
+        "SRC-PM-20261102"
+      ]
+    },
+    {
+      "id": "D-ACTION-DYNAMICS",
+      "title": "【候选】动作九项动力学待验收",
+      "description": "契约 §6 与附录覆盖耐心、多候选竞争、父子归属取消、现实中断与终止、未知冷启动探索、目标满足、预演隔离预算、差集情景计量、执行事实。九项均开放，候选公式、上限和阈值不随文档登记升为已确认。",
+      "status": "candidate",
+      "sourceIds": [
+        "SRC-ACTION-V1",
+        "SRC-ACTION-DYNAMICS-V1",
+        "SRC-PM-STATUS"
+      ]
+    },
+    {
+      "id": "D-GOAL-INTERFACE-OPEN",
+      "title": "【未验证/开放】目标入口与非动作缺件边界",
+      "description": "视频⑯从底层同源要线索认出，现 L-GOAL 仍指向 P-C2-GOAL，逻辑对应待联合确认。新版非动作缺件再钳与动作稿情景不作可执行子目标、上限 3 等表述须分清适用范围；二元目标缺口不替代全部连续差集计量。优先最新视频，不改端点掩盖差异。",
+      "status": "unresolved",
+      "sourceIds": [
+        "SRC-CONCEPT-V0",
+        "SRC-ACTION-V1",
+        "SRC-ACTION-DYNAMICS-V1",
+        "SRC-PM-STATUS"
+      ]
+    },
+    {
+      "id": "D-STATE-SSPACE-01",
+      "title": "【已作废作主线／3D 归档】【候选】S-SPACE-01 只登记成峰进度",
+      "description": "【已作废作主线】2026-11-04 起不作当前默认；历史确认保留为 3D 线归档，见 D-PM-2D-RESET。登记保位稀疏特征到活动峰的设计：局部投影、投影后有限邻接交换均为未选定对照，峰不自动等于对象。三维、归组、多实例、回映和遮挡续接仍待研究；不把动画或文档当作机制证据。 核对期间新到 S-SPACE-02 仅追加候选索引，三维模式筛选与接收侧补丁讨论不构成机制批准或接口签认。",
+      "status": "deprecated",
+      "sourceIds": [
+        "SRC-STATE-INDEX",
+        "SRC-S-SPACE-01",
+        "SRC-STATE-INTERFACE",
+        "SRC-PM-20261102",
+        "SRC-S-SPACE-02",
+        "SRC-U-2D-RESET-20261104",
+        "SRC-PM-STATUS-2D-20261104"
+      ]
+    },
+    {
+      "id": "D-STATE-INPUT-PATCH",
+      "title": "【已作废作主线／3D 归档】【未验证/开放】状态等待输入契约补丁",
+      "description": "【已作废作主线】2026-11-04 起不作当前默认；历史确认保留为 3D 线归档，见 D-PM-2D-RESET。初读时状态 S-SPACE-01／接口备注仍列旧 depth_evidence 与更新语义；核对期间另到 S-SPACE-02 与接口候选补丁，已讨论 view_id、geometry_ref、逐样本 ray 及逐路撤销／有效期，旧字段不作为新稿并行字段。仍等输入用户确认、契约补丁与双方签认；本次只登记来源变化，不改 L-SPACE / P-SPACE-IN 载荷。",
+      "status": "deprecated",
+      "sourceIds": [
+        "SRC-STATE-INTERFACE",
+        "SRC-S-SPACE-01",
+        "SRC-INPUT-INTERFACE",
+        "SRC-INPUT-V1",
+        "SRC-PM-20261102",
+        "SRC-S-SPACE-02",
+        "SRC-U-2D-RESET-20261104",
+        "SRC-PM-STATUS-2D-20261104"
+      ]
+    },
+    {
+      "id": "D-INPUT-DIRECTION",
+      "title": "【已作废作主线／3D 归档】【已确认】输入稀疏与射线的职责方向",
+      "description": "【已作废作主线】2026-11-04 起不作当前默认；历史确认保留为 3D 线归档，见 D-PM-2D-RESET。方向已确认：Q1-A 分块局部对比 topK；先稀疏再赋射线；多路独立稀疏矩阵和射线分别 ingest；输入侧不先配对／三角测量，三维交汇由 S-SPACE 活动叠出；禁止 Minecraft 对象 ID、地图、隐藏属性和配方。仅登记方向，不批准参数、字段、规范拓扑或三维能力验收。",
+      "status": "deprecated",
+      "sourceIds": [
+        "SRC-PM-20261102",
+        "SRC-INPUT-INDEX",
+        "SRC-INPUT-V1",
+        "SRC-U-2D-RESET-20261104",
+        "SRC-PM-STATUS-2D-20261104"
+      ]
+    },
+    {
+      "id": "D-INPUT-V1",
+      "title": "【已作废作主线／3D 归档】【候选】输入 v1 仅登记、待用户确认",
+      "description": "【已作废作主线】2026-11-04 起不作当前默认；历史确认保留为 3D 线归档，见 D-PM-2D-RESET。通俗方案、设计草案、接口契约仅作候选索引。Q2/Q3、VisionSparseEvent、射线／标定字段、载荷版本与 ingest 接纳语义均不得在用户确认前作为已批准结构写进 ports / edges；现 L-SPACE 的 candidate 状态与 P-SPACE-IN 载荷记录不变。",
+      "status": "deprecated",
+      "sourceIds": [
+        "SRC-INPUT-PLAIN",
+        "SRC-INPUT-V1",
+        "SRC-INPUT-INTERFACE",
+        "SRC-PM-20261102",
+        "SRC-U-2D-RESET-20261104",
+        "SRC-PM-STATUS-2D-20261104"
+      ]
+    },
+    {
+      "id": "D-INPUT-OPEN",
+      "title": "【开放/未决】输入 v3 与 S-SPACE-08 字段及参数待群对齐",
+      "description": "【3D 归档】原 P1–P5／Q2/Q3／VisionSparseEvent 等随旧输入线归档。输入 v3 与状态最小承载 S-SPACE-08 均已登记；D-INPUT-2D-V3 的方向与参数后调时序不变，D-INPUT-2D-V3-HANDOFF 与状态字段表仍为候选。schema 字段名、shape、坐标、position_index、强度尺度、同址重复、空帧、颜色编码、最小元数据及 P-SPACE-IN／等价接收口联合签认仍开放；块大小／是否重叠、k、亮度与颜色权重、噪声门槛、并列次序等状态设计对齐后再调。身体与动作经历入口本轮不扩展；不改输入正文或定稿输入拓扑，mechanismValidated: false。",
+      "status": "unresolved",
+      "sourceIds": [
+        "SRC-INPUT-V1",
+        "SRC-INPUT-INTERFACE",
+        "SRC-PM-STATUS",
+        "SRC-U-2D-RESET-20261104",
+        "SRC-PM-STATUS-2D-20261104",
+        "SRC-INPUT-2D-V3",
+        "SRC-U-INPUT-2D-V3-20261104",
+        "SRC-PM-STATUS-INPUT-2D-V3-20261104",
+        "SRC-S-SPACE-08",
+        "SRC-U-STATE-SSPACE-08-20261104",
+        "SRC-PM-STATE-SSPACE-08-20261104",
+        "SRC-PM-STATUS-STATE-SSPACE-08-20261104"
+      ]
+    },
+    {
+      "id": "D-INPUT-3D-FEASIBILITY",
+      "title": "【已作废作主线／3D 归档】【候选】几何可行性不等于三维机制通过",
+      "description": "【已作废作主线】2026-11-04 起不作当前默认；历史确认保留为 3D 线归档，见 D-PM-2D-RESET。登记双路射线报告的条件性几何论证；未配对的稀疏位置、正确对应、标定及时序之间仍有缺口，成峰与消歧无机制验收证据。报告不授权输入侧预先三角测量，也不证明 S-SPACE 已有稳定三维能力。",
+      "status": "deprecated",
+      "sourceIds": [
+        "SRC-INPUT-3D-FEASIBILITY",
+        "SRC-INPUT-V1",
+        "SRC-PM-20261102",
+        "SRC-U-2D-RESET-20261104",
+        "SRC-PM-STATUS-2D-20261104"
+      ]
+    },
+    {
+      "id": "D-PM-VALIDATION",
+      "title": "【已确认】登记与测试不改变机制验证状态",
+      "description": "mechanismValidated: false。模块文档、动画、几何论证与工作台 check / test 仅支持各自检查范围；不等于运行网络、脑机制或 Minecraft 能力验收，不将候选升级为确认。",
+      "status": "confirmed",
+      "sourceIds": [
+        "SRC-PM-20261102",
+        "SRC-PM-STATUS",
+        "SRC-V"
+      ]
+    },
+    {
+      "id": "D-PM-STATE-REGISTER",
+      "title": "【已作废作主线／3D 归档】【已确认】状态 03～07 只登记研究进度",
+      "description": "【已作废作主线】2026-11-04 起不作当前默认；历史确认保留为 3D 线归档，见 D-PM-2D-RESET。本轮只登记状态侧候选材料及源稿明确确认的边界，mechanismValidated: false；不改运行源码或 modules/input，不扩展输入／概念／动作拓扑。工作台 check / test 通过和既有合成验证均不批准机制；不新增案例分类。",
+      "status": "deprecated",
+      "sourceIds": [
+        "SRC-PM-STATE-20261103",
+        "SRC-STATE-DECISIONS-20261103",
+        "SRC-PM-STATE-STATUS-20261103",
+        "SRC-U-2D-RESET-20261104",
+        "SRC-PM-STATUS-2D-20261104"
+      ]
+    },
+    {
+      "id": "D-STATE-FIXED-RF",
+      "title": "【已作废作主线／3D 归档】【已确认】固定重叠三维感受野，位置不学",
+      "description": "【已作废作主线】2026-11-04 起不作当前默认；历史确认保留为 3D 线归档，见 D-PM-2D-RESET。固定、重叠三维 RF 的位置不学习，学习归概念网络。具体核函数、排布、读出、容量和实现仍待设计与核验，不能由该方向确认推定所有实验配置获批。",
+      "status": "deprecated",
+      "sourceIds": [
+        "SRC-S-SPACE-03",
+        "SRC-STATE-DECISIONS-20261103",
+        "SRC-U-2D-RESET-20261104",
+        "SRC-PM-STATUS-2D-20261104"
+      ]
+    },
+    {
+      "id": "D-STATE-NATURAL-IMAGING",
+      "title": "【已作废作主线／3D 归档】【已确认】输入到承载自然成像，筛选另立",
+      "description": "【已作废作主线】2026-11-04 起不作当前默认；历史确认保留为 3D 线归档，见 D-PM-2D-RESET。输入→承载是自然成像；场与亮度不贴真假、对错、交汇或人为形态标签。筛正确／稳定 3D 像属于另立的筛选模块；其算法、稳定性定义及接口尚未设计，不作为沉积前资格门。本次不新建结构或接线。",
+      "status": "deprecated",
+      "sourceIds": [
+        "SRC-S-SPACE-04",
+        "SRC-STATE-DECISIONS-20261103",
+        "SRC-U-2D-RESET-20261104",
+        "SRC-PM-STATUS-2D-20261104"
+      ]
+    },
+    {
+      "id": "D-STATE-MC-MONO",
+      "title": "【已作废作主线／3D 归档】【已确认】MC 首版单路 2D 与相机参数",
+      "description": "【已作废作主线】2026-11-04 起不作当前默认；历史确认保留为 3D 线归档，见 D-PM-2D-RESET。首版入口为一张二维画面＋相机参数，经稀疏化形成亮点与单路 ray，无左右图或双目配对前提。仅确认入口方向，不批准 Q2/Q3、VisionSparseEvent、L-SPACE / P-SPACE-IN 载荷或运行协议。",
+      "status": "deprecated",
+      "sourceIds": [
+        "SRC-S-SPACE-06",
+        "SRC-STATE-DECISIONS-20261103",
+        "SRC-U-2D-RESET-20261104",
+        "SRC-PM-STATUS-2D-20261104"
+      ]
+    },
+    {
+      "id": "D-STATE-MC-SCALE-K",
+      "title": "【已作废作主线／3D 归档】【已确认】1 块单位先验与锁定后已知的 K",
+      "description": "【已作废作主线】2026-11-04 起不作当前默认；历史确认保留为 3D 线归档，见 D-PM-2D-RESET。单位方块边长 b=1 个方块单位作为显式尺度先验；从真实 MC 锁定版本、FOV 与投影后，K 视为已知，不逐帧猜。真实锁定值、块数 N 及几何适用依据仍待核验，不默认 N=1、块等于米或已知世界位姿。",
+      "status": "deprecated",
+      "sourceIds": [
+        "SRC-S-SPACE-06B",
+        "SRC-S-SPACE-06C",
+        "SRC-STATE-DECISIONS-20261103",
+        "SRC-U-2D-RESET-20261104",
+        "SRC-PM-STATUS-2D-20261104"
+      ]
+    },
+    {
+      "id": "D-STATE-RELATIVE-LAYOUT-BOUNDARY",
+      "title": "【已作废作主线／3D 归档】【已确认】A 外条件计量与相机未测深分开",
+      "description": "【已作废作主线】2026-11-04 起不作当前默认；历史确认保留为 3D 线归档，见 D-PM-2D-RESET。等尺度关系或已知方块范围及几何条件适用时，可由表观尺寸在 A 外计算相对近远和条件坐标。ray.depth 保持相机未测深，结果不写回观测或重新沉积。不给画面、外观或结果另起工程 status taxonomy；缺依据的计算不产生数值，不补零或替代判定词。",
+      "status": "deprecated",
+      "sourceIds": [
+        "SRC-S-SPACE-07",
+        "SRC-STATE-DECISIONS-20261103",
+        "SRC-U-2D-RESET-20261104",
+        "SRC-PM-STATUS-2D-20261104"
+      ]
+    },
+    {
+      "id": "D-STATE-CONDITIONAL-PARAMETERS",
+      "title": "【已作废作主线／3D 归档】【候选】计算窗与宽度只作条件起点",
+      "description": "【已作废作主线】2026-11-04 起不作当前默认；历史确认保留为 3D 线归档，见 D-PM-2D-RESET。前向 z 主窗口 0.25–16 m、紧窗口 0.25–12.5 m，以及 σ≈0.015625 m、h≈0.0078125 m 等只登记为有来源的候选起点。不写正式接口默认，不当测得深度范围或未知误差上界；各实验的核与配置不合并成已选实现。",
+      "status": "deprecated",
+      "sourceIds": [
+        "SRC-S-SPACE-03",
+        "SRC-S-SPACE-04",
+        "SRC-PM-STATE-20261103",
+        "SRC-U-2D-RESET-20261104",
+        "SRC-PM-STATUS-2D-20261104"
+      ]
+    },
+    {
+      "id": "D-STATE-SSPACE-03-07",
+      "title": "【已作废作主线／3D 归档】【候选】状态 03～07 研究交付保持候选",
+      "description": "【已作废作主线】2026-11-04 起不作当前默认；历史确认保留为 3D 线归档，见 D-PM-2D-RESET。登记承载草稿、自然成像边界、交汇特异性、单目状态、尺度先验、图像到图案及相对布局。03～07 的机制、公式与实验实现均未获机制批准；05B 的同输入异世界反例、多物体透视的两项能力未通过、07 的条件与无分类标签边界同时保留。07 上报独立验证 247/247 只支持所述合成检查，mechanismValidated: false。",
+      "status": "deprecated",
+      "sourceIds": [
+        "SRC-S-SPACE-03",
+        "SRC-S-SPACE-04",
+        "SRC-S-SPACE-05",
+        "SRC-S-SPACE-05-RESULT",
+        "SRC-S-SPACE-06",
+        "SRC-S-SPACE-06-RESULT",
+        "SRC-S-SPACE-06B",
+        "SRC-S-SPACE-06C",
+        "SRC-S-SPACE-06C-RESULT",
+        "SRC-S-SPACE-MULTI-RESULT",
+        "SRC-S-SPACE-07",
+        "SRC-S-SPACE-07-RESULT",
+        "SRC-S-SPACE-07-VALIDATION",
+        "SRC-PM-STATE-STATUS-20261103",
+        "SRC-U-2D-RESET-20261104",
+        "SRC-PM-STATUS-2D-20261104"
+      ]
+    },
+    {
+      "id": "D-STATE-RESEARCH-OPEN",
+      "title": "【开放/未决】S-SPACE-08 已上报，五项跨模块交接待群对齐",
+      "description": "【3D 归档／历史参考·非本版默认】原筛选算法、真实 MC、旧输入联合签认等开放项随旧线归档。当前最小承载稿 S-SPACE-08 已登记，不再等待五盒方案；已确认范围见 D-STATE-2D-SSPACE-08，候选与开放项分别见 D-STATE-2D-SSPACE-08-HANDOFF、D-STATE-2D-SSPACE-08-OPEN。1. 输入字段签认：shape 的交付位置、坐标原点与轴向、position_index、强度尺度、最小帧元数据、同址重复及完整空帧／没有完整帧的区别。2. 概念读取与 C0／L-CALL／L-CAL0 在 S-INSTANCE／S-SOURCE 退场后的承接位置与时序。3. 概念回传峰如何落回仅含活动图的 S-SPACE，非观测落点和位置对应待定，不加第二张图、实例表或来源账本作默认答案。4. 四盒退场后 L-GROUP／L-CALL／L-RETURN／L-CAL0／L-HAVE／L-HAVE-QUERY／L-ACTION-TRACE／L-EXPERIENCE／L-BODY／L-GOAL 与 architecture.json 拓扑的群对齐后物理更新；本轮不删除、重接或重编号。5. 颜色通道、编码和输入块大小／k／权重／重叠／噪声门槛／并列次序；等状态设计对齐后调，不锁参数值。概念／动作非几何阻塞保留；观测隔离不是待放开项。mechanismValidated: false。",
+      "status": "unresolved",
+      "sourceIds": [
+        "SRC-S-SPACE-03",
+        "SRC-S-SPACE-04",
+        "SRC-S-SPACE-06",
+        "SRC-S-SPACE-06B",
+        "SRC-S-SPACE-07",
+        "SRC-PM-STATUS",
+        "SRC-PM-STATE-STATUS-20261103",
+        "SRC-PM-STATE-20261103",
+        "SRC-U-2D-RESET-20261104",
+        "SRC-PM-STATUS-2D-20261104",
+        "SRC-INPUT-2D-V3",
+        "SRC-U-INPUT-2D-V3-20261104",
+        "SRC-PM-STATUS-INPUT-2D-V3-20261104",
+        "SRC-S-SPACE-08",
+        "SRC-U-STATE-SSPACE-08-20261104",
+        "SRC-PM-STATE-SSPACE-08-20261104",
+        "SRC-PM-STATUS-STATE-SSPACE-08-20261104"
+      ]
+    },
+    {
+      "id": "D-PM-2D-RESET",
+      "title": "【已确认】输入／状态重置为 2D toy，再升 3D",
+      "description": "用户已确认阶段切换：删除并重建输入与状态网络方向，当前主线为 2D 世界 toy model，3D 为后续升级。旧 3D／MC／S-SPACE-01～07 材料归档非现行默认。概念／动作不重建。工作台同步至本决定；不假造未研究的 2D 端口／接线。mechanismValidated: false。",
+      "status": "confirmed",
+      "sourceIds": [
+        "SRC-U-2D-RESET-20261104",
+        "SRC-PM-2D-BRIEF-20261104",
+        "SRC-PM-STATUS-2D-20261104",
+        "SRC-U"
+      ]
+    },
+    {
+      "id": "D-INPUT-2D-STAGE",
+      "title": "【开放/未决】输入 v3 与状态 08 均已登记，交接待群对齐",
+      "description": "输入短稿 v3 与 README STATUS 已于 1.2.1 登记；本次收到 S-SPACE-08 最小活动图设计，入口方向与原位置＋强度一致，状态未点亮格的 0 是无活动，不是输入补伪零观测。D-INPUT-2D-V3 已确认方向与调参时序不变；D-INPUT-2D-V3-HANDOFF 及状态侧具体字段仍候选，不表示输入已接受状态表或联合签认完成。颜色、参数、身体／经历交接继续开放；不改输入正文或 ports／edges，mechanismValidated: false。",
+      "status": "unresolved",
+      "sourceIds": [
+        "SRC-U-2D-RESET-20261104",
+        "SRC-PM-STATUS-2D-20261104",
+        "SRC-INPUT-INDEX",
+        "SRC-INPUT-2D-V3",
+        "SRC-U-INPUT-2D-V3-20261104",
+        "SRC-PM-STATUS-INPUT-2D-V3-20261104",
+        "SRC-S-SPACE-08",
+        "SRC-U-STATE-SSPACE-08-20261104",
+        "SRC-PM-STATE-SSPACE-08-20261104",
+        "SRC-PM-STATUS-STATE-SSPACE-08-20261104"
+      ]
+    },
+    {
+      "id": "D-STATE-2D-STAGE",
+      "title": "【开放/未决】状态 S-SPACE-08 已登记，跨模块接线待群对齐",
+      "description": "【用户已确认】当前状态主线为 S-SPACE-08 的同尺寸密强度活动图，第一版只留 S-SPACE；四盒非本版职责，旧五职责待设计的表述由八条决定覆盖。【候选方案】字段、伪代码、读出与四项核验大纲未获联合签认或执行。【开放/未决】五项交接见 D-STATE-2D-SSPACE-08-OPEN；保留全部结构 ID、端口、接线与几何，待群对齐后处理。【3D 归档／历史参考·非本版默认】01～07 与旧实验；mechanismValidated: false。",
+      "status": "unresolved",
+      "sourceIds": [
+        "SRC-U-2D-RESET-20261104",
+        "SRC-PM-STATUS-2D-20261104",
+        "SRC-STATE-INDEX",
+        "SRC-S-SPACE-08",
+        "SRC-U-STATE-SSPACE-08-20261104",
+        "SRC-PM-STATE-SSPACE-08-20261104",
+        "SRC-PM-STATUS-STATE-SSPACE-08-20261104"
+      ]
+    },
+    {
+      "id": "D-3D-LINE-ARCHIVED",
+      "title": "【已作废作主线】旧 3D／MC／S-SPACE 研究不作当前默认",
+      "description": "将既有输入三维可行性与状态 S-SPACE-01～07 等登记为 3D 线候选／研究归档。保留 ID 与历史确认叙述，但展示与决策默认以 2D toy 阶段为准；升 3D 时再评估是否重新启用。",
+      "status": "deprecated",
+      "sourceIds": [
+        "SRC-U-2D-RESET-20261104",
+        "SRC-PM-STATUS-2D-20261104",
+        "SRC-INPUT-3D-FEASIBILITY",
+        "SRC-S-SPACE-01",
+        "SRC-S-SPACE-07"
+      ]
+    },
+    {
+      "id": "D-INPUT-2D-V3",
+      "title": "【用户已确认】2D 画面分块局部对比 topK 稀疏进 S-SPACE",
+      "description": "2D 画面→分块局部对比 topK 稀疏→S-SPACE；每块最多留 k 个突出位置，不够少留、不凑数。点带原画面位置，可带光强＋颜色；颜色是观测通道，不是对象标签／ID，topK 打分可以让颜色参与加权。块大小、k、对比与颜色权重等参数等状态网络设计完再调，本轮不锁数值默认。不预装具体游戏对象编号或世界地图，观测入口只交适配器真实稀疏测量，补全／回映不是新观测。本决定只确认方向与调参时序；交接 schema 仍候选／开放，等状态最小承载后再对；旧 3D／MC 不作现行，不新增或改定稿输入 ports／wires／topology。概念／动作已确认边界继续有效；mechanismValidated: false。",
+      "status": "confirmed",
+      "sourceIds": [
+        "SRC-INPUT-2D-V3",
+        "SRC-INPUT-INDEX",
+        "SRC-U-INPUT-2D-V3-20261104",
+        "SRC-PM-INPUT-2D-V3-20261104"
+      ]
+    },
+    {
+      "id": "D-INPUT-2D-V3-HANDOFF",
+      "title": "【候选】输入 v3 整帧稀疏集合交接形状",
+      "description": "候选形状为一帧一次交出稀疏集合，携带位置索引、强度、可选颜色、来源／时间等最小元数据，整帧检查后交给 S-SPACE；未列位置不表示「空」，不补伪零观测。这些描述不是定稿 schema 字段或接纳协议；具体字段名、颜色编码、强度尺度与 P-SPACE-IN／等价接收口的联合签认，等状态最小承载草稿后再对，开放项见 D-INPUT-OPEN。身体信号与动作经历入口本轮不扩展；不改 ports／edges，mechanismValidated: false。",
+      "status": "candidate",
+      "sourceIds": [
+        "SRC-INPUT-2D-V3",
+        "SRC-PM-INPUT-2D-V3-20261104",
+        "SRC-PM-STATUS-INPUT-2D-V3-20261104"
+      ]
+    },
+    {
+      "id": "D-STATE-2D-SSPACE-08",
+      "title": "【用户已确认】S-SPACE-08 · 第一版只留 2D 活动图的八条方向",
+      "description": "【用户已确认】以下八条按本轮登记 brief 原文保存，对应 S-SPACE-08 第 2 节：\n1. 入口：2D 画面 → 分块局部对比 topK 稀疏 → S-SPACE；点含原位置＋强度；颜色可参与 topK 加权，进状态格为后选项；不预装对象 ID／地图；参数等状态设计后再调（本稿不锁参数）。\n2. 点亮：topK 点直接点亮对应图像平面格；**不做**相机→世界映射。\n3. 峰：第一版只承载活动格；峰等概念学习／补全读出后再回传；状态侧不做峰／归组／局部极大。\n4. 跨帧：每帧整图覆盖；不叠帧、不衰减叠帧；不自留历史。\n5. 职责盒：删掉 S-INSTANCE／S-SOURCE／S-HAVE／S-WANT；第一版**只留 S-SPACE 活动图**。\n6. 存储：整幅密网格；未点到的格为 0（表示无活动，不是填未知）。\n7. 格载荷：第一版每格只要强度；颜色可选后加。\n8. 分辨率：与输入画面同尺寸，一点一格。\n【用户已确认】观测口只收真实稀疏；补全／回映／推算不得写观测格；无兜底／无账本／未知不补零；禁止 MC 对象 ID／地图／隐藏属性／配方。四盒退场是本版职责方向，结构物理更新仍待群对齐，本轮只登记，不删除或重接。",
+      "status": "confirmed",
+      "sourceIds": [
+        "SRC-S-SPACE-08",
+        "SRC-U-STATE-SSPACE-08-20261104",
+        "SRC-PM-STATE-SSPACE-08-20261104",
+        "SRC-PM-STATUS-STATE-SSPACE-08-20261104"
+      ],
+      "notes": [
+        "【开放/未决】本决定不签认字段表、伪代码、接线或核验场景；分别见 D-STATE-2D-SSPACE-08-HANDOFF、D-STATE-2D-SSPACE-08-OPEN。mechanismValidated: false。",
+        "【用户已确认】状态三因子只校 C0 吸引子内部连接，上层由下一层非三因子校准；返回无强度。真实输入触发的直接和补全活动可学习，内部预演不学习，遮挡／缺测照常小幅削弱；L-GOAL【设计已锁·现码未对齐】不回退。",
+        "【历史参考·非本版默认】D-OBSERVATION-BOUNDARY 的旧射线语境不成为 2D 必填字段；D-COMPLETION-BOUNDARY 的原实例叙述不恢复 S-INSTANCE。观测隔离与返回无强度的已确认边界继续有效。"
+      ]
+    },
+    {
+      "id": "D-STATE-2D-SSPACE-08-HANDOFF",
+      "title": "【候选方案】S-SPACE-08 字段、伪代码与核验大纲",
+      "description": "S-SPACE-08 第 3～7 节的 frame_id、shape、source_id、sampled_at／clock_id、samples、position_index、intensity 等字段名与元数据交接，左上原点、轴向、行优先索引、同帧位置唯一与强度尺度均只作候选对齐，不宣称输入 v3 已接受。第 4 节伪代码是规则说明，不是运行实现；向概念交当前活动图与帧元数据的方式未签认。第 9 节及 2d-toy-model/README.md 的单点、双点、完整空帧、次帧覆盖仅为候选核验场景，尚未实现或执行；H=3、W=4 与示例强度不是默认参数。升 3D 仅为候选钩子，不恢复旧三维载荷或实验默认。mechanismValidated: false。",
+      "status": "candidate",
+      "sourceIds": [
+        "SRC-S-SPACE-08",
+        "SRC-STATE-2D-TOY-OUTLINE",
+        "SRC-INPUT-2D-V3",
+        "SRC-PM-STATE-SSPACE-08-20261104"
+      ]
+    },
+    {
+      "id": "D-STATE-2D-SSPACE-08-OPEN",
+      "title": "【开放/未决】四盒退场后的五项交接与拓扑群对齐",
+      "description": "1. 输入字段签认：shape 的交付位置、坐标原点与轴向、position_index、强度尺度、最小帧元数据、同址重复及完整空帧／没有完整帧的区别。2. 概念读取与 C0／L-CALL／L-CAL0 在 S-INSTANCE／S-SOURCE 退场后的承接位置与时序。3. 概念回传峰如何落回仅含活动图的 S-SPACE，非观测落点和位置对应待定，不加第二张图、实例表或来源账本作默认答案。4. 四盒退场后 L-GROUP／L-CALL／L-RETURN／L-CAL0／L-HAVE／L-HAVE-QUERY／L-ACTION-TRACE／L-EXPERIENCE／L-BODY／L-GOAL 与 architecture.json 拓扑的群对齐后物理更新；本轮不删除、重接或重编号。5. 颜色通道、编码和输入块大小／k／权重／重叠／噪声门槛／并列次序；等状态设计对齐后调，不锁参数值。【用户已确认】以上开放项不重开八条方向、观测隔离、无兜底／无账本／未知不补零；三因子只校 C0、返回无强度与 L-GOAL【设计已锁·现码未对齐】继续有效。旧节点、端口、边的确认状态和几何是保留身份，不证明已成为本版有效接线。群对齐并记录签认范围后，才由 Codex 在后续版本按稳定 ID 更新；mechanismValidated: false。",
+      "status": "unresolved",
+      "sourceIds": [
+        "SRC-S-SPACE-08",
+        "SRC-U-STATE-SSPACE-08-20261104",
+        "SRC-PM-STATE-SSPACE-08-20261104",
+        "SRC-PM-STATUS-STATE-SSPACE-08-20261104",
+        "SRC-INPUT-2D-V3",
+        "SRC-PM-STATUS-INPUT-2D-V3-20261104"
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "M-ENV",
+      "label": "环境",
+      "kind": "module",
+      "parentId": null,
+      "status": "confirmed",
+      "description": "Minecraft / 现实环境的边界。未接入游戏，无预置对象真值。",
+      "position": [
+        -11,
+        0,
+        0
+      ],
+      "size": [
+        2.8,
+        3.2,
+        3
+      ],
+      "color": "#4e96a7",
+      "sourceIds": [
+        "SRC-P"
+      ],
+      "decisionIds": [],
+      "tags": []
+    },
+    {
+      "id": "M-IN",
+      "label": "感觉入口",
+      "kind": "module",
+      "parentId": null,
+      "status": "confirmed",
+      "description": "真实画面、身体采样、采样时刻及可用性。保留原位置；不先赋物体类别。",
+      "position": [
+        -6.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        3.5,
+        2.8
+      ],
+      "color": "#63c8c1",
+      "sourceIds": [
+        "SRC-P",
+        "SRC-B",
+        "SRC-INPUT-INDEX",
+        "SRC-INPUT-PLAIN",
+        "SRC-INPUT-V1",
+        "SRC-INPUT-INTERFACE",
+        "SRC-INPUT-3D-FEASIBILITY",
+        "SRC-PM-STATUS",
+        "SRC-U-2D-RESET-20261104",
+        "SRC-PM-STATUS-2D-20261104"
+      ],
+      "decisionIds": [
+        "D-INPUT-DIRECTION",
+        "D-INPUT-V1",
+        "D-INPUT-OPEN",
+        "D-INPUT-3D-FEASIBILITY",
+        "D-PM-PROCESS",
+        "D-PM-2D-RESET",
+        "D-INPUT-2D-STAGE",
+        "D-3D-LINE-ARCHIVED"
+      ],
+      "tags": [],
+      "notes": [
+        "【未验证/开放】2026-11-04 起主线为 2D toy model；旧 MC／双路／三维材料见归档来源，确认前不落 2D 拓扑。",
+        "【候选】modules/input/ 四份交付只作评审入口；已确认方向不批准 Q2/Q3、VisionSparseEvent 或射线字段进入规范端口／接线。",
+        "【未验证/开放】P1–P5 及旧 Q4/Q5 保留；本次不改 L-SPACE / P-SPACE-IN 载荷。"
+      ]
+    },
+    {
+      "id": "M-STATE",
+      "label": "状态网络",
+      "kind": "module",
+      "parentId": null,
+      "status": "confirmed",
+      "description": "【用户已确认】本版主线见 S-SPACE-08，第一版只留 S-SPACE 图像平面活动图：同尺寸密强度网格、按原位置点亮、每帧覆盖。【开放/未决】S-INSTANCE／S-SOURCE／S-HAVE／S-WANT 非本版职责，保留旧结构身份，待群对齐后处理；旧职责说明与接线不作本版定稿。",
+      "position": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        5.3,
+        7,
+        4
+      ],
+      "color": "#66cabd",
+      "sourceIds": [
+        "SRC-B",
+        "SRC-STATE-INDEX",
+        "SRC-S-SPACE-01",
+        "SRC-STATE-INTERFACE",
+        "SRC-PM-STATUS",
+        "SRC-S-SPACE-02",
+        "SRC-PM-STATE-20261103",
+        "SRC-PM-STATE-STATUS-20261103",
+        "SRC-STATE-DECISIONS-20261103",
+        "SRC-S-SPACE-03",
+        "SRC-S-SPACE-04",
+        "SRC-S-SPACE-05",
+        "SRC-S-SPACE-05-RESULT",
+        "SRC-S-SPACE-06",
+        "SRC-S-SPACE-06-RESULT",
+        "SRC-S-SPACE-06B",
+        "SRC-S-SPACE-06C",
+        "SRC-S-SPACE-06C-RESULT",
+        "SRC-S-SPACE-MULTI-RESULT",
+        "SRC-S-SPACE-07",
+        "SRC-S-SPACE-07-RESULT",
+        "SRC-S-SPACE-07-VALIDATION",
+        "SRC-U-2D-RESET-20261104",
+        "SRC-PM-STATUS-2D-20261104"
+      ],
+      "decisionIds": [
+        "D-STATE",
+        "D-GOAL",
+        "D-OBSERVATION-BOUNDARY",
+        "D-COMPLETION-BOUNDARY",
+        "D-STATE-SSPACE-01",
+        "D-STATE-INPUT-PATCH",
+        "D-PM-VALIDATION",
+        "D-PM-STATE-REGISTER",
+        "D-STATE-FIXED-RF",
+        "D-STATE-NATURAL-IMAGING",
+        "D-STATE-MC-MONO",
+        "D-STATE-MC-SCALE-K",
+        "D-STATE-RELATIVE-LAYOUT-BOUNDARY",
+        "D-STATE-CONDITIONAL-PARAMETERS",
+        "D-STATE-SSPACE-03-07",
+        "D-STATE-RESEARCH-OPEN",
+        "D-PM-2D-RESET",
+        "D-STATE-2D-STAGE",
+        "D-3D-LINE-ARCHIVED"
+      ],
+      "tags": [],
+      "notes": [
+        "【用户已确认】本版主线见 modules/state-network/S-SPACE-08-2d-toy-model.md 与 D-STATE-2D-SSPACE-08；第一版只留 S-SPACE 活动图，四盒非本版职责。",
+        "【开放/未决】字段、概念读取／C0 校准、回传峰落点及四盒相关旧 L-* 待群对齐后处理，见 D-STATE-2D-SSPACE-08-OPEN；本轮保留所有 ID、状态、端口、边与几何，mechanismValidated: false。",
+        "【3D 归档／历史参考·非本版默认】【未验证/开放】2026-11-04 起主线为 2D toy model；S-SPACE-01～07 为 3D 归档非现行默认；等 2D 最小方案上报。",
+        "【3D 归档／历史参考·非本版默认】【候选】modules/state-network/S-SPACE-01-sparse-feature-to-spatial-peak.md 两种成峰对照均未选定；峰不等于对象。",
+        "【3D 归档／历史参考·非本版默认】【候选】核对期间状态侧另到 modules/state-network/S-SPACE-02-multi-view-ray-3d-filter.md 与接口备注补丁；【未验证/开放】已有接收侧字段讨论，仍等输入用户确认及契约签认，mechanismValidated: false。",
+        "【3D 归档／历史参考·非本版默认】【候选】状态 03～07 本轮进度与来源见 sources/pm-status-2026-11-03.md、modules/state-network/README.md；只登记源稿已确认边界和候选证据，不改输入载荷，不关闭 1.1.1 阻塞。mechanismValidated: false。"
+      ]
+    },
+    {
+      "id": "M-CONCEPT",
+      "label": "概念网络 · 同一基座",
+      "kind": "module",
+      "parentId": null,
+      "status": "confirmed",
+      "description": "同一多层网络承担学习、识别补全、时序预测与目标反查。C0、C1、C2为层级关系示意，不限定层数。",
+      "position": [
+        7,
+        2,
+        0
+      ],
+      "size": [
+        6,
+        11,
+        5
+      ],
+      "color": "#ae9cff",
+      "sourceIds": [
+        "SRC-B",
+        "SRC-CONCEPT-V0-INDEX",
+        "SRC-CONCEPT-V0",
+        "SRC-CONCEPT-BRIEF",
+        "SRC-PM-STATUS"
+      ],
+      "decisionIds": [
+        "D-CORE",
+        "D-CAL0",
+        "D-CALN",
+        "D-CONCEPT-VIDEO-FIRST",
+        "D-CONCEPT-CODE-GAP",
+        "D-CONCEPT-OPEN",
+        "D-COMPLETION-BOUNDARY",
+        "D-GOAL-INTERFACE-OPEN",
+        "D-PM-VALIDATION"
+      ],
+      "tags": [],
+      "notes": [
+        "【已确认】modules/concept-network/design-memo-video-first-v0.md 登记视频①–⑯主线和最新校准靶点；本轮未重看视频。",
+        "【设计已锁·现码未对齐】模块报告现码仍改下行 W、动作门仍挂 W；【未验证/开放】O1–O10 与 U-CREDIT 等继续开放。"
+      ]
+    },
+    {
+      "id": "M-ACTION",
+      "label": "动作接口",
+      "kind": "module",
+      "parentId": null,
+      "status": "confirmed",
+      "description": "只接原始允许动作。发令、接受和实际成功分开；动作意义通过经历学习。",
+      "position": [
+        -1,
+        -7,
+        0
+      ],
+      "size": [
+        4.5,
+        2.5,
+        2.5
+      ],
+      "color": "#e7b785",
+      "sourceIds": [
+        "SRC-P",
+        "SRC-B",
+        "SRC-ACTION-V1",
+        "SRC-ACTION-DYNAMICS-V1",
+        "SRC-ACTION-BRIEF",
+        "SRC-PM-STATUS"
+      ],
+      "decisionIds": [
+        "D-ACTION-V1",
+        "D-ACTION-DYNAMICS",
+        "D-GOAL-INTERFACE-OPEN",
+        "D-CONCEPT-CODE-GAP",
+        "D-PM-VALIDATION"
+      ],
+      "tags": [],
+      "notes": [
+        "【候选】modules/action-goal/v1-interface-contract.md 与 v1-open-dynamics-candidates.md 只登记交接边界和九项提案，不改变 L-GOAL / L-BODY / L-ACTION-TRACE 接线。",
+        "【未验证/开放】九项动力学未验收，目标底层入口、非动作缺件与情景边界待对齐；【设计已锁·现码未对齐】动作门差距保留。"
+      ]
+    },
+    {
+      "id": "S-IN-SPARSE",
+      "label": "稀疏 / 位置保留",
+      "kind": "structure",
+      "parentId": "M-IN",
+      "status": "candidate",
+      "description": "局部颜色、亮暗、轮廓及位置，局部对比/topK的最终输入编码仍待确定。",
+      "position": [
+        0,
+        0.45,
+        0
+      ],
+      "size": [
+        2.4,
+        1.2,
+        2
+      ],
+      "color": "#73b9ff",
+      "sourceIds": [
+        "SRC-B",
+        "SRC-C1"
+      ],
+      "decisionIds": [],
+      "tags": []
+    },
+    {
+      "id": "S-IN-BODY",
+      "label": "身体 / 时钟",
+      "kind": "structure",
+      "parentId": "M-IN",
+      "status": "confirmed",
+      "description": "身体值、实际动作标记及真实采样时间。饥饿信号本身不包含食物知识。",
+      "position": [
+        0,
+        -1,
+        0
+      ],
+      "size": [
+        2.4,
+        0.9,
+        2
+      ],
+      "color": "#73b9ff",
+      "sourceIds": [
+        "SRC-P"
+      ],
+      "decisionIds": [],
+      "tags": []
+    },
+    {
+      "id": "S-SPACE",
+      "label": "空间多峰",
+      "kind": "structure",
+      "parentId": "M-STATE",
+      "status": "confirmed",
+      "description": "【用户已确认】S-SPACE-08：真实 topK 稀疏点直接点亮同尺寸图像平面格，每格仅强度，未点亮为无活动的 0，每帧整图覆盖；不做相机→世界映射，不先做峰／归组／局部极大，不自留历史。补全／回映／推算不得写入观测格。【开放/未决】概念回传峰的非观测落点待群对齐。",
+      "position": [
+        0,
+        2.05,
+        0
+      ],
+      "size": [
+        4.4,
+        1.5,
+        2.8
+      ],
+      "color": "#73b9ff",
+      "sourceIds": [
+        "SRC-B",
+        "SRC-PM-STATE-20261103",
+        "SRC-PM-STATE-STATUS-20261103",
+        "SRC-STATE-DECISIONS-20261103",
+        "SRC-S-SPACE-03",
+        "SRC-S-SPACE-04",
+        "SRC-S-SPACE-05",
+        "SRC-S-SPACE-05-RESULT",
+        "SRC-S-SPACE-06",
+        "SRC-S-SPACE-06-RESULT",
+        "SRC-S-SPACE-06B",
+        "SRC-S-SPACE-06C",
+        "SRC-S-SPACE-06C-RESULT",
+        "SRC-S-SPACE-MULTI-RESULT",
+        "SRC-S-SPACE-07",
+        "SRC-S-SPACE-07-RESULT",
+        "SRC-S-SPACE-07-VALIDATION",
+        "SRC-U-2D-RESET-20261104",
+        "SRC-PM-STATUS-2D-20261104"
+      ],
+      "decisionIds": [
+        "D-STATE",
+        "D-PM-STATE-REGISTER",
+        "D-STATE-FIXED-RF",
+        "D-STATE-NATURAL-IMAGING",
+        "D-STATE-MC-MONO",
+        "D-STATE-MC-SCALE-K",
+        "D-STATE-RELATIVE-LAYOUT-BOUNDARY",
+        "D-STATE-CONDITIONAL-PARAMETERS",
+        "D-STATE-SSPACE-03-07",
+        "D-STATE-RESEARCH-OPEN",
+        "D-PM-2D-RESET",
+        "D-STATE-2D-STAGE",
+        "D-3D-LINE-ARCHIVED"
+      ],
+      "tags": [],
+      "notes": [
+        "【用户已确认】本版主线见 modules/state-network/S-SPACE-08-2d-toy-model.md 与 D-STATE-2D-SSPACE-08；第一版只留 S-SPACE 活动图，四盒非本版职责。",
+        "【开放/未决】字段、概念读取／C0 校准、回传峰落点及四盒相关旧 L-* 待群对齐后处理，见 D-STATE-2D-SSPACE-08-OPEN；本轮保留所有 ID、状态、端口、边与几何，mechanismValidated: false。",
+        "【历史参考·非本版默认】旧标签“空间多峰”及 P-SPACE-OUT 的“多峰/关系”说明仅保留结构身份，不表示本版生成峰；待群对齐后处理。",
+        "【3D 归档／历史参考·非本版默认】【3D 归档·非当前默认】原 03～07 三维／MC 候选笔记保留追溯；当前阶段先做 2D 平面空间 toy，不把旧窗宽当默认。",
+        "【3D 归档／历史参考·非本版默认】【候选】modules/state-network/S-SPACE-03-carrier-structure.md：固定 RF 承载草稿；窗口／宽度仅为条件起点，不是正式默认。",
+        "【3D 归档／历史参考·非本版默认】【候选】modules/state-network/S-SPACE-04-false-intersection-filter.md：自然成像与另立筛选模块的职责边界已确认；场不贴真假或交汇标签，筛选算法未设计。",
+        "【3D 归档／历史参考·非本版默认】【候选】modules/state-network/S-SPACE-05-specificity-at-intersection.md 与 experiments/specificity-at-intersection/RESULT.md（相对该模块目录）：93 个合成场景的条件响应和同输入异世界反例，不证明普遍唯一定位。",
+        "【3D 归档／历史参考·非本版默认】【候选】modules/state-network/S-SPACE-06-mc-monocular-state.md：MC 首版单路 2D＋相机参数方向已确认；32 项合成检查不等于真实 MC 接入。",
+        "【3D 归档／历史参考·非本版默认】【候选】modules/state-network/S-SPACE-06b-block-scale-prior.md：1 块单位与锁定后已知 K 的先验边界；N、真实配置及适用依据仍开放，不默认 N=1。",
+        "【3D 归档／历史参考·非本版默认】【候选】modules/state-network/S-SPACE-06c-image-to-pattern.md：图像到活动图案及 A 外条件计量；experiments/mc-image-to-pattern/RESULT.md、experiments/mc-perspective-multi/RESULT.md（相对该模块目录）保留合成证据和能力未通过项。",
+        "【3D 归档／历史参考·非本版默认】【候选】modules/state-network/S-SPACE-07-relative-layout.md：适用条件下的 A 外相对计量，不发布工程 status taxonomy；ray.depth 仅表示相机未测深。experiments/mc-relative-layout/validation.json（相对该模块目录）上报 247/247，mechanismValidated: false。"
+      ]
+    },
+    {
+      "id": "S-INSTANCE",
+      "label": "实例 / 对应",
+      "kind": "structure",
+      "parentId": "M-STATE",
+      "status": "unresolved",
+      "description": "同类不同实例保留独立位置、属性、参与角色与调用对应；不预置对象真ID。",
+      "position": [
+        -1.15,
+        0.2,
+        0
+      ],
+      "size": [
+        2,
+        1.6,
+        2.8
+      ],
+      "color": "#73b9ff",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-STATE",
+        "D-OPEN"
+      ],
+      "tags": [],
+      "notes": [
+        "【用户已确认】S-SPACE-08 第一版只留 S-SPACE 活动图；S-INSTANCE 非本版职责，不用别名或附表恢复。",
+        "【开放/未决】本 ID、所属端口及 L-GROUP／L-CALL／L-RETURN 原样保留，不删除、不重接、不重编号；承接职责与拓扑待群对齐后处理，见 D-STATE-2D-SSPACE-08-OPEN。",
+        "【历史参考·非本版默认】本节点的旧标签、说明与确认状态只作追溯，不表示 2D 本版保留该职责；概念／动作既有已确认边界不回退。"
+      ]
+    },
+    {
+      "id": "S-SOURCE",
+      "label": "出处 / 经历",
+      "kind": "structure",
+      "parentId": "M-STATE",
+      "status": "confirmed",
+      "description": "观察、补全、预测、回忆、预演分别保留身份；实际经历不会被解释改写。",
+      "position": [
+        1.15,
+        0.2,
+        0
+      ],
+      "size": [
+        2,
+        1.6,
+        2.8
+      ],
+      "color": "#73b9ff",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-STATE",
+        "D-LEARN"
+      ],
+      "tags": [],
+      "notes": [
+        "【用户已确认】S-SPACE-08 第一版只留 S-SPACE 活动图；S-SOURCE 非本版职责，不用别名或附表恢复。",
+        "【开放/未决】本 ID、所属端口及 L-CAL0／L-ACTION-TRACE／L-EXPERIENCE 原样保留，不删除、不重接、不重编号；承接职责与拓扑待群对齐后处理，见 D-STATE-2D-SSPACE-08-OPEN。",
+        "【历史参考·非本版默认】本节点的旧标签、说明与确认状态只作追溯，不表示 2D 本版保留该职责；概念／动作既有已确认边界不回退。"
+      ]
+    },
+    {
+      "id": "S-HAVE",
+      "label": "已有状态",
+      "kind": "structure",
+      "parentId": "M-STATE",
+      "status": "confirmed",
+      "description": "当前有现实见证的状态。过去有过或预演出现，不等于当前已经拥有。",
+      "position": [
+        -1.15,
+        -1.8,
+        0
+      ],
+      "size": [
+        2,
+        1.4,
+        2.8
+      ],
+      "color": "#73b9ff",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-GOAL"
+      ],
+      "tags": [],
+      "notes": [
+        "【用户已确认】S-SPACE-08 第一版只留 S-SPACE 活动图；S-HAVE 非本版职责，不用别名或附表恢复。",
+        "【开放/未决】本 ID、所属端口及 L-HAVE／L-HAVE-QUERY 原样保留，不删除、不重接、不重编号；承接职责与拓扑待群对齐后处理，见 D-STATE-2D-SSPACE-08-OPEN。",
+        "【历史参考·非本版默认】本节点的旧标签、说明与确认状态只作追溯，不表示 2D 本版保留该职责；概念／动作既有已确认边界不回退。"
+      ]
+    },
+    {
+      "id": "S-WANT",
+      "label": "目标 / 需要",
+      "kind": "structure",
+      "parentId": "M-STATE",
+      "status": "confirmed",
+      "description": "身体需要、好奇与已学偏好形成“要”。优先、耐心、子目标的动态机制仍待定。",
+      "position": [
+        1.15,
+        -1.8,
+        0
+      ],
+      "size": [
+        2,
+        1.4,
+        2.8
+      ],
+      "color": "#73b9ff",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-GOAL"
+      ],
+      "tags": [],
+      "notes": [
+        "【用户已确认】S-SPACE-08 第一版只留 S-SPACE 活动图；S-WANT 非本版职责，不用别名或附表恢复。",
+        "【开放/未决】本 ID、所属端口及 L-BODY／L-GOAL 原样保留，不删除、不重接、不重编号；承接职责与拓扑待群对齐后处理，见 D-STATE-2D-SSPACE-08-OPEN。",
+        "【历史参考·非本版默认】本节点的旧标签、说明与确认状态只作追溯，不表示 2D 本版保留该职责；概念／动作既有已确认边界不回退。"
+      ]
+    },
+    {
+      "id": "S-CONTEXT",
+      "label": "调用 / 分支区分",
+      "kind": "structure",
+      "parentId": "S-SOURCE",
+      "status": "candidate",
+      "description": "同一概念权重的不同上下文可分。C1的分时/代际方案仅为候选，不视为固定对象表。",
+      "position": [
+        0,
+        0,
+        0.2
+      ],
+      "size": [
+        1.6,
+        1.1,
+        1.5
+      ],
+      "color": "#73b9ff",
+      "sourceIds": [
+        "SRC-C1"
+      ],
+      "decisionIds": [
+        "D-OPEN"
+      ],
+      "tags": [],
+      "notes": [
+        "【历史参考·非本版默认】S-SPACE-08 不沿用旧 CONTEXT 或五职责叙事；本 ID 与 S-SOURCE 父子关系仅保留追溯，不用来恢复实例或出处职责。【开放/未决】待群对齐后处理，不删除或重接。"
+      ]
+    },
+    {
+      "id": "U-BIND",
+      "label": "绑定与身份续接 ?",
+      "kind": "placeholder",
+      "parentId": "S-INSTANCE",
+      "status": "unresolved",
+      "description": "多峰归组、同色实例交叉、分裂/合并和旧返回失效的统一动态承载仍未选定。",
+      "position": [
+        0,
+        0,
+        0.1
+      ],
+      "size": [
+        1.6,
+        1.1,
+        1.5
+      ],
+      "color": "#73b9ff",
+      "sourceIds": [
+        "SRC-B",
+        "SRC-C1"
+      ],
+      "decisionIds": [
+        "D-OPEN"
+      ],
+      "tags": []
+    },
+    {
+      "id": "U-MEM",
+      "label": "长期痕迹 / 重解释 ?",
+      "kind": "placeholder",
+      "parentId": "S-SOURCE",
+      "status": "unresolved",
+      "description": "功能已要求；容量、召回地址、保留与重解释的统一实现仍是候选。",
+      "position": [
+        0,
+        -1.2,
+        0.1
+      ],
+      "size": [
+        1.8,
+        0.8,
+        1.5
+      ],
+      "color": "#73b9ff",
+      "sourceIds": [
+        "SRC-P",
+        "SRC-C1"
+      ],
+      "decisionIds": [
+        "D-OPEN"
+      ],
+      "tags": []
+    },
+    {
+      "id": "U-REG",
+      "label": "耐心 / 优先 / 探索 ?",
+      "kind": "placeholder",
+      "parentId": "S-WANT",
+      "status": "unresolved",
+      "description": "不写死成功动作。如何持续目标、恢复耐心、探索和重选尚待明确动态规则。",
+      "position": [
+        0,
+        0,
+        0.1
+      ],
+      "size": [
+        1.6,
+        1.1,
+        1.5
+      ],
+      "color": "#73b9ff",
+      "sourceIds": [
+        "SRC-P",
+        "SRC-C1"
+      ],
+      "decisionIds": [
+        "D-OPEN"
+      ],
+      "tags": []
+    },
+    {
+      "id": "S-COMPETE",
+      "label": "动作竞争",
+      "kind": "structure",
+      "parentId": "M-ACTION",
+      "status": "unresolved",
+      "description": "承接同网反查产生的已着地动作候选；互斥、并发、持续/释放、中断仍待求解。",
+      "position": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        1.7,
+        1.5,
+        1.8
+      ],
+      "color": "#73b9ff",
+      "sourceIds": [
+        "SRC-B",
+        "SRC-C1"
+      ],
+      "decisionIds": [
+        "D-OPEN"
+      ],
+      "tags": []
+    },
+    {
+      "id": "S-EXEC",
+      "label": "发令 / 回执",
+      "kind": "structure",
+      "parentId": "M-ACTION",
+      "status": "confirmed",
+      "description": "实际动作尝试和可用回执分别记入经历；胜出不等于已执行成功。",
+      "position": [
+        1,
+        0,
+        0
+      ],
+      "size": [
+        1.7,
+        1.5,
+        1.8
+      ],
+      "color": "#73b9ff",
+      "sourceIds": [
+        "SRC-P",
+        "SRC-B"
+      ],
+      "decisionIds": [],
+      "tags": []
+    },
+    {
+      "id": "C0",
+      "label": "最底层 · 局部概念",
+      "kind": "module",
+      "parentId": "M-CONCEPT",
+      "status": "confirmed",
+      "description": "同类局部吸引子与内部连接。上层抽象程度为示意；实际层数、容量与分工不预置。",
+      "position": [
+        0,
+        -3.2,
+        0
+      ],
+      "size": [
+        5.1,
+        2.5,
+        3.8
+      ],
+      "color": "#b4a0ff",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-CORE",
+        "D-CAL0"
+      ],
+      "tags": []
+    },
+    {
+      "id": "S-C0-ATTR",
+      "label": "局部吸引子",
+      "kind": "structure",
+      "parentId": "C0",
+      "status": "confirmed",
+      "description": "部分线索沿已学连接唤起/补全模式；此处小图只抽样显示两个活动单元和连接，不规定网络规模。",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.4,
+        1.7,
+        2.7
+      ],
+      "color": "#a99cff",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-CORE",
+        "D-RHO",
+        "D-VIS"
+      ],
+      "tags": []
+    },
+    {
+      "id": "S-C0-N1",
+      "label": "神经元 α（示意）",
+      "kind": "structure",
+      "parentId": "S-C0-ATTR",
+      "status": "confirmed",
+      "description": "只表示吸引子组成活动单元，不赋物体语义或永久对象编号。",
+      "position": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        0.65,
+        0.65
+      ],
+      "color": "#81bffc",
+      "sourceIds": [
+        "SRC-B",
+        "SRC-V"
+      ],
+      "decisionIds": [
+        "D-VIS"
+      ],
+      "tags": []
+    },
+    {
+      "id": "S-C0-SYN",
+      "label": "内部连接 ρ / H",
+      "kind": "structure",
+      "parentId": "S-C0-ATTR",
+      "status": "confirmed",
+      "description": "吸引子组成神经元之间的连接集合；允许增强、削弱、新建。此连接集合才是校准靶点。",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.6,
+        0.85,
+        0.9
+      ],
+      "color": "#ccb5ff",
+      "sourceIds": [
+        "SRC-U",
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-CAL0",
+        "D-RHO"
+      ],
+      "tags": []
+    },
+    {
+      "id": "S-C0-N2",
+      "label": "神经元 β（示意）",
+      "kind": "structure",
+      "parentId": "S-C0-ATTR",
+      "status": "confirmed",
+      "description": "单元数量、活动值及连接示例仅供架构展示，无真实网络计算。",
+      "position": [
+        1.5,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        0.65,
+        0.65
+      ],
+      "color": "#81bffc",
+      "sourceIds": [
+        "SRC-B",
+        "SRC-V"
+      ],
+      "decisionIds": [
+        "D-VIS"
+      ],
+      "tags": []
+    },
+    {
+      "id": "C1",
+      "label": "上层 · 时序组合",
+      "kind": "module",
+      "parentId": "M-CONCEPT",
+      "status": "confirmed",
+      "description": "同类局部吸引子与内部连接。上层抽象程度为示意；实际层数、容量与分工不预置。",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        5.1,
+        2.5,
+        3.8
+      ],
+      "color": "#b4a0ff",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-CORE",
+        "D-CALN"
+      ],
+      "tags": []
+    },
+    {
+      "id": "S-C1-ATTR",
+      "label": "局部吸引子",
+      "kind": "structure",
+      "parentId": "C1",
+      "status": "confirmed",
+      "description": "部分线索沿已学连接唤起/补全模式；此处小图只抽样显示两个活动单元和连接，不规定网络规模。",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.4,
+        1.7,
+        2.7
+      ],
+      "color": "#a99cff",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-CORE",
+        "D-RHO",
+        "D-VIS"
+      ],
+      "tags": []
+    },
+    {
+      "id": "S-C1-N1",
+      "label": "神经元 α（示意）",
+      "kind": "structure",
+      "parentId": "S-C1-ATTR",
+      "status": "confirmed",
+      "description": "只表示吸引子组成活动单元，不赋物体语义或永久对象编号。",
+      "position": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        0.65,
+        0.65
+      ],
+      "color": "#81bffc",
+      "sourceIds": [
+        "SRC-B",
+        "SRC-V"
+      ],
+      "decisionIds": [
+        "D-VIS"
+      ],
+      "tags": []
+    },
+    {
+      "id": "S-C1-SYN",
+      "label": "内部连接 ρ / H",
+      "kind": "structure",
+      "parentId": "S-C1-ATTR",
+      "status": "confirmed",
+      "description": "吸引子组成神经元之间的连接集合；允许增强、削弱、新建。此连接集合才是校准靶点。",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.6,
+        0.85,
+        0.9
+      ],
+      "color": "#ccb5ff",
+      "sourceIds": [
+        "SRC-U",
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-CALN",
+        "D-RHO"
+      ],
+      "tags": []
+    },
+    {
+      "id": "S-C1-N2",
+      "label": "神经元 β（示意）",
+      "kind": "structure",
+      "parentId": "S-C1-ATTR",
+      "status": "confirmed",
+      "description": "单元数量、活动值及连接示例仅供架构展示，无真实网络计算。",
+      "position": [
+        1.5,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        0.65,
+        0.65
+      ],
+      "color": "#81bffc",
+      "sourceIds": [
+        "SRC-B",
+        "SRC-V"
+      ],
+      "decisionIds": [
+        "D-VIS"
+      ],
+      "tags": []
+    },
+    {
+      "id": "C2",
+      "label": "更高层 · 关系组合",
+      "kind": "module",
+      "parentId": "M-CONCEPT",
+      "status": "confirmed",
+      "description": "同类局部吸引子与内部连接。上层抽象程度为示意；实际层数、容量与分工不预置。",
+      "position": [
+        0,
+        3.2,
+        0
+      ],
+      "size": [
+        5.1,
+        2.5,
+        3.8
+      ],
+      "color": "#b4a0ff",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-CORE",
+        "D-CALN"
+      ],
+      "tags": []
+    },
+    {
+      "id": "S-C2-ATTR",
+      "label": "局部吸引子",
+      "kind": "structure",
+      "parentId": "C2",
+      "status": "confirmed",
+      "description": "部分线索沿已学连接唤起/补全模式；此处小图只抽样显示两个活动单元和连接，不规定网络规模。",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        4.4,
+        1.7,
+        2.7
+      ],
+      "color": "#a99cff",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-CORE",
+        "D-RHO",
+        "D-VIS"
+      ],
+      "tags": []
+    },
+    {
+      "id": "S-C2-N1",
+      "label": "神经元 α（示意）",
+      "kind": "structure",
+      "parentId": "S-C2-ATTR",
+      "status": "confirmed",
+      "description": "只表示吸引子组成活动单元，不赋物体语义或永久对象编号。",
+      "position": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        0.65,
+        0.65
+      ],
+      "color": "#81bffc",
+      "sourceIds": [
+        "SRC-B",
+        "SRC-V"
+      ],
+      "decisionIds": [
+        "D-VIS"
+      ],
+      "tags": []
+    },
+    {
+      "id": "S-C2-SYN",
+      "label": "内部连接 ρ / H",
+      "kind": "structure",
+      "parentId": "S-C2-ATTR",
+      "status": "confirmed",
+      "description": "吸引子组成神经元之间的连接集合；允许增强、削弱、新建。此连接集合才是校准靶点。",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1.6,
+        0.85,
+        0.9
+      ],
+      "color": "#ccb5ff",
+      "sourceIds": [
+        "SRC-U",
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-CALN",
+        "D-RHO"
+      ],
+      "tags": []
+    },
+    {
+      "id": "S-C2-N2",
+      "label": "神经元 β（示意）",
+      "kind": "structure",
+      "parentId": "S-C2-ATTR",
+      "status": "confirmed",
+      "description": "单元数量、活动值及连接示例仅供架构展示，无真实网络计算。",
+      "position": [
+        1.5,
+        0,
+        0
+      ],
+      "size": [
+        0.65,
+        0.65,
+        0.65
+      ],
+      "color": "#81bffc",
+      "sourceIds": [
+        "SRC-B",
+        "SRC-V"
+      ],
+      "decisionIds": [
+        "D-VIS"
+      ],
+      "tags": []
+    },
+    {
+      "id": "S-T01",
+      "label": "时间展开 0→1",
+      "kind": "structure",
+      "parentId": "M-CONCEPT",
+      "status": "confirmed",
+      "description": "低层活动按时间片铺开、统一传播色、再稀疏映射；顺序、参与者、来源需保住。",
+      "position": [
+        0,
+        -1.6,
+        0
+      ],
+      "size": [
+        3.7,
+        0.55,
+        3.1
+      ],
+      "color": "#8fa6e9",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-CORE"
+      ],
+      "tags": []
+    },
+    {
+      "id": "S-T12",
+      "label": "时间展开 1→2",
+      "kind": "structure",
+      "parentId": "M-CONCEPT",
+      "status": "confirmed",
+      "description": "同类层间组合关系可递归；具体时间格、联合容量与变速处理未确定。",
+      "position": [
+        0,
+        1.6,
+        0
+      ],
+      "size": [
+        3.7,
+        0.55,
+        3.1
+      ],
+      "color": "#8fa6e9",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-CORE"
+      ],
+      "tags": []
+    },
+    {
+      "id": "U-CAL0",
+      "label": "三因子完整式 ?",
+      "kind": "placeholder",
+      "parentId": "C0",
+      "status": "unresolved",
+      "description": "校准位置及增强/削弱/新建已定；三因子定义、责任分配、时窗及联合稳定性仍待完整规格。",
+      "position": [
+        0,
+        0,
+        2
+      ],
+      "size": [
+        3.1,
+        1,
+        1
+      ],
+      "color": "#73b9ff",
+      "sourceIds": [
+        "SRC-U"
+      ],
+      "decisionIds": [
+        "D-CAL0"
+      ],
+      "tags": []
+    },
+    {
+      "id": "U-H",
+      "label": "H / 传播完整式 ?",
+      "kind": "placeholder",
+      "parentId": "C1",
+      "status": "unresolved",
+      "description": "H色记忆写入、匹配、传播步进、色容量与边界未完整确定；不自行补公式。",
+      "position": [
+        0,
+        0,
+        2
+      ],
+      "size": [
+        3.1,
+        1,
+        1
+      ],
+      "color": "#73b9ff",
+      "sourceIds": [
+        "SRC-B",
+        "SRC-U"
+      ],
+      "decisionIds": [
+        "D-RHO"
+      ],
+      "tags": []
+    },
+    {
+      "id": "U-CAPACITY",
+      "label": "容量 / 稳定性 ?",
+      "kind": "placeholder",
+      "parentId": "C2",
+      "status": "unresolved",
+      "description": "有限资源下的多实例、组合复用、串扰与长期保留未验证。",
+      "position": [
+        0,
+        0,
+        2
+      ],
+      "size": [
+        3.1,
+        1,
+        1
+      ],
+      "color": "#73b9ff",
+      "sourceIds": [
+        "SRC-C1"
+      ],
+      "decisionIds": [
+        "D-OPEN"
+      ],
+      "tags": []
+    },
+    {
+      "id": "U-CREDIT",
+      "label": "跨层责任归属 ?",
+      "kind": "placeholder",
+      "parentId": "C1",
+      "status": "unresolved",
+      "description": "高层错误“灯亮”关系 vs 正确C0视觉内容：沿参与路径施加负信号会否伤及正确低层？已有L-CAL0/L-CAL1靶点清楚，但责任划分未解决，禁止声称§10闭环已过。",
+      "position": [
+        0,
+        0,
+        -1.9
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "color": "#ee989e",
+      "sourceIds": [
+        "SRC-REVIEW",
+        "SRC-V2"
+      ],
+      "decisionIds": [
+        "D-V2",
+        "D-CREDIT"
+      ],
+      "tags": [
+        "待验收"
+      ]
+    },
+    {
+      "id": "U-DECODE",
+      "label": "原解码贡献记录 ?",
+      "kind": "placeholder",
+      "parentId": "U-CAL0",
+      "status": "unresolved",
+      "description": "原解码如何记录具体内部连接对输出分量的贡献，尚无完整核验；不增加外置归因器。",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "color": "#ee989e",
+      "sourceIds": [
+        "SRC-REVIEW",
+        "SRC-V2"
+      ],
+      "decisionIds": [
+        "D-V2"
+      ],
+      "tags": [
+        "待验收"
+      ]
+    },
+    {
+      "id": "U-ETA-K",
+      "label": "η / K 共同可行域 ?",
+      "kind": "placeholder",
+      "parentId": "U-CAL0",
+      "status": "unresolved",
+      "description": "当前普通学习率η与传播/更新次数K共同可行域待验证；不能用单边示例替代全网。",
+      "position": [
+        0,
+        1.3,
+        0
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "color": "#ee989e",
+      "sourceIds": [
+        "SRC-REVIEW",
+        "SRC-V2"
+      ],
+      "decisionIds": [
+        "D-V2"
+      ],
+      "tags": [
+        "待验收"
+      ]
+    },
+    {
+      "id": "U-H-GROW",
+      "label": "新边 H / 多边稳定 ?",
+      "kind": "placeholder",
+      "parentId": "U-H",
+      "status": "unresolved",
+      "description": "新连接的H初始化、后续生长与多边耦合稳定性尚未完成验收。",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "color": "#ee989e",
+      "sourceIds": [
+        "SRC-REVIEW",
+        "SRC-V2"
+      ],
+      "decisionIds": [
+        "D-V2"
+      ],
+      "tags": [
+        "待验收"
+      ]
+    },
+    {
+      "id": "C-T0",
+      "label": "T0 / 责任追踪候选",
+      "kind": "placeholder",
+      "parentId": "U-CAL0",
+      "status": "candidate",
+      "description": "有限责任迹、现实调制、生长资格和预算是V2候选设计；此处只承载方案，不计算或批准公式。",
+      "position": [
+        0,
+        -1.3,
+        0
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "color": "#efba70",
+      "sourceIds": [
+        "SRC-V2"
+      ],
+      "decisionIds": [
+        "D-V2"
+      ],
+      "tags": [
+        "待验收"
+      ]
+    }
+  ],
+  "ports": [
+    {
+      "id": "P-C0-IN",
+      "nodeId": "C0",
+      "label": "活动输入",
+      "direction": "in",
+      "position": [
+        -2.55,
+        -0.5,
+        0.2
+      ],
+      "signal": "activity",
+      "status": "confirmed",
+      "description": "活动输入",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-C0-RETURN",
+      "nodeId": "C0",
+      "label": "补全返回",
+      "direction": "out",
+      "position": [
+        -2.55,
+        0.55,
+        0.2
+      ],
+      "signal": "completion",
+      "status": "confirmed",
+      "description": "补全返回",
+      "sourceIds": [
+        "SRC-U",
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-RETURN"
+      ]
+    },
+    {
+      "id": "P-C0-UP",
+      "nodeId": "C0",
+      "label": "低层活动",
+      "direction": "out",
+      "position": [
+        1.8,
+        1.25,
+        0
+      ],
+      "signal": "temporal",
+      "status": "confirmed",
+      "description": "低层活动",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-C0-DOWN",
+      "nodeId": "C0",
+      "label": "下层校准信号",
+      "direction": "out",
+      "position": [
+        2.55,
+        0.15,
+        0
+      ],
+      "signal": "calibration",
+      "status": "confirmed",
+      "description": "下层校准信号",
+      "sourceIds": [
+        "SRC-U"
+      ],
+      "decisionIds": [
+        "D-CALN"
+      ]
+    },
+    {
+      "id": "P-C0-CAL",
+      "nodeId": "S-C0-SYN",
+      "label": "内部连接校准",
+      "direction": "in",
+      "position": [
+        0,
+        0,
+        0.6
+      ],
+      "signal": "calibration",
+      "status": "confirmed",
+      "description": "内部连接校准",
+      "sourceIds": [
+        "SRC-U"
+      ],
+      "decisionIds": [
+        "D-CAL0"
+      ]
+    },
+    {
+      "id": "P-C0-N1",
+      "nodeId": "S-C0-N1",
+      "label": "活动",
+      "direction": "bidirectional",
+      "position": [
+        0.33,
+        0,
+        0
+      ],
+      "signal": "activity",
+      "status": "confirmed",
+      "description": "活动",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-C0-SYN-A",
+      "nodeId": "S-C0-SYN",
+      "label": "连接端α",
+      "direction": "bidirectional",
+      "position": [
+        -0.8,
+        0,
+        0
+      ],
+      "signal": "activity",
+      "status": "confirmed",
+      "description": "连接端α",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-C0-SYN-B",
+      "nodeId": "S-C0-SYN",
+      "label": "连接端β",
+      "direction": "bidirectional",
+      "position": [
+        0.8,
+        0,
+        0
+      ],
+      "signal": "activity",
+      "status": "confirmed",
+      "description": "连接端β",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-C0-N2",
+      "nodeId": "S-C0-N2",
+      "label": "活动",
+      "direction": "bidirectional",
+      "position": [
+        -0.33,
+        0,
+        0
+      ],
+      "signal": "activity",
+      "status": "confirmed",
+      "description": "活动",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-C1-IN",
+      "nodeId": "C1",
+      "label": "活动输入",
+      "direction": "in",
+      "position": [
+        -2.55,
+        -0.5,
+        0.2
+      ],
+      "signal": "activity",
+      "status": "confirmed",
+      "description": "活动输入",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-C1-RETURN",
+      "nodeId": "C1",
+      "label": "补全返回",
+      "direction": "out",
+      "position": [
+        -2.55,
+        0.55,
+        0.2
+      ],
+      "signal": "completion",
+      "status": "confirmed",
+      "description": "补全返回",
+      "sourceIds": [
+        "SRC-U",
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-RETURN"
+      ]
+    },
+    {
+      "id": "P-C1-UP",
+      "nodeId": "C1",
+      "label": "低层活动",
+      "direction": "out",
+      "position": [
+        1.8,
+        1.25,
+        0
+      ],
+      "signal": "temporal",
+      "status": "confirmed",
+      "description": "低层活动",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-C1-DOWN",
+      "nodeId": "C1",
+      "label": "下层校准信号",
+      "direction": "out",
+      "position": [
+        2.55,
+        0.15,
+        0
+      ],
+      "signal": "calibration",
+      "status": "confirmed",
+      "description": "下层校准信号",
+      "sourceIds": [
+        "SRC-U"
+      ],
+      "decisionIds": [
+        "D-CALN"
+      ]
+    },
+    {
+      "id": "P-C1-CAL",
+      "nodeId": "S-C1-SYN",
+      "label": "内部连接校准",
+      "direction": "in",
+      "position": [
+        0,
+        0,
+        0.6
+      ],
+      "signal": "calibration",
+      "status": "confirmed",
+      "description": "内部连接校准",
+      "sourceIds": [
+        "SRC-U"
+      ],
+      "decisionIds": [
+        "D-CALN"
+      ]
+    },
+    {
+      "id": "P-C1-N1",
+      "nodeId": "S-C1-N1",
+      "label": "活动",
+      "direction": "bidirectional",
+      "position": [
+        0.33,
+        0,
+        0
+      ],
+      "signal": "activity",
+      "status": "confirmed",
+      "description": "活动",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-C1-SYN-A",
+      "nodeId": "S-C1-SYN",
+      "label": "连接端α",
+      "direction": "bidirectional",
+      "position": [
+        -0.8,
+        0,
+        0
+      ],
+      "signal": "activity",
+      "status": "confirmed",
+      "description": "连接端α",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-C1-SYN-B",
+      "nodeId": "S-C1-SYN",
+      "label": "连接端β",
+      "direction": "bidirectional",
+      "position": [
+        0.8,
+        0,
+        0
+      ],
+      "signal": "activity",
+      "status": "confirmed",
+      "description": "连接端β",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-C1-N2",
+      "nodeId": "S-C1-N2",
+      "label": "活动",
+      "direction": "bidirectional",
+      "position": [
+        -0.33,
+        0,
+        0
+      ],
+      "signal": "activity",
+      "status": "confirmed",
+      "description": "活动",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-C2-IN",
+      "nodeId": "C2",
+      "label": "活动输入",
+      "direction": "in",
+      "position": [
+        -2.55,
+        -0.5,
+        0.2
+      ],
+      "signal": "activity",
+      "status": "confirmed",
+      "description": "活动输入",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-C2-RETURN",
+      "nodeId": "C2",
+      "label": "补全返回",
+      "direction": "out",
+      "position": [
+        -2.55,
+        0.55,
+        0.2
+      ],
+      "signal": "completion",
+      "status": "confirmed",
+      "description": "补全返回",
+      "sourceIds": [
+        "SRC-U",
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-RETURN"
+      ]
+    },
+    {
+      "id": "P-C2-UP",
+      "nodeId": "C2",
+      "label": "低层活动",
+      "direction": "out",
+      "position": [
+        1.8,
+        1.25,
+        0
+      ],
+      "signal": "temporal",
+      "status": "confirmed",
+      "description": "低层活动",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-C2-DOWN",
+      "nodeId": "C2",
+      "label": "下层校准信号",
+      "direction": "out",
+      "position": [
+        2.55,
+        0.15,
+        0
+      ],
+      "signal": "calibration",
+      "status": "confirmed",
+      "description": "下层校准信号",
+      "sourceIds": [
+        "SRC-U"
+      ],
+      "decisionIds": [
+        "D-CALN"
+      ]
+    },
+    {
+      "id": "P-C2-CAL",
+      "nodeId": "S-C2-SYN",
+      "label": "内部连接校准",
+      "direction": "in",
+      "position": [
+        0,
+        0,
+        0.6
+      ],
+      "signal": "calibration",
+      "status": "confirmed",
+      "description": "内部连接校准",
+      "sourceIds": [
+        "SRC-U"
+      ],
+      "decisionIds": [
+        "D-CALN"
+      ]
+    },
+    {
+      "id": "P-C2-N1",
+      "nodeId": "S-C2-N1",
+      "label": "活动",
+      "direction": "bidirectional",
+      "position": [
+        0.33,
+        0,
+        0
+      ],
+      "signal": "activity",
+      "status": "confirmed",
+      "description": "活动",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-C2-SYN-A",
+      "nodeId": "S-C2-SYN",
+      "label": "连接端α",
+      "direction": "bidirectional",
+      "position": [
+        -0.8,
+        0,
+        0
+      ],
+      "signal": "activity",
+      "status": "confirmed",
+      "description": "连接端α",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-C2-SYN-B",
+      "nodeId": "S-C2-SYN",
+      "label": "连接端β",
+      "direction": "bidirectional",
+      "position": [
+        0.8,
+        0,
+        0
+      ],
+      "signal": "activity",
+      "status": "confirmed",
+      "description": "连接端β",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-C2-N2",
+      "nodeId": "S-C2-N2",
+      "label": "活动",
+      "direction": "bidirectional",
+      "position": [
+        -0.33,
+        0,
+        0
+      ],
+      "signal": "activity",
+      "status": "confirmed",
+      "description": "活动",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-T01-IN",
+      "nodeId": "S-T01",
+      "label": "片段入口",
+      "direction": "in",
+      "position": [
+        1.2,
+        -0.28,
+        0
+      ],
+      "signal": "temporal",
+      "status": "confirmed",
+      "description": "片段入口",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-T01-OUT",
+      "nodeId": "S-T01",
+      "label": "展开活动",
+      "direction": "out",
+      "position": [
+        -1.2,
+        0.28,
+        0
+      ],
+      "signal": "temporal",
+      "status": "confirmed",
+      "description": "展开活动",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-T12-IN",
+      "nodeId": "S-T12",
+      "label": "片段入口",
+      "direction": "in",
+      "position": [
+        1.2,
+        -0.28,
+        0
+      ],
+      "signal": "temporal",
+      "status": "confirmed",
+      "description": "片段入口",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-T12-OUT",
+      "nodeId": "S-T12",
+      "label": "展开活动",
+      "direction": "out",
+      "position": [
+        -1.2,
+        0.28,
+        0
+      ],
+      "signal": "temporal",
+      "status": "confirmed",
+      "description": "展开活动",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-ENV-OBS",
+      "nodeId": "M-ENV",
+      "label": "真实反馈",
+      "direction": "out",
+      "position": [
+        1.4,
+        0.5,
+        0
+      ],
+      "signal": "observation",
+      "status": "confirmed",
+      "description": "真实反馈",
+      "sourceIds": [
+        "SRC-P"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-ENV-ACT",
+      "nodeId": "M-ENV",
+      "label": "动作作用",
+      "direction": "in",
+      "position": [
+        0,
+        -1.6,
+        0
+      ],
+      "signal": "action",
+      "status": "confirmed",
+      "description": "动作作用",
+      "sourceIds": [
+        "SRC-P"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-IN-RAW",
+      "nodeId": "M-IN",
+      "label": "采样",
+      "direction": "in",
+      "position": [
+        -1.5,
+        0.5,
+        0
+      ],
+      "signal": "observation",
+      "status": "confirmed",
+      "description": "采样",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-IN-FEAT",
+      "nodeId": "S-IN-SPARSE",
+      "label": "具位置特征",
+      "direction": "out",
+      "position": [
+        1.2,
+        0,
+        0
+      ],
+      "signal": "observation",
+      "status": "confirmed",
+      "description": "具位置特征",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-IN-BODY",
+      "nodeId": "S-IN-BODY",
+      "label": "身体采样",
+      "direction": "out",
+      "position": [
+        1.2,
+        0,
+        0
+      ],
+      "signal": "body",
+      "status": "confirmed",
+      "description": "身体采样",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-SPACE-IN",
+      "nodeId": "S-SPACE",
+      "label": "空间证据",
+      "direction": "in",
+      "position": [
+        -2.2,
+        0,
+        0
+      ],
+      "signal": "observation",
+      "status": "confirmed",
+      "description": "空间证据",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-SPACE-OUT",
+      "nodeId": "S-SPACE",
+      "label": "多峰/关系",
+      "direction": "out",
+      "position": [
+        0,
+        -0.75,
+        0
+      ],
+      "signal": "spatial",
+      "status": "confirmed",
+      "description": "多峰/关系",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-INSTANCE-IN",
+      "nodeId": "S-INSTANCE",
+      "label": "归组线索",
+      "direction": "in",
+      "position": [
+        0,
+        0.8,
+        0
+      ],
+      "signal": "spatial",
+      "status": "unresolved",
+      "description": "归组线索",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-INSTANCE-CALL",
+      "nodeId": "S-INSTANCE",
+      "label": "实例调用",
+      "direction": "out",
+      "position": [
+        1,
+        0,
+        1.4
+      ],
+      "signal": "activity",
+      "status": "candidate",
+      "description": "实例调用",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-STATE"
+      ]
+    },
+    {
+      "id": "P-INSTANCE-RETURN",
+      "nodeId": "S-INSTANCE",
+      "label": "原处回映",
+      "direction": "in",
+      "position": [
+        1,
+        0,
+        -1.4
+      ],
+      "signal": "completion",
+      "status": "candidate",
+      "description": "原处回映",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-RETURN"
+      ]
+    },
+    {
+      "id": "P-SOURCE-IN",
+      "nodeId": "S-SOURCE",
+      "label": "实际经历",
+      "direction": "in",
+      "position": [
+        -1,
+        0,
+        1.4
+      ],
+      "signal": "experience",
+      "status": "confirmed",
+      "description": "实际经历",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-SOURCE-OUT",
+      "nodeId": "S-SOURCE",
+      "label": "时序/来源",
+      "direction": "out",
+      "position": [
+        1,
+        0,
+        0
+      ],
+      "signal": "temporal",
+      "status": "confirmed",
+      "description": "时序/来源",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-STATE-CAL",
+      "nodeId": "S-SOURCE",
+      "label": "状态反馈 · 三因子",
+      "direction": "out",
+      "position": [
+        1,
+        -0.5,
+        1.4
+      ],
+      "signal": "calibration",
+      "status": "confirmed",
+      "description": "状态反馈 · 三因子",
+      "sourceIds": [
+        "SRC-U"
+      ],
+      "decisionIds": [
+        "D-CAL0",
+        "D-MISSING"
+      ]
+    },
+    {
+      "id": "P-HAVE-IN",
+      "nodeId": "S-HAVE",
+      "label": "现实核对",
+      "direction": "in",
+      "position": [
+        -1,
+        0,
+        0
+      ],
+      "signal": "observation",
+      "status": "confirmed",
+      "description": "现实核对",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-GOAL"
+      ]
+    },
+    {
+      "id": "P-HAVE-OUT",
+      "nodeId": "S-HAVE",
+      "label": "当前已有",
+      "direction": "out",
+      "position": [
+        1,
+        -0.3,
+        1.4
+      ],
+      "signal": "goal",
+      "status": "confirmed",
+      "description": "当前已有",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-GOAL"
+      ]
+    },
+    {
+      "id": "P-WANT-IN",
+      "nodeId": "S-WANT",
+      "label": "需要/偏好",
+      "direction": "in",
+      "position": [
+        -1,
+        0,
+        0
+      ],
+      "signal": "body",
+      "status": "confirmed",
+      "description": "需要/偏好",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-GOAL"
+      ]
+    },
+    {
+      "id": "P-WANT-OUT",
+      "nodeId": "S-WANT",
+      "label": "目标条件",
+      "direction": "out",
+      "position": [
+        1,
+        0,
+        1.4
+      ],
+      "signal": "goal",
+      "status": "confirmed",
+      "description": "目标条件",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-GOAL"
+      ]
+    },
+    {
+      "id": "P-C2-GOAL",
+      "nodeId": "C2",
+      "label": "要 / 已有入口",
+      "direction": "in",
+      "position": [
+        -2.55,
+        0.3,
+        1.4
+      ],
+      "signal": "goal",
+      "status": "confirmed",
+      "description": "要 / 已有入口",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-CORE",
+        "D-GOAL"
+      ]
+    },
+    {
+      "id": "P-C0-ACTION",
+      "nodeId": "C0",
+      "label": "动作/缺条件候选",
+      "direction": "out",
+      "position": [
+        -1.6,
+        -1.25,
+        1
+      ],
+      "signal": "action",
+      "status": "confirmed",
+      "description": "动作/缺条件候选",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-CORE"
+      ]
+    },
+    {
+      "id": "P-ACTION-CAND",
+      "nodeId": "S-COMPETE",
+      "label": "候选竞争",
+      "direction": "in",
+      "position": [
+        0,
+        0.75,
+        0
+      ],
+      "signal": "action",
+      "status": "unresolved",
+      "description": "候选竞争",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-ACTION-WIN",
+      "nodeId": "S-COMPETE",
+      "label": "胜出候选",
+      "direction": "out",
+      "position": [
+        0.85,
+        0,
+        0
+      ],
+      "signal": "action",
+      "status": "unresolved",
+      "description": "胜出候选",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-EXEC-IN",
+      "nodeId": "S-EXEC",
+      "label": "原始动作",
+      "direction": "in",
+      "position": [
+        -0.85,
+        0,
+        0
+      ],
+      "signal": "action",
+      "status": "confirmed",
+      "description": "原始动作",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-EXEC-OUT",
+      "nodeId": "S-EXEC",
+      "label": "实际提交",
+      "direction": "out",
+      "position": [
+        0,
+        -0.75,
+        0
+      ],
+      "signal": "action",
+      "status": "confirmed",
+      "description": "实际提交",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "P-EXEC-TRACE",
+      "nodeId": "S-EXEC",
+      "label": "动作经历",
+      "direction": "out",
+      "position": [
+        0.85,
+        0,
+        0
+      ],
+      "signal": "experience",
+      "status": "confirmed",
+      "description": "动作经历",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": []
+    }
+  ],
+  "edges": [
+    {
+      "id": "L-C0-A",
+      "label": "神经元 ↔ 内部连接",
+      "to": "P-C0-SYN-A",
+      "signal": "activity",
+      "status": "confirmed",
+      "description": "连接组示意的一端。ρ/H不是额外的桥接变量。",
+      "sourceIds": [
+        "SRC-B",
+        "SRC-V"
+      ],
+      "decisionIds": [
+        "D-RHO",
+        "D-VIS"
+      ],
+      "legacyRefs": [],
+      "tags": [],
+      "from": "P-C0-N1"
+    },
+    {
+      "id": "L-C0-B",
+      "label": "内部连接 ↔ 神经元",
+      "to": "P-C0-N2",
+      "signal": "activity",
+      "status": "confirmed",
+      "description": "连接组示意的另一端；图中方向只示意当前信号，不指定固定单向拓扑。",
+      "sourceIds": [
+        "SRC-B",
+        "SRC-V"
+      ],
+      "decisionIds": [
+        "D-RHO",
+        "D-VIS"
+      ],
+      "legacyRefs": [],
+      "tags": [],
+      "from": "P-C0-SYN-B"
+    },
+    {
+      "id": "L-C1-A",
+      "label": "神经元 ↔ 内部连接",
+      "to": "P-C1-SYN-A",
+      "signal": "activity",
+      "status": "confirmed",
+      "description": "连接组示意的一端。ρ/H不是额外的桥接变量。",
+      "sourceIds": [
+        "SRC-B",
+        "SRC-V"
+      ],
+      "decisionIds": [
+        "D-RHO",
+        "D-VIS"
+      ],
+      "legacyRefs": [],
+      "tags": [],
+      "from": "P-C1-N1"
+    },
+    {
+      "id": "L-C1-B",
+      "label": "内部连接 ↔ 神经元",
+      "to": "P-C1-N2",
+      "signal": "activity",
+      "status": "confirmed",
+      "description": "连接组示意的另一端；图中方向只示意当前信号，不指定固定单向拓扑。",
+      "sourceIds": [
+        "SRC-B",
+        "SRC-V"
+      ],
+      "decisionIds": [
+        "D-RHO",
+        "D-VIS"
+      ],
+      "legacyRefs": [],
+      "tags": [],
+      "from": "P-C1-SYN-B"
+    },
+    {
+      "id": "L-C2-A",
+      "label": "神经元 ↔ 内部连接",
+      "to": "P-C2-SYN-A",
+      "signal": "activity",
+      "status": "confirmed",
+      "description": "连接组示意的一端。ρ/H不是额外的桥接变量。",
+      "sourceIds": [
+        "SRC-B",
+        "SRC-V"
+      ],
+      "decisionIds": [
+        "D-RHO",
+        "D-VIS"
+      ],
+      "legacyRefs": [],
+      "tags": [],
+      "from": "P-C2-N1"
+    },
+    {
+      "id": "L-C2-B",
+      "label": "内部连接 ↔ 神经元",
+      "to": "P-C2-N2",
+      "signal": "activity",
+      "status": "confirmed",
+      "description": "连接组示意的另一端；图中方向只示意当前信号，不指定固定单向拓扑。",
+      "sourceIds": [
+        "SRC-B",
+        "SRC-V"
+      ],
+      "decisionIds": [
+        "D-RHO",
+        "D-VIS"
+      ],
+      "legacyRefs": [],
+      "tags": [],
+      "from": "P-C2-SYN-B"
+    },
+    {
+      "id": "L-SENSE",
+      "label": "真实采样",
+      "to": "P-IN-RAW",
+      "signal": "observation",
+      "status": "confirmed",
+      "description": "真实画面与自身状态进入感觉入口，不输入对象真值。",
+      "sourceIds": [
+        "SRC-P",
+        "SRC-B"
+      ],
+      "decisionIds": [],
+      "legacyRefs": [
+        "W01",
+        "W08",
+        "W20",
+        "W24"
+      ],
+      "tags": [],
+      "from": "P-ENV-OBS"
+    },
+    {
+      "id": "L-SPACE",
+      "label": "保位置稀疏活动",
+      "to": "P-SPACE-IN",
+      "signal": "observation",
+      "status": "candidate",
+      "description": "局部特征及位置映入空间候选。跨视角深度及参照的具体算法为候选。",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-STATE"
+      ],
+      "legacyRefs": [
+        "W01",
+        "W02"
+      ],
+      "tags": [],
+      "from": "P-IN-FEAT"
+    },
+    {
+      "id": "L-GROUP",
+      "label": "多峰 → 实例候选",
+      "to": "P-INSTANCE-IN",
+      "signal": "spatial",
+      "status": "unresolved",
+      "description": "一物多峰、多物相似峰与整体/部分的动态归组尚未确定。",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-OPEN"
+      ],
+      "legacyRefs": [
+        "W03"
+      ],
+      "tags": [],
+      "from": "P-SPACE-OUT"
+    },
+    {
+      "id": "L-CALL",
+      "label": "局部线索调用",
+      "to": "P-C0-IN",
+      "signal": "activity",
+      "status": "candidate",
+      "description": "保留实例、位置、关系与来源，把可复用局部内容送入同一概念网。具体编码未定。",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-STATE",
+        "D-CORE"
+      ],
+      "legacyRefs": [
+        "W04",
+        "W05"
+      ],
+      "tags": [],
+      "from": "P-INSTANCE-CALL"
+    },
+    {
+      "id": "L-RETURN",
+      "label": "补全沿对应返回",
+      "to": "P-INSTANCE-RETURN",
+      "signal": "completion",
+      "status": "candidate",
+      "description": "返回是信号通路；回到原实例/出处，不写成新观察。对应维护未定，没有返回强度。",
+      "sourceIds": [
+        "SRC-U",
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-RETURN"
+      ],
+      "legacyRefs": [
+        "W06"
+      ],
+      "tags": [],
+      "from": "P-C0-RETURN"
+    },
+    {
+      "id": "L-CAL0",
+      "label": "三因子 · 内部连接",
+      "to": "P-C0-CAL",
+      "signal": "calibration",
+      "status": "confirmed",
+      "description": "增强 / 削弱 / 新建概念最底层吸引子内部神经元连接。靶点已定，完整规则仍待解。",
+      "sourceIds": [
+        "SRC-U"
+      ],
+      "decisionIds": [
+        "D-CAL0",
+        "D-LEARN",
+        "D-MISSING"
+      ],
+      "legacyRefs": [],
+      "tags": [],
+      "from": "P-STATE-CAL",
+      "path": [
+        [
+          2,
+          -0.8,
+          3.5
+        ],
+        [
+          5,
+          -1.2,
+          3.5
+        ]
+      ]
+    },
+    {
+      "id": "L-CAL1",
+      "label": "非三因子 · 0→1",
+      "to": "P-C1-CAL",
+      "signal": "calibration",
+      "status": "confirmed",
+      "description": "C0的实际低层活动校准C1内部吸引子连接，沿用原非三因子机制。",
+      "sourceIds": [
+        "SRC-U"
+      ],
+      "decisionIds": [
+        "D-CALN"
+      ],
+      "legacyRefs": [],
+      "tags": [],
+      "from": "P-C0-DOWN",
+      "path": [
+        [
+          10.8,
+          -0.8,
+          1.7
+        ],
+        [
+          10.8,
+          2,
+          1.7
+        ]
+      ]
+    },
+    {
+      "id": "L-CAL2",
+      "label": "非三因子 · 1→2",
+      "to": "P-C2-CAL",
+      "signal": "calibration",
+      "status": "confirmed",
+      "description": "C1校准C2内部吸引子连接；同样关系可向更高层递归。",
+      "sourceIds": [
+        "SRC-U"
+      ],
+      "decisionIds": [
+        "D-CALN"
+      ],
+      "legacyRefs": [],
+      "tags": [],
+      "from": "P-C1-DOWN",
+      "path": [
+        [
+          11.5,
+          2,
+          1.7
+        ],
+        [
+          11.5,
+          5.2,
+          1.7
+        ]
+      ]
+    },
+    {
+      "id": "L-T01-IN",
+      "label": "低层时间片",
+      "to": "P-T01-IN",
+      "signal": "temporal",
+      "status": "confirmed",
+      "description": "真实经历的低层活动按时间展开。",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [],
+      "legacyRefs": [
+        "W10"
+      ],
+      "tags": [],
+      "from": "P-C0-UP"
+    },
+    {
+      "id": "L-T01-OUT",
+      "label": "展开 → 上层",
+      "to": "P-C1-IN",
+      "signal": "temporal",
+      "status": "candidate",
+      "description": "平铺/统一光色/稀疏映射后形成组合输入。具体联合编码未定。",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [],
+      "legacyRefs": [
+        "W10"
+      ],
+      "tags": [],
+      "from": "P-T01-OUT"
+    },
+    {
+      "id": "L-T12-IN",
+      "label": "上层时间片",
+      "to": "P-T12-IN",
+      "signal": "temporal",
+      "status": "confirmed",
+      "description": "继续形成更长或更复合的关系材料。",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [],
+      "legacyRefs": [
+        "W10"
+      ],
+      "tags": [],
+      "from": "P-C1-UP"
+    },
+    {
+      "id": "L-T12-OUT",
+      "label": "展开 → 更高层",
+      "to": "P-C2-IN",
+      "signal": "temporal",
+      "status": "candidate",
+      "description": "不宣称三层已足够表达现实世界规律。",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [],
+      "legacyRefs": [
+        "W10"
+      ],
+      "tags": [],
+      "from": "P-T12-OUT"
+    },
+    {
+      "id": "L-FB10",
+      "label": "上层补全反馈",
+      "to": "P-C0-IN",
+      "signal": "completion",
+      "status": "confirmed",
+      "description": "上层补全回到下一层，和低层已有活动核对。",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-CORE"
+      ],
+      "legacyRefs": [
+        "W06",
+        "W15"
+      ],
+      "tags": [],
+      "from": "P-C1-RETURN"
+    },
+    {
+      "id": "L-FB21",
+      "label": "更高层补全反馈",
+      "to": "P-C1-IN",
+      "signal": "completion",
+      "status": "confirmed",
+      "description": "逐层补全与条件反查共用同一层级网络。",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-CORE"
+      ],
+      "legacyRefs": [
+        "W15",
+        "W16"
+      ],
+      "tags": [],
+      "from": "P-C2-RETURN"
+    },
+    {
+      "id": "L-EXPERIENCE",
+      "label": "经历 → 时间展开",
+      "to": "P-T01-IN",
+      "signal": "temporal",
+      "status": "candidate",
+      "description": "前后状态、动作、参与者与真实时间保留来源进入同网组合。",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-STATE"
+      ],
+      "legacyRefs": [
+        "W09",
+        "W10",
+        "W13",
+        "W24"
+      ],
+      "tags": [],
+      "from": "P-SOURCE-OUT"
+    },
+    {
+      "id": "L-BODY",
+      "label": "身体 → 需要",
+      "to": "P-WANT-IN",
+      "signal": "body",
+      "status": "confirmed",
+      "description": "实际身体需要和变化参与目标活动；不能提前注入食物语义。",
+      "sourceIds": [
+        "SRC-P",
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-GOAL"
+      ],
+      "legacyRefs": [
+        "W08",
+        "W14"
+      ],
+      "tags": [],
+      "from": "P-IN-BODY"
+    },
+    {
+      "id": "L-HAVE",
+      "label": "现实 → 已有",
+      "to": "P-HAVE-IN",
+      "signal": "observation",
+      "status": "candidate",
+      "description": "已有须由现实活动支持；判定的具体绑定机制待补。",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-GOAL"
+      ],
+      "legacyRefs": [
+        "W15"
+      ],
+      "tags": [],
+      "from": "P-SPACE-OUT"
+    },
+    {
+      "id": "L-GOAL",
+      "label": "要 → 同网反查",
+      "to": "P-C2-GOAL",
+      "signal": "goal",
+      "status": "confirmed",
+      "description": "目标进入同一概念基座，沿逐层补全找当前缺失条件。不是外置规划器。",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-CORE",
+        "D-GOAL"
+      ],
+      "legacyRefs": [
+        "W14",
+        "W15",
+        "W16"
+      ],
+      "tags": [],
+      "from": "P-WANT-OUT",
+      "path": [
+        [
+          1,
+          -3,
+          4
+        ],
+        [
+          4,
+          5.5,
+          4
+        ]
+      ]
+    },
+    {
+      "id": "L-HAVE-QUERY",
+      "label": "已有 → 缺失比较",
+      "to": "P-C2-GOAL",
+      "signal": "goal",
+      "status": "candidate",
+      "description": "与目标在同实例、参照、相对时间比较。具体联合编码未定。",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-GOAL"
+      ],
+      "legacyRefs": [
+        "W15"
+      ],
+      "tags": [],
+      "from": "P-HAVE-OUT",
+      "path": [
+        [
+          0,
+          -4,
+          5
+        ],
+        [
+          3,
+          5.8,
+          5
+        ]
+      ]
+    },
+    {
+      "id": "L-ACTION",
+      "label": "候选 → 动作竞争",
+      "to": "P-ACTION-CAND",
+      "signal": "action",
+      "status": "unresolved",
+      "description": "同网补全返回已学动作候选；探索选择、竞争与着地机制尚未完成。",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-CORE",
+        "D-OPEN"
+      ],
+      "legacyRefs": [
+        "W19"
+      ],
+      "tags": [],
+      "from": "P-C0-ACTION"
+    },
+    {
+      "id": "L-COMPETE",
+      "label": "胜出 → 发令",
+      "to": "P-EXEC-IN",
+      "signal": "action",
+      "status": "unresolved",
+      "description": "候选胜出后才可送接口；不能把愿望或预演当实际动作。",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-OPEN"
+      ],
+      "legacyRefs": [
+        "W19"
+      ],
+      "tags": [],
+      "from": "P-ACTION-WIN"
+    },
+    {
+      "id": "L-EXECUTE",
+      "label": "动作 → 环境",
+      "to": "P-ENV-ACT",
+      "signal": "action",
+      "status": "confirmed",
+      "description": "执行后环境反馈通过真实采样重新进入，不预置后果。",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [],
+      "legacyRefs": [
+        "W20"
+      ],
+      "tags": [],
+      "from": "P-EXEC-OUT",
+      "path": [
+        [
+          -1,
+          -10,
+          0
+        ],
+        [
+          -11,
+          -10,
+          0
+        ]
+      ]
+    },
+    {
+      "id": "L-ACTION-TRACE",
+      "label": "真实动作 → 经历",
+      "to": "P-SOURCE-IN",
+      "signal": "experience",
+      "status": "confirmed",
+      "description": "命令、回执、结果分别保存。仅已实际发生的动作写入现实经历。",
+      "sourceIds": [
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-STATE"
+      ],
+      "legacyRefs": [
+        "W09",
+        "W20"
+      ],
+      "tags": [],
+      "from": "P-EXEC-TRACE",
+      "path": [
+        [
+          2,
+          -7,
+          -3
+        ],
+        [
+          2,
+          0,
+          -3
+        ]
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "V-ALL",
+      "label": "结构总览",
+      "nodeIds": [
+        "M-ENV",
+        "M-IN",
+        "M-STATE",
+        "M-CONCEPT",
+        "M-ACTION"
+      ],
+      "edgeIds": [],
+      "description": "物理承载与待定职责。三个层级只是示意。"
+    },
+    {
+      "id": "V-CAL",
+      "label": "校准接线",
+      "nodeIds": [
+        "M-STATE",
+        "M-CONCEPT",
+        "C0",
+        "C1",
+        "C2",
+        "S-C0-SYN",
+        "S-C1-SYN",
+        "S-C2-SYN"
+      ],
+      "edgeIds": [
+        "L-CAL0",
+        "L-CAL1",
+        "L-CAL2"
+      ],
+      "description": "状态三因子落底层内部连接；下一概念层以非三因子校准更高层。"
+    },
+    {
+      "id": "V-OBS",
+      "label": "观察 / 补全",
+      "nodeIds": [
+        "M-ENV",
+        "M-IN",
+        "M-STATE",
+        "M-CONCEPT"
+      ],
+      "edgeIds": [
+        "L-SENSE",
+        "L-SPACE",
+        "L-GROUP",
+        "L-CALL",
+        "L-RETURN",
+        "L-CAL0"
+      ],
+      "description": "真实输入及其补全均可学习；补全不是新的外界观察。"
+    },
+    {
+      "id": "V-TIME",
+      "label": "时序 / 预测",
+      "nodeIds": [
+        "M-STATE",
+        "M-CONCEPT"
+      ],
+      "edgeIds": [
+        "L-EXPERIENCE",
+        "L-T01-IN",
+        "L-T01-OUT",
+        "L-T12-IN",
+        "L-T12-OUT",
+        "L-FB21",
+        "L-FB10",
+        "L-RETURN"
+      ],
+      "description": "预测是同一概念基座的用途。内部预演不学习；没有额外预测器。"
+    },
+    {
+      "id": "V-GOAL",
+      "label": "目标 / 行动",
+      "nodeIds": [
+        "M-ENV",
+        "M-IN",
+        "M-STATE",
+        "M-CONCEPT",
+        "M-ACTION"
+      ],
+      "edgeIds": [
+        "L-BODY",
+        "L-GOAL",
+        "L-HAVE-QUERY",
+        "L-FB21",
+        "L-FB10",
+        "L-ACTION",
+        "L-COMPETE",
+        "L-EXECUTE",
+        "L-SENSE",
+        "L-ACTION-TRACE"
+      ],
+      "description": "要与已有分开；缺失反查、动作竞争到真实反馈。候选路线不意味着执行成功。"
+    }
+  ],
+  "changelog": [
+    {
+      "version": "1.0.0",
+      "date": "2026-11-02",
+      "summary": "建立可追溯架构图；采用最新内部连接校准定义；明确候选与未定部分。",
+      "ids": [
+        "L-CAL0",
+        "L-CAL1",
+        "L-CAL2",
+        "D-LEARN",
+        "D-MISSING",
+        "D-RETURN"
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-11-02T09:42:12.232114+00:00",
+      "summary": "纳入Git设计基准、规则/案例承载及V2候选；新增跨层责任归属待验证项。",
+      "ids": [
+        "R-CAL0",
+        "CASE-LAMP-CREDIT",
+        "U-CREDIT",
+        "C-T0"
+      ]
+    },
+    {
+      "version": "1.1.1",
+      "date": "2026-11-02T20:57:04.842Z",
+      "summary": "汇总 2026-11-02 概念 v0、动作 v1 候选、状态 S-SPACE-01 与输入 v1 候选上报；登记项目管理流程、真实观测／补全／返回边界、来源与阻塞，四模块仅追加引用备注。输入 Q2/Q3、VisionSparseEvent 和 L-SPACE / P-SPACE-IN 载荷未定稿；端口、接线、校准靶点及旧状态不变。O1–O10、动作九项、P1–P5 与 U-CREDIT 等保留开放，mechanismValidated: false。 核对期间另到 S-SPACE-02 与接收侧补丁草稿，原样归档并登记为候选，未联合签认。",
+      "ids": [
+        "SRC-PM-20261102",
+        "SRC-PM-STATUS",
+        "SRC-CONCEPT-V0-INDEX",
+        "SRC-CONCEPT-V0",
+        "SRC-CONCEPT-BRIEF",
+        "SRC-ACTION-V1",
+        "SRC-ACTION-DYNAMICS-V1",
+        "SRC-ACTION-BRIEF",
+        "SRC-STATE-INDEX",
+        "SRC-S-SPACE-01",
+        "SRC-STATE-INTERFACE",
+        "SRC-INPUT-INDEX",
+        "SRC-INPUT-PLAIN",
+        "SRC-INPUT-V1",
+        "SRC-INPUT-INTERFACE",
+        "SRC-INPUT-3D-FEASIBILITY",
+        "D-PM-PROCESS",
+        "D-OBSERVATION-BOUNDARY",
+        "D-COMPLETION-BOUNDARY",
+        "D-CONCEPT-VIDEO-FIRST",
+        "D-CONCEPT-CODE-GAP",
+        "D-CONCEPT-OPEN",
+        "D-ACTION-V1",
+        "D-ACTION-DYNAMICS",
+        "D-GOAL-INTERFACE-OPEN",
+        "D-STATE-SSPACE-01",
+        "D-STATE-INPUT-PATCH",
+        "D-INPUT-DIRECTION",
+        "D-INPUT-V1",
+        "D-INPUT-OPEN",
+        "D-INPUT-3D-FEASIBILITY",
+        "D-PM-VALIDATION",
+        "M-IN",
+        "M-STATE",
+        "M-CONCEPT",
+        "M-ACTION",
+        "SRC-S-SPACE-02"
+      ]
+    },
+    {
+      "version": "1.1.2",
+      "date": "2026-11-04T03:02:53.972Z",
+      "summary": "登记 2026-11-03 状态网络 S-SPACE-03～07（含 06b/06c）及关键合成结果，追加来源、用户已确认边界和 M-STATE / S-SPACE 候选备注。自然成像与 A 外相对布局按源稿记录，不发布工程分类、不写回条件深度。研究机制仍候选，mechanismValidated: false；保留全部旧 ID、决定、案例与历史，结构身份及 ports / edges / rules / cases / views / tombstones 不变。P1–P5、Q2/Q3、VisionSparseEvent 和 L-SPACE / P-SPACE-IN 未定稿；筛选、真实 MC 与联合签认继续开放。",
+      "ids": [
+        "SRC-PM-STATE-20261103",
+        "SRC-PM-STATE-STATUS-20261103",
+        "SRC-STATE-DECISIONS-20261103",
+        "SRC-S-SPACE-03",
+        "SRC-S-SPACE-04",
+        "SRC-S-SPACE-05",
+        "SRC-S-SPACE-05-RESULT",
+        "SRC-S-SPACE-06",
+        "SRC-S-SPACE-06-RESULT",
+        "SRC-S-SPACE-06B",
+        "SRC-S-SPACE-06C",
+        "SRC-S-SPACE-06C-RESULT",
+        "SRC-S-SPACE-MULTI-RESULT",
+        "SRC-S-SPACE-07",
+        "SRC-S-SPACE-07-RESULT",
+        "SRC-S-SPACE-07-VALIDATION",
+        "D-PM-STATE-REGISTER",
+        "D-STATE-FIXED-RF",
+        "D-STATE-NATURAL-IMAGING",
+        "D-STATE-MC-MONO",
+        "D-STATE-MC-SCALE-K",
+        "D-STATE-RELATIVE-LAYOUT-BOUNDARY",
+        "D-STATE-CONDITIONAL-PARAMETERS",
+        "D-STATE-SSPACE-03-07",
+        "D-STATE-RESEARCH-OPEN",
+        "M-STATE",
+        "S-SPACE"
+      ]
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-11-04T12:07:04.554Z",
+      "summary": "阶段切换：输入／状态重置为 2D toy model 优先，3D／MC／S-SPACE-01～07 归档非现行默认；概念／动作已确认边界保留。不新增 2D 端口／接线定稿；相关旧决定标【已作废作主线／3D 归档】。mechanismValidated: false。",
+      "ids": [
+        "SRC-U-2D-RESET-20261104",
+        "SRC-PM-2D-BRIEF-20261104",
+        "SRC-PM-STATUS-2D-20261104",
+        "D-PM-2D-RESET",
+        "D-INPUT-2D-STAGE",
+        "D-STATE-2D-STAGE",
+        "D-3D-LINE-ARCHIVED",
+        "M-IN",
+        "M-STATE",
+        "S-SPACE",
+        "D-STATE-FIXED-RF",
+        "D-STATE-SSPACE-03-07",
+        "D-INPUT-DIRECTION",
+        "D-INPUT-V1",
+        "SRC-INPUT-3D-FEASIBILITY",
+        "SRC-S-SPACE-01",
+        "SRC-S-SPACE-07"
+      ]
+    },
+    {
+      "version": "1.2.1",
+      "date": "2026-11-04T13:13:02.091Z",
+      "summary": "登记输入 2D toy v3 短稿与 README STATUS：已确认画面→分块局部对比 topK 稀疏→S-SPACE、原位置及可选光强／颜色（非对象标签）、topK 可色加权，参数等状态设计完再调；整帧交接仍候选，schema 等状态最小承载后再对。新增来源、方向决定、候选交接与独立纪要，更新输入上报进度；旧 3D／MC 仍归档，概念／动作已确认边界不回退。nodes／ports／edges／views／rules／cases／tombstones 保持不变，不定稿输入拓扑；mechanismValidated: false。",
+      "ids": [
+        "SRC-INPUT-INDEX",
+        "SRC-INPUT-2D-V3",
+        "SRC-U-INPUT-2D-V3-20261104",
+        "SRC-PM-INPUT-2D-V3-20261104",
+        "SRC-PM-STATUS-INPUT-2D-V3-20261104",
+        "D-INPUT-OPEN",
+        "D-INPUT-2D-STAGE",
+        "D-STATE-RESEARCH-OPEN",
+        "D-INPUT-2D-V3",
+        "D-INPUT-2D-V3-HANDOFF"
+      ]
+    },
+    {
+      "version": "1.2.2",
+      "date": "2026-11-04T16:03:53.769Z",
+      "summary": "登记 S-SPACE-08 为 2D 状态主线，按 brief 原文保存八条已确认方向，第一版只留同尺寸密强度活动图、每帧覆盖；四盒退场只登记职责方向及待群对齐事项。新增主稿、核验大纲、brief、用户追加与纪要来源，分开确认／候选／开放；旧 01～07 保持 3D 归档非默认。节点仅更新 description／notes；nodes 身份、几何、状态及 ports／edges／views／rules／cases／tombstones 保持 1.2.1，不删 ID、不重接、不锁输入 schema。概念／动作已确认边界不回退；mechanismValidated: false。",
+      "ids": [
+        "SRC-STATE-INDEX",
+        "SRC-S-SPACE-08",
+        "SRC-STATE-2D-TOY-OUTLINE",
+        "SRC-U-STATE-SSPACE-08-20261104",
+        "SRC-PM-STATE-SSPACE-08-20261104",
+        "SRC-PM-STATUS-STATE-SSPACE-08-20261104",
+        "D-STATE",
+        "D-STATE-RESEARCH-OPEN",
+        "D-STATE-2D-STAGE",
+        "D-INPUT-OPEN",
+        "D-INPUT-2D-STAGE",
+        "D-STATE-2D-SSPACE-08",
+        "D-STATE-2D-SSPACE-08-HANDOFF",
+        "D-STATE-2D-SSPACE-08-OPEN",
+        "M-STATE",
+        "S-SPACE",
+        "S-INSTANCE",
+        "S-SOURCE",
+        "S-HAVE",
+        "S-WANT",
+        "S-CONTEXT"
+      ]
+    }
+  ],
+  "tombstones": [
+    {
+      "id": "DEPRECATED-B1",
+      "kind": "structure",
+      "reason": "旧桥接B1校准靶点/返回强度被用户纠正；该编号只是展示废弃记录，不伪装旧W编号。",
+      "replacedBy": [
+        "L-CAL0"
+      ],
+      "sourceIds": [
+        "SRC-U"
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "id": "R-CAL0",
+      "label": "底层校准目标",
+      "status": "confirmed",
+      "description": "可自动检查的架构契约：状态三因子只能落在C0内部连接。此检查不执行三因子数值更新。",
+      "checks": [
+        {
+          "type": "edge-target",
+          "edgeId": "L-CAL0",
+          "nodeId": "S-C0-SYN"
+        },
+        {
+          "type": "edge-decision",
+          "edgeId": "L-CAL0",
+          "decisionId": "D-CAL0"
+        }
+      ],
+      "sourceIds": [
+        "SRC-U"
+      ],
+      "decisionIds": [
+        "D-CAL0"
+      ]
+    },
+    {
+      "id": "R-CALN",
+      "label": "逐层非三因子",
+      "status": "confirmed",
+      "description": "可自动检查的架构契约：C0→C1、C1→C2校准落在相应内部连接。",
+      "checks": [
+        {
+          "type": "edge-target",
+          "edgeId": "L-CAL1",
+          "nodeId": "S-C1-SYN"
+        },
+        {
+          "type": "edge-target",
+          "edgeId": "L-CAL2",
+          "nodeId": "S-C2-SYN"
+        },
+        {
+          "type": "edge-decision",
+          "edgeId": "L-CAL1",
+          "decisionId": "D-CALN"
+        },
+        {
+          "type": "edge-decision",
+          "edgeId": "L-CAL2",
+          "decisionId": "D-CALN"
+        }
+      ],
+      "sourceIds": [
+        "SRC-U"
+      ],
+      "decisionIds": [
+        "D-CALN"
+      ]
+    },
+    {
+      "id": "R-RETURN",
+      "label": "返回仅传信号",
+      "status": "confirmed",
+      "description": "核对当前L-RETURN关联纯信号决定；没有新增返回强度参数。",
+      "checks": [
+        {
+          "type": "edge-decision",
+          "edgeId": "L-RETURN",
+          "decisionId": "D-RETURN"
+        }
+      ],
+      "sourceIds": [
+        "SRC-U"
+      ],
+      "decisionIds": [
+        "D-RETURN"
+      ]
+    },
+    {
+      "id": "R-LEARN",
+      "label": "现实与预演学习边界",
+      "status": "confirmed",
+      "description": "规范已定：真实输入的直接/补全活动可学习，内部预演不学习。尚无可执行神经规则，不能据此报告机制验证通过。",
+      "checks": [],
+      "sourceIds": [
+        "SRC-U"
+      ],
+      "decisionIds": [
+        "D-LEARN"
+      ]
+    },
+    {
+      "id": "R-MISSING",
+      "label": "遮挡缺测无豁免",
+      "status": "confirmed",
+      "description": "规范已定：对应小幅削弱照常发生；实际净变化须合计普通更新和额外调制。没有可运行更新式。",
+      "checks": [],
+      "sourceIds": [
+        "SRC-U"
+      ],
+      "decisionIds": [
+        "D-MISSING"
+      ]
+    },
+    {
+      "id": "R-CREDIT",
+      "label": "跨层责任反例",
+      "status": "unresolved",
+      "description": "须验证错误高层关系与正确低层内容如何分别归属。此处不补救、不跳过、不以动画宣称通过。",
+      "checks": [],
+      "sourceIds": [
+        "SRC-REVIEW",
+        "SRC-V2"
+      ],
+      "decisionIds": [
+        "D-CREDIT"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "CASE-OBS",
+      "label": "现实观察与补全",
+      "status": "unresolved",
+      "description": "静态逻辑检查单；不是网络运行轨迹。",
+      "steps": [
+        {
+          "id": "STEP-OBS-1",
+          "label": "真实采样进入状态",
+          "edgeIds": [
+            "L-SENSE",
+            "L-SPACE"
+          ],
+          "ruleIds": [],
+          "result": "defined",
+          "note": "接线和来源区分已定义；感觉编码具体实现仍有候选。"
+        },
+        {
+          "id": "STEP-OBS-2",
+          "label": "同网补全返回原处",
+          "edgeIds": [
+            "L-CALL",
+            "L-RETURN"
+          ],
+          "ruleIds": [
+            "R-RETURN",
+            "R-LEARN"
+          ],
+          "result": "defined",
+          "note": "现实引发的直接及补全活动均可学习。"
+        },
+        {
+          "id": "STEP-OBS-3",
+          "label": "实际连接如何更新",
+          "edgeIds": [
+            "L-CAL0"
+          ],
+          "ruleIds": [
+            "R-CAL0",
+            "R-LEARN"
+          ],
+          "result": "unresolved",
+          "note": "责任份额、三因子完整式与H规格未全定；不得伪造数值轨迹。"
+        }
+      ],
+      "sourceIds": [
+        "SRC-U",
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-LEARN",
+        "D-RETURN"
+      ]
+    },
+    {
+      "id": "CASE-OCCLUDE",
+      "label": "遮挡 / 缺测",
+      "status": "unresolved",
+      "description": "不设置缺测学习豁免；净更新仍需机制完整后验收。",
+      "steps": [
+        {
+          "id": "STEP-OCC-1",
+          "label": "同一补全被现实缺测核对",
+          "edgeIds": [
+            "L-RETURN",
+            "L-CAL0"
+          ],
+          "ruleIds": [
+            "R-MISSING"
+          ],
+          "result": "defined",
+          "note": "相应小幅削弱照常；没有掩码免罚。"
+        },
+        {
+          "id": "STEP-OCC-2",
+          "label": "累计效果 / 恢复路径",
+          "edgeIds": [
+            "L-CAL0",
+            "L-CAL1"
+          ],
+          "ruleIds": [
+            "R-CAL0",
+            "R-CALN"
+          ],
+          "result": "unresolved",
+          "note": "仍须合计ρ普通学习、三因子、预算与新H生长，不把一次负项等同净下降。"
+        }
+      ],
+      "sourceIds": [
+        "SRC-U",
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-MISSING",
+        "D-V2"
+      ]
+    },
+    {
+      "id": "CASE-LAMP-CREDIT",
+      "label": "高层误判灯亮 → 责任归属",
+      "status": "unresolved",
+      "description": "关键待验证：底层视觉概念正确，高层条件关系错误时会更新谁？",
+      "steps": [
+        {
+          "id": "STEP-LAMP-1",
+          "label": "高层关系预测灯亮",
+          "edgeIds": [
+            "L-FB21",
+            "L-FB10"
+          ],
+          "ruleIds": [
+            "R-CALN"
+          ],
+          "result": "defined",
+          "note": "C1/C2承载条件/时间关系；C0可正确承载灯亮视觉内容。这里只追踪所属层，不断言已学正确。"
+        },
+        {
+          "id": "STEP-LAMP-2",
+          "label": "底层内容返回；现实灯未亮",
+          "edgeIds": [
+            "L-RETURN",
+            "L-SENSE"
+          ],
+          "ruleIds": [
+            "R-RETURN"
+          ],
+          "result": "defined",
+          "note": "返回纯信号。差异不是新增返回强度变量。"
+        },
+        {
+          "id": "STEP-LAMP-3",
+          "label": "状态负反馈到C0内部连接",
+          "edgeIds": [
+            "L-CAL0"
+          ],
+          "ruleIds": [
+            "R-CAL0",
+            "R-CREDIT"
+          ],
+          "result": "unresolved",
+          "note": "仅按参与追责是否伤及正确C0视觉内容？责任归属尚未验收。"
+        },
+        {
+          "id": "STEP-LAMP-4",
+          "label": "更高错误关系是否被修正",
+          "edgeIds": [
+            "L-CAL1",
+            "L-CAL2"
+          ],
+          "ruleIds": [
+            "R-CALN",
+            "R-CREDIT"
+          ],
+          "result": "unresolved",
+          "note": "下层仍以原非三因子校准上层；尚未证明错误高层关系会被恰当修改。§10闭环不标通过。"
+        }
+      ],
+      "sourceIds": [
+        "SRC-REVIEW",
+        "SRC-V2"
+      ],
+      "decisionIds": [
+        "D-CREDIT",
+        "D-CAL0",
+        "D-CALN"
+      ]
+    },
+    {
+      "id": "CASE-GOAL",
+      "label": "目标反查 / 内部预演",
+      "status": "unresolved",
+      "description": "同一基座承担目标与条件预演；未接真实Minecraft。",
+      "steps": [
+        {
+          "id": "STEP-GOAL-1",
+          "label": "区分要与当前已有",
+          "edgeIds": [
+            "L-GOAL",
+            "L-HAVE-QUERY"
+          ],
+          "ruleIds": [],
+          "result": "defined",
+          "note": "目标不能充当事实或当前已有。"
+        },
+        {
+          "id": "STEP-GOAL-2",
+          "label": "同网反查及假设分支",
+          "edgeIds": [
+            "L-FB21",
+            "L-FB10"
+          ],
+          "ruleIds": [
+            "R-LEARN"
+          ],
+          "result": "unresolved",
+          "note": "内部预演不学习；完整分支保持、顺序与停止条件未定。"
+        },
+        {
+          "id": "STEP-GOAL-3",
+          "label": "竞争后发令并取得现实反馈",
+          "edgeIds": [
+            "L-ACTION",
+            "L-COMPETE",
+            "L-EXECUTE",
+            "L-SENSE"
+          ],
+          "ruleIds": [],
+          "result": "unresolved",
+          "note": "不能把候选动作画成已执行成功；动作选择与竞争机制尚待设计。"
+        }
+      ],
+      "sourceIds": [
+        "SRC-U",
+        "SRC-B"
+      ],
+      "decisionIds": [
+        "D-CORE",
+        "D-GOAL",
+        "D-LEARN"
+      ]
+    }
+  ]
+}

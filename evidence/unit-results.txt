@@ -1,0 +1,110 @@
+
+> architecture-workbench@1.0.0 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: canonical schema and explicit internal-connection targets
+ok 1 - canonical schema and explicit internal-connection targets
+  ---
+  duration_ms: 8.045603
+  type: 'test'
+  ...
+# Subtest: calibration retargeting to a valid but wrong node fails design contract
+ok 2 - calibration retargeting to a valid but wrong node fails design contract
+  ---
+  duration_ms: 2.5833
+  type: 'test'
+  ...
+# Subtest: reject dangling endpoint
+ok 3 - reject dangling endpoint
+  ---
+  duration_ms: 1.533901
+  type: 'test'
+  ...
+# Subtest: reject duplicate global ID
+ok 4 - reject duplicate global ID
+  ---
+  duration_ms: 2.2612
+  type: 'test'
+  ...
+# Subtest: reject parent cycle
+ok 5 - reject parent cycle
+  ---
+  duration_ms: 1.454701
+  type: 'test'
+  ...
+# Subtest: reject invalid geometry
+ok 6 - reject invalid geometry
+  ---
+  duration_ms: 1.1978
+  type: 'test'
+  ...
+# Subtest: reject wrong port direction
+ok 7 - reject wrong port direction
+  ---
+  duration_ms: 2.481401
+  type: 'test'
+  ...
+# Subtest: reject malformed optional array
+ok 8 - reject malformed optional array
+  ---
+  duration_ms: 1.1822
+  type: 'test'
+  ...
+# Subtest: reject unknown source
+ok 9 - reject unknown source
+  ---
+  duration_ms: 1.543401
+  type: 'test'
+  ...
+# Subtest: reject missing required label
+ok 10 - reject missing required label
+  ---
+  duration_ms: 1.6282
+  type: 'test'
+  ...
+# Subtest: reject duplicate case step
+ok 11 - reject duplicate case step
+  ---
+  duration_ms: 1.506401
+  type: 'test'
+  ...
+# Subtest: reject dangling case rule
+ok 12 - reject dangling case rule
+  ---
+  duration_ms: 1.5524
+  type: 'test'
+  ...
+# Subtest: renaming or repositioning preserves stable identity
+ok 13 - renaming or repositioning preserves stable identity
+  ---
+  duration_ms: 1.662401
+  type: 'test'
+  ...
+# Subtest: old IDs and tombstones cannot disappear or be reused
+ok 14 - old IDs and tombstones cannot disappear or be reused
+  ---
+  duration_ms: 3.901601
+  type: 'test'
+  ...
+# Subtest: external change requires monotone version and append-only log
+ok 15 - external change requires monotone version and append-only log
+  ---
+  duration_ms: 2.991901
+  type: 'test'
+  ...
+# Subtest: archive references do not masquerade as W01–W24 identities
+ok 16 - archive references do not masquerade as W01–W24 identities
+  ---
+  duration_ms: 0.3501
+  type: 'test'
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 16
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 235.799165
